@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Punjab_Ornaments.Presentation.Views.Purchase.AddPurchase"
+             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase"
+             xmlns:model="clr-namespace:Punjab_Ornaments.Models.Stock"
+             x:DataType="viewmodel:AddPurchaseViewModel"
+             Title="AddPurchase">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Matel Type" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Picker Title="Matel Type" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="White" SelectedItem="{Binding PurchaseItem.MatelType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Gold</x:String>
+                            <x:String>Silver</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="ItemType" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Picker Title="Matel Type" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="White" SelectedItem="{Binding PurchaseItem.ItemType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>LR</x:String>
+                            <x:String>TP</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Brand" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Picker Title="Brand" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="White" SelectedItem="{Binding PurchaseItem.Brand}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Dhanya</x:String>
+                            <x:String>PNJB</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Manufacture Id" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.ManufactureId}" Placeholder="ManufactureId" Grid.Column="1"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Manufacture Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.ManufactureName, Mode=TwoWay}" Placeholder="ManufactureName" Grid.Column="1" />
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Weight" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Grid Grid.Column="1" ColumnDefinitions="*,*,*">
+                    <Entry Grid.Column="0" x:Name="GrossWeight"  Text="{Binding PurchaseItem.GrossWeight}" Placeholder="GrossWeight" PropertyChanged="Entry_PropertyChanged"/>
+                    <Entry Grid.Column="1" x:Name="LessWeight" Text="{Binding PurchaseItem.LessWeight}" Placeholder="LessWeight" PropertyChanged="Entry_PropertyChanged" />
+                    <Entry Grid.Column="2" x:Name="NetWeight" Text="{Binding PurchaseItem.NetWeight}" IsEnabled="False"/>
+                </Grid>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Quantity" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.Quantity}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Rate" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.Rate}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Wastage" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.Wastage}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Label Text="Labour" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                <Entry Text="{Binding PurchaseItem.Labour}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            </Grid>
+            <Button Text="Add" Command="{Binding AddPurchaseCommnad}" CommandParameter="{Binding PurchaseItem}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
