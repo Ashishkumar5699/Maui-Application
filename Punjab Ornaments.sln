@@ -6,14 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Punjab Ornaments.Mobile", "Punjab Ornaments.Mobile.csproj", "{188F55BD-1C6A-4895-B9F3-F2F34540831B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{187E51D8-BB99-4315-BFB4-00F5B76727F8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.git = .git
+		README.md = README.md
+	EndProjectSection
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PunjabOrnaments.Common.Models", "..\PunjabOrnaments.Common\PunjabOrnaments.Common.Models.shproj", "{601197A7-76E1-4C88-B263-D3F0ECF85C4C}"
-EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "punjabornaments.react.typescript.productadmin", "..\PunjabOrnaments.React.TypeScript.ProductAdmin\punjabornaments.react.typescript.productadmin.esproj", "{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PunjabOrnaments.Service.APi", "..\PunjabOrnaments.Service.APi\PunjabOrnaments.Service.APi.csproj", "{B20E75F2-DA7F-4667-8A1A-FCBC62725077}"
-EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "punjabornaments.react.javascript.productadmin", "..\punjabornaments.react.javascript.productadmin\punjabornaments.react.javascript.productadmin.esproj", "{C493CE3D-A6F5-4613-986E-AD71831FA0BF}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PunjabOrnaments.Common.Models", "Common\Models\PunjabOrnaments.Common.Models.shproj", "{601197A7-76E1-4C88-B263-D3F0ECF85C4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,22 +26,6 @@ Global
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE59F7BB-23C2-4C7A-92BF-2B1D5332049D}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{B20E75F2-DA7F-4667-8A1A-FCBC62725077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B20E75F2-DA7F-4667-8A1A-FCBC62725077}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B20E75F2-DA7F-4667-8A1A-FCBC62725077}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B20E75F2-DA7F-4667-8A1A-FCBC62725077}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C493CE3D-A6F5-4613-986E-AD71831FA0BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

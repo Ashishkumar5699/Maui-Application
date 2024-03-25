@@ -41,6 +41,9 @@
 	  <MtouchLink>SdkOnly</MtouchLink>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -65,6 +68,9 @@
 	  <MauiCss Remove="Models\Common\**" />
 	  <MauiXaml Remove="Models\Common\**" />
 	  <None Remove="Models\Common\**" />
+	  <None Remove=".gitignore" />
+	  <None Remove=".git" />
+	  <None Remove="README.md" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -162,6 +168,5 @@
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionPunjabOrnamentsHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
-	<Import Project="..\PunjabOrnaments.Common\PunjabOrnaments.Common.projitems" Label="Shared" />
-
+	<Import Project="Common\Models\PunjabOrnaments.Common.projitems" Label="Shared" Condition="Exists('Common\Models\PunjabOrnaments.Common.projitems')" />
 </Project>
