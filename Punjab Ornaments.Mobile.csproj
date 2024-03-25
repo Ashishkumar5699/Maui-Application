@@ -166,6 +166,9 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="Controls\CustomControlFramework\CustomControlFramework.csproj" />
+	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionPunjabOrnamentsHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 	<Import Project="Common\Models\PunjabOrnaments.Common.projitems" Label="Shared" Condition="Exists('Common\Models\PunjabOrnaments.Common.projitems')" />
