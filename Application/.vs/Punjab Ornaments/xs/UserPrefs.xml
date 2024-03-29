@@ -1,0 +1,64 @@
+﻿<Properties StartupConfiguration="{188F55BD-1C6A-4895-B9F3-F2F34540831B}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/APIService/APIService.cs" relfile="Infrastructure/APIService/APIService.cs" line="36" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/APIService/APIService.cs" relfile="Infrastructure/APIService/APIService.cs" line="37" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="89" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="79" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="83" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="80" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="81" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Infrastructure/RestService/RestService.cs" relfile="Infrastructure/RestService/RestService.cs" line="82" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Auth/LoginPage.xaml.cs" relfile="Presentation/Views/Auth/LoginPage.xaml.cs" line="16" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Viewmodels/Auth/LoginPageViewModel.cs" relfile="Presentation/Viewmodels/Auth/LoginPageViewModel.cs" line="50" column="1" />
+      <Breakpoint file="/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Viewmodels/Auth/LoginPageViewModel.cs" relfile="Presentation/Viewmodels/Auth/LoginPageViewModel.cs" line="39" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Punjab_220Ornaments.Mobile PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.33A856A8-B7E1-4052-8015-D02E59D6BE8C" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.33A856A8-B7E1-4052-8015-D02E59D6BE8C" />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>Controls/CustomControlFramework/CustomControlFramework.csproj</String>
+    <String>Common/Models/PunjabOrnaments.Common.Models.shproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Controls/CustomControlFramework/Buttons/LoadingButton/LoadingButton.xaml">
+    <Files>
+      <File FileName="Presentation/Views/Auth/LoginPage.xaml" Line="16" Column="28" IsPinned="True" />
+      <File FileName="../Controls/CustomControlFramework/Buttons/LoadingButton/LoadingButton.xaml" Line="12" Column="9" />
+      <File FileName="../Controls/CustomControlFramework/Buttons/LoadingButton/LoadingButton.xaml.cs" Line="13" Column="1" />
+      <File FileName="Platforms/iOS/Program.cs" />
+      <File FileName="Presentation/Viewmodels/Auth/LoginPageViewModel.cs" />
+      <File FileName="Resources/Styles/Colors.xaml" />
+      <File FileName="../Controls/CustomControlFramework/Style/Colors.xaml" Line="7" Column="43" />
+      <File FileName="MauiProgram.cs" Line="1" Column="1" />
+      <File FileName="Presentation/Views/Auth/LoginPage.xaml.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Punjab Ornaments" expanded="True">
+            <Node name="CustomControlFramework">
+              <Node name="Buttons" expanded="True">
+                <Node name="LoadingButton" expanded="True">
+                  <Node name="LoadingButton.xaml" expanded="True" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Style" expanded="True" />
+            </Node>
+            <Node name="Punjab Ornaments.Mobile">
+              <Node name="Presentation">
+                <Node name="Views">
+                  <Node name="Auth" expanded="True">
+                    <Node name="LoginPage.xaml" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

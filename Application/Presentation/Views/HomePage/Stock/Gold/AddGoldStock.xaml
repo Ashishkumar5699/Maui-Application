@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels"
+             xmlns:model="clr-namespace:Punjab_Ornaments.Models"
+             x:DataType="model:Gold"
+             x:Class="Punjab_Ornaments.Presentation.Views.AddGoldStock"
+             Title="AddGoldStock">
+    <VerticalStackLayout Spacing="10">
+        <Frame VerticalOptions="Center" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" CornerRadius="50">
+            <Image Source="dotnet_bot.png" />
+        </Frame>
+        <Grid ColumnDefinitions="*,*">
+            <Label Text="Code  " Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding Code}" Placeholder="Code" Grid.Column="1" />
+        </Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Label Text="Weight" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding Weight}" Placeholder="Weight" Grid.Column="1" />
+        </Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Label Text="Brand"  Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding Brand}" Placeholder="Brand" Grid.Column="1" />
+        </Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Label Text="Carrot"  Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding Carrot}" Placeholder="Carrot" Grid.Column="1" />
+        </Grid>
+        <Button Text="Add" x:DataType="viewmodel:GoldStockListViewModel" Command="{Binding AddNewItemCommand}" CommandParameter="{Binding .}"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels.Auth"
+             xmlns:control="clr-namespace:CustomControlFramework.Buttons.LoadingButton;assembly=CustomControlFramework"
+             x:Class="Punjab_Ornaments.Presentation.Views.Auth.LoginPage"
+             x:DataType="viewmodel:LoginPageViewModel"
+             Title="LoginPage">
+    <Grid BackgroundColor="LightGray">
+        <VerticalStackLayout Padding="10" Spacing="5">
+            <Label Text="Welcome" HorizontalOptions="Center" FontSize="Title"/>
+            <Label Text="User Name"/>
+            <Entry Text="{Binding UserName}"/>
+            <Label Text="Password"/>
+            <Entry Text="{Binding Password}" IsPassword="True"/>
+            <!--<Button Text="Login" Command="{Binding LoginCommand}" Margin="25"/>-->
+            <control:LoadingButton Text="Login" Command="{Binding LoginCommand}" IsLoading="{Binding IsBusy}" Margin="25" BackgroundColor="Red"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

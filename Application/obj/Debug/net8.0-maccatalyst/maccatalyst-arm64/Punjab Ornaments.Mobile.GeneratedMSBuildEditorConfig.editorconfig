@@ -1,0 +1,167 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Punjab_Ornaments
+build_property.ProjectDir = /Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/CustomControls/LabelButton.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.CustomControls.LabelButton.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/CustomControls/LabelButton.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/CustomControls/LabelButton.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Approval/ApprovalTemplates/Purchasetemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Approval.ApprovalTemplates.Purchasetemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Approval/ApprovalTemplates/Purchasetemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Approval/ApprovalTemplates/Purchasetemplate.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Approval/CompleteApprovalsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Approval.CompleteApprovalsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Approval/CompleteApprovalsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Approval/CompleteApprovalsView.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Approval/PendingApprovalsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Approval.PendingApprovalsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Approval/PendingApprovalsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Approval/PendingApprovalsView.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Approval/PurchaseDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Approval.PurchaseDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Approval/PurchaseDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Approval/PurchaseDetailPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Auth/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Auth.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Auth/LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Auth/LoginPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Common/Popup/SucessComfirmPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Common.Popup.SucessComfirmPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Common/Popup/SucessComfirmPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Common/Popup/SucessComfirmPopup.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Customer/AddNewCustomerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Customer.AddNewCustomerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Customer/AddNewCustomerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Customer/AddNewCustomerPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Customer/CustomerListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Customer.CustomerListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Customer/CustomerListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Customer/CustomerListPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/HomePageView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.HomePageView.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/HomePageView.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/HomePageView.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Purchase/AddPurchase.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Purchase.AddPurchase.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Purchase/AddPurchase.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Purchase/AddPurchase.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Stock/Gold/AddGoldStock.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Stock.Gold.AddGoldStock.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Stock/Gold/AddGoldStock.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Stock/Gold/AddGoldStock.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Stock/Gold/GoldStockDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Stock.Gold.GoldStockDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Stock/Gold/GoldStockDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Stock/Gold/GoldStockDetailPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Stock/Gold/GoldStockList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Stock.Gold.GoldStockList.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Stock/Gold/GoldStockList.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Stock/Gold/GoldStockList.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/HomePage/Stock/StockView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.HomePage.Stock.StockView.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/HomePage/Stock/StockView.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/HomePage/Stock/StockView.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Settings/MetalTypeDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Settings.MetalTypeDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Settings/MetalTypeDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Settings/MetalTypeDetailPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Settings/MetalTypePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Settings.MetalTypePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Settings/MetalTypePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Settings/MetalTypePage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Settings/SettingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Settings.SettingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Settings/SettingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Settings/SettingPage.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/Settings/Templates/MetalTypeTemplate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.Settings.Templates.MetalTypeTemplate.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/Settings/Templates/MetalTypeTemplate.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/Settings/Templates/MetalTypeTemplate.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Presentation/Views/UnderConstruction.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Presentation.Views.UnderConstruction.xaml
+build_metadata.AdditionalFiles.TargetPath = Presentation/Views/UnderConstruction.xaml
+build_metadata.AdditionalFiles.RelativePath = Presentation/Views/UnderConstruction.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/qss/Desktop/MAUI/PunjabOrnaments/Maui-Application/Application/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Punjab_Ornaments.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels"
+             xmlns:model="clr-namespace:Punjab_Ornaments.Models"
+             x:DataType="viewmodel:GoldStockListViewModel"
+             x:Class="Punjab_Ornaments.Presentation.Views.GoldStockList"
+             x:Name="GoldStockListPage"
+             Title="Gold Stock View">
+    <Grid>
+        <CollectionView ItemsSource="{Binding GoldStockList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame x:DataType="model:Gold">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GoldStockListViewModel}}, Path=NavigatetoDetailPageCommand}"
+                                    CommandParameter="{Binding Id}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid ColumnDefinitions="100,*,*">
+                                <Frame Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="50">
+                                    <Image HeightRequest="20" WidthRequest="20" Source="dotnet_bot.png" />
+                                </Frame>
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                    <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Code  " HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Code}" HorizontalOptions="Center" VerticalOptions="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Copy_text"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Weight" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Weight}"/>
+                                                    <Span Text=" "/>
+                                                    <Span Text="Gram"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Grid.Column="2" VerticalOptions="CenterAndExpand">
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Brand" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Brand}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="Carrot" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Carrot}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Add" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateToAddnewPageCommand}"/>
+    </Grid>
+</ContentPage>
