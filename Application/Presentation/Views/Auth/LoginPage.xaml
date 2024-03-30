@@ -9,6 +9,7 @@
         <VerticalStackLayout Padding="10" Spacing="5">
             <Label Text="Welcome" HorizontalOptions="Center" FontSize="Title"/>
             <Label Text="User Name"/>
+            <Entry />
             <Entry Text="{Binding UserName}"/>
             <Entry Text="{Binding Password}" IsPassword="True"/>
             <Button Text="Login" Command="{Binding LoginCommand}" Margin="25"/>

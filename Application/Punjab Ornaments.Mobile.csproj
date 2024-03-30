@@ -71,11 +71,6 @@
 	  <None Remove=".gitignore" />
 	  <None Remove=".git" />
 	  <None Remove="README.md" />
-	  <None Remove="Controls\CustomControlFramework\Platforms\iOS\" />
-	  <None Remove="Controls\CustomControlFramework\Platforms\Android\" />
-	  <None Remove="Controls\CustomControlFramework\Platforms\MacCatalyst\" />
-	  <None Remove="Controls\CustomControlFramework\Platforms\Tizen\" />
-	  <None Remove="Controls\CustomControlFramework\Platforms\Windows\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -171,17 +166,7 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="Controls\CustomControlFramework\CustomControlFramework.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Controls\CustomControlFramework\Platforms\iOS\" />
-	  <Folder Include="Controls\CustomControlFramework\Platforms\Android\" />
-	  <Folder Include="Controls\CustomControlFramework\Platforms\MacCatalyst\" />
-	  <Folder Include="Controls\CustomControlFramework\Platforms\Tizen\" />
-	  <Folder Include="Controls\CustomControlFramework\Platforms\Windows\" />
-	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionPunjabOrnamentsHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
-	<Import Project="Common\Models\PunjabOrnaments.Common.projitems" Label="Shared" Condition="Exists('Common\Models\PunjabOrnaments.Common.projitems')" />
+	<Import Project="..\Common\Models\PunjabOrnaments.Common.projitems" Label="Shared" Condition="Exists('..\Common\Models\PunjabOrnaments.Common.projitems')" />
 </Project>
