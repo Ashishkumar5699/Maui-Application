@@ -68,6 +68,9 @@
 	  <MauiCss Remove="Models\Common\**" />
 	  <MauiXaml Remove="Models\Common\**" />
 	  <None Remove="Models\Common\**" />
+	  <None Remove=".gitignore" />
+	  <None Remove=".git" />
+	  <None Remove="README.md" />
 	</ItemGroup>
 
 	<ItemGroup>
