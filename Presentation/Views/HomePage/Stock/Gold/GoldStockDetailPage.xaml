@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels"
+             xmlns:model="clr-namespace:Punjab_Ornaments.Models"
+             x:DataType="viewmodel:GoldStockDetailPageViewModel"
+             x:Class="Punjab_Ornaments.Presentation.Views.GoldStockDetailPage"
+             Title="GoldStockDetailPage">
+    <ScrollView>
+        <VerticalStackLayout BindingContext="{Binding GoldStock}">
+            <Frame>
+                <Image HeightRequest="200" WidthRequest="200" Source="dotnet_bot.png" />
+            </Frame>
+                <VerticalStackLayout x:DataType="model:Gold">
+                    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="Code  " FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="{Binding Code}" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="Weight" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                            <Label FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.FormattedText>
+                                    <FormattedString >
+                                    <Span Text="{Binding Weight}" FontSize="Title"/>
+                                    <Span Text=" " FontSize="Title"/>
+                                    <Span Text="Gram" FontSize="Title"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+                        <HorizontalStackLayout Spacing="20">
+                            <Label Text="Brand" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="{Binding Brand}" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="Carrot" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="{Binding Carrot}" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
