@@ -2,7 +2,8 @@
 {
     public static class ApiConstant
     {
-        public const string url = "http://localhost:5000";
+        public const string url = "https://pnjb.azurewebsites.net/";
+        //public const string url = "http://localhost:5000";
         public const string base_url = url + "api/";
 
         #region Account
