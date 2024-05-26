@@ -1,12 +1,9 @@
 [submodule "Common"]
 	path = Common
 	url = https://github.com/Ashishkumar5699/DotnetMauiLinker.git
-<<<<<<< HEAD
 [submodule "Controls"]
 	path = Controls
 	url = https://github.com/Ashishkumar5699/MAUIControls.git
 [submodule "MAUIControls"]
 	path = MAUIControls
 	url = https://github.com/Ashishkumar5699/MAUIControls.git
-=======
->>>>>>> origin/Stable
