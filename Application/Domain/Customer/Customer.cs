@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Punjab_Ornaments.Models
+namespace Punjab_Ornaments.Domain.Customer
 {
     public class Customer : PunjabOrnaments.Common.Models.Products.Consumer
     {

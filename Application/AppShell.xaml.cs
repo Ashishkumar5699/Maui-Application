@@ -3,6 +3,7 @@ using Punjab_Ornaments.Presentation.Views.Approval;
 using Punjab_Ornaments.Presentation.Views.Auth;
 using Punjab_Ornaments.Presentation.Views.Customer;
 using Punjab_Ornaments.Presentation.Views.Purchase;
+using Punjab_Ornaments.Presentation.Views.QuickSale;
 using Punjab_Ornaments.Presentation.Views.Settings;
 
 namespace Punjab_Ornaments;
@@ -39,5 +40,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(SettingPage), typeof(SettingPage));
         Routing.RegisterRoute(nameof(MetalTypePage), typeof(MetalTypePage));
         Routing.RegisterRoute(nameof(MetalTypeDetailPage), typeof(MetalTypeDetailPage));
+
+        //QuckView
+        Routing.RegisterRoute(nameof(SalePageView), typeof(SalePageView));
     }
 }

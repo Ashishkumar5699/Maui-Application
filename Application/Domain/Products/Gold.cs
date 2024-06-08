@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Punjab_Ornaments.Models
+namespace Punjab_Ornaments.Domain.Products
 {
     public class Gold : PunjabOrnaments.Common.Models.Products.Gold
     {

@@ -1,7 +1,8 @@
-﻿using Punjab_Ornaments.Models;
-using Punjab_Ornaments.Models.Approvals;
-using Punjab_Ornaments.Models.Auth;
-using Punjab_Ornaments.Models.Products.Details;
+﻿using Punjab_Ornaments.Domain.Approvals;
+using Punjab_Ornaments.Domain.Auth;
+using Punjab_Ornaments.Domain.Customer;
+using Punjab_Ornaments.Domain.Products;
+using Punjab_Ornaments.Domain.Products.Details;
 using Punjab_Ornaments.Resources.Constant;
 using PunjabOrnaments.Common.Models.Response;
 using SQLite;
@@ -26,7 +27,7 @@ namespace Punjab_Ornaments.Infrastructure.Database
         {
             database.CreateTable<Customer>();
             database.CreateTable<Gold>();
-            database.CreateTable<Models.Auth.LoginUser>();
+            database.CreateTable<LoginUser>();
             //database.CreateTable<Purchase>();
             //database.CreateTable<MetelType>();
             database.CreateTable<Discriptions>();

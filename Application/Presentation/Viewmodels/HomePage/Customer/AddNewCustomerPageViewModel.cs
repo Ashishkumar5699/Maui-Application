@@ -123,7 +123,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer
         
         async Task AddCustomerAsync()
         {
-            Models.Customer customer = new()
+            Domain.Customer.Customer customer = new()
             {
                 CustmorPrifix = Prifix,
                 CustmorFirstName = FirstName,

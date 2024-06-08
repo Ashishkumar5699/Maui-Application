@@ -1,4 +1,4 @@
-﻿using Punjab_Ornaments.Models.Auth;
+﻿using Punjab_Ornaments.Domain.Auth;
 using PunjabOrnaments.Common.Models.Response;
 namespace Punjab_Ornaments.Extensions
 {

@@ -7,7 +7,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
     public partial class AddPurchaseViewModel : BaseViewModel
     {
         #region Private Members
-        private Models.Approvals.PurchaseRequest _purchaseItem;
+        private Domain.Approvals.PurchaseRequest _purchaseItem;
         #endregion
 
         #region Commands
@@ -27,7 +27,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
         #endregion
 
         #region BindableProperties
-        public Models.Approvals.PurchaseRequest PurchaseItem
+        public Domain.Approvals.PurchaseRequest PurchaseItem
         {
             get => _purchaseItem;
             set
@@ -37,8 +37,9 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
             }
         }
         #endregion
+
         #region Methods
-        async Task AddPurchaseAsync(Models.Approvals.PurchaseRequest purchaseItem)
+        async Task AddPurchaseAsync(Domain.Approvals.PurchaseRequest purchaseItem)
         {
             if (PurchaseItemValidation(purchaseItem))
             {
@@ -52,7 +53,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
         }
         private void UpdateDefaultValues()
         {
-            PurchaseItem = new Models.Approvals.PurchaseRequest
+            PurchaseItem = new Domain.Approvals.PurchaseRequest
             {
                 MatelType = null,
                 ItemType = string.Empty,
@@ -70,7 +71,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
             };
         }
 
-        private static bool PurchaseItemValidation(Models.Approvals.PurchaseRequest purchaseItem)
+        private static bool PurchaseItemValidation(Domain.Approvals.PurchaseRequest purchaseItem)
         {
             if (purchaseItem.MatelType == string.Empty) return false;
             else if (purchaseItem.ItemType == string.Empty) return false;

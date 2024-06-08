@@ -1,6 +1,9 @@
-﻿using Punjab_Ornaments.Models;
-using Punjab_Ornaments.Models.Auth;
-using Punjab_Ornaments.Models.Products.Details;
+﻿using Punjab_Ornaments.Domain;
+using Punjab_Ornaments.Domain.Approvals;
+using Punjab_Ornaments.Domain.Auth;
+using Punjab_Ornaments.Domain.Customer;
+using Punjab_Ornaments.Domain.Products;
+using Punjab_Ornaments.Domain.Products.Details;
 
 namespace Punjab_Ornaments.Infrastructure.Database
 {
@@ -23,8 +26,8 @@ namespace Punjab_Ornaments.Infrastructure.Database
 
         #region Approval Section
 
-        Task<List<Models.Approvals.PurchaseRequest>> GetAllPendingPurchaseRequests();
-        Task<List<Models.Approvals.PurchaseRequest>> GetAllCompletePurchaseRequests();
+        Task<List<PurchaseRequest>> GetAllPendingPurchaseRequests();
+        Task<List<PurchaseRequest>> GetAllCompletePurchaseRequests();
         #endregion
 
         #region CustomerSection
@@ -36,13 +39,13 @@ namespace Punjab_Ornaments.Infrastructure.Database
         #endregion
 
         #region PurchaseSection
-        Task<int> AddPurchase(Models.Approvals.PurchaseRequest Purchaseitem);
-        Task<int> UpdatePurchase(Models.Approvals.PurchaseRequest Purchaseitem);
-        Task<int> DeletePurchase(Models.Approvals.PurchaseRequest Purchaseitem);
-        Task<List<Models.Approvals.PurchaseRequest>> GetAllPendingPurchases();
-        Task<List<Models.Approvals.PurchaseRequest>> GetAllCompletePurchases();
-        Task<List<Models.Approvals.PurchaseRequest>> GetTodaysPurchase();
-        Task<List<Models.Approvals.PurchaseRequest>> GetPurchaseById(int purchaseid);
+        Task<int> AddPurchase(PurchaseRequest Purchaseitem);
+        Task<int> UpdatePurchase(PurchaseRequest Purchaseitem);
+        Task<int> DeletePurchase(PurchaseRequest Purchaseitem);
+        Task<List<PurchaseRequest>> GetAllPendingPurchases();
+        Task<List<PurchaseRequest>> GetAllCompletePurchases();
+        Task<List<PurchaseRequest>> GetTodaysPurchase();
+        Task<List<PurchaseRequest>> GetPurchaseById(int purchaseid);
         Task<int> ApprovedPurchase(int purchaseid, int isapproved);
         #endregion
 
