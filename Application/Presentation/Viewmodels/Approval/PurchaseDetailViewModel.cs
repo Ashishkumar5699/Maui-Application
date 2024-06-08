@@ -9,7 +9,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
     {
         #region Private Members
         public int _purchaserequestId;
-        private Models.Approvals.PurchaseRequest _purchaseitem;
+        private Domain.Approvals.PurchaseRequest _purchaseitem;
         private bool _approverejectbtnvisible;
         private bool _deletebtnvisible;
         private bool _addtostockbtnvisible;
@@ -45,7 +45,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
                 OnPropertyChanged(nameof(PurchaseRequestId));
             }
         }
-        public Models.Approvals.PurchaseRequest Purchaseitem
+        public Domain.Approvals.PurchaseRequest Purchaseitem
         {
             get => _purchaseitem;
             set

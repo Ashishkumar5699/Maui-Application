@@ -9,7 +9,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
     public partial class ApprovalViewModel : BaseViewModel
     {
         #region Private Members
-        private ObservableCollection<Models.Approvals.PurchaseRequest> _puchaseList;
+        private ObservableCollection<Domain.Approvals.PurchaseRequest> _puchaseList;
 
         #endregion
 
@@ -22,7 +22,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
         {
         }
         #region Bindable Properties
-        public ObservableCollection<Models.Approvals.PurchaseRequest> PuchaseList
+        public ObservableCollection<Domain.Approvals.PurchaseRequest> PuchaseList
         {
             get => _puchaseList;
             set
@@ -34,7 +34,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
         #endregion
 
         #region Methods
-        public async Task<List<Models.Approvals.PurchaseRequest>> GetAllPendingPurchaseRequests() => await _dataService.GetAllPendingPurchases();
+        public async Task<List<Domain.Approvals.PurchaseRequest>> GetAllPendingPurchaseRequests() => await _dataService.GetAllPendingPurchases();
 
         private async Task NavigateToPurchaseDetailPageAsync(int purchaseid) => await _navigationService.NavigateToAsync(NavigationPath.PurchaseDetailPage, "PurchaseId", purchaseid);
         #endregion

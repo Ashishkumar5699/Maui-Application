@@ -12,12 +12,14 @@ using Punjab_Ornaments.Presentation.Viewmodels.Auth;
 using Punjab_Ornaments.Presentation.Viewmodels.Common;
 using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer;
 using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase;
+using Punjab_Ornaments.Presentation.Viewmodels.QuickSale;
 using Punjab_Ornaments.Presentation.Viewmodels.Settings;
 using Punjab_Ornaments.Presentation.Views;
 using Punjab_Ornaments.Presentation.Views.Approval;
 using Punjab_Ornaments.Presentation.Views.Auth;
 using Punjab_Ornaments.Presentation.Views.Customer;
 using Punjab_Ornaments.Presentation.Views.Purchase;
+using Punjab_Ornaments.Presentation.Views.QuickSale;
 using Punjab_Ornaments.Presentation.Views.Settings;
 
 namespace Punjab_Ornaments;
@@ -75,6 +77,9 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<MetalTypePageViewModel>();
         mauiAppBuilder.Services.AddSingleton<MetalTypeDetailPageViewModel>();
 
+		//Quick Sale
+        mauiAppBuilder.Services.AddSingleton<SalePageViewModel>();
+
 
         return mauiAppBuilder;
 	}
@@ -114,6 +119,9 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<SettingPage>();
         mauiAppBuilder.Services.AddSingleton<MetalTypePage>();
         mauiAppBuilder.Services.AddSingleton<MetalTypeDetailPage>();
+
+		//Quick Sale
+        mauiAppBuilder.Services.AddSingleton<SalePageView>();
 
 
         return mauiAppBuilder;

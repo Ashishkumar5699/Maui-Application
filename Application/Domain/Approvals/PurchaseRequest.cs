@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Punjab_Ornaments.Models.Approvals
+namespace Punjab_Ornaments.Domain.Approvals
 {
     public class PurchaseRequest : PunjabOrnaments.Common.Approvals.PurchaseRequest
     {

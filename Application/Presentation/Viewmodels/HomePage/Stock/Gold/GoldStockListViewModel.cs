@@ -2,9 +2,9 @@
 using CommunityToolkit.Mvvm.Input;
 using Punjab_Ornaments.Infrastructure.Database;
 using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Models;
 using Punjab_Ornaments.Resources.Constant;
 using System.Collections.ObjectModel;
+using Punjab_Ornaments.Domain.Products;
 
 namespace Punjab_Ornaments.Presentation.Viewmodels
 {
@@ -49,7 +49,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels
         string image;
 
         [ObservableProperty]
-        Models.Products.Details.Discriptions brand;
+        Domain.Products.Details.Discriptions brand;
 
         [ObservableProperty]
         string carrot;

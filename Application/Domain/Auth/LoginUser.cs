@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Models.Auth
+﻿namespace Punjab_Ornaments.Domain.Auth
 {
     public class LoginUser : PunjabOrnaments.Common.Models.Auth.AuthUser
     {

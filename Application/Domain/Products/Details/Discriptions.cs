@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Models.Products.Details
+﻿namespace Punjab_Ornaments.Domain.Products.Details
 {
     public class Discriptions
     {

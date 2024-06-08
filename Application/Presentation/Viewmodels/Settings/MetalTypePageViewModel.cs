@@ -1,7 +1,7 @@
 ﻿using Punjab_Ornaments.Infrastructure.APIService;
 using Punjab_Ornaments.Infrastructure.Database;
 using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Models.Products.Details;
+using Punjab_Ornaments.Domain.Products.Details;
 using Punjab_Ornaments.Resources.Constant;
 using System.Collections.ObjectModel;
 using System.Windows.Input;

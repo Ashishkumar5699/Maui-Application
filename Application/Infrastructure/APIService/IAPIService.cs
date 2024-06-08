@@ -1,5 +1,6 @@
 ﻿
-using Punjab_Ornaments.Models.Auth;
+using Punjab_Ornaments.Domain.Auth;
+using Punjab_Ornaments.Domain.Approvals;
 
 namespace Punjab_Ornaments.Infrastructure.APIService
 {
@@ -8,10 +9,13 @@ namespace Punjab_Ornaments.Infrastructure.APIService
         #region Auth
         Task<PunjabOrnaments.Common.Models.Response.ResponseResult<LoginUser>> LoginUser(LoginUser loginUser);
         #endregion
-        Task AddGoldPurchaseRequst(Models.Approvals.PurchaseRequest request);
-        Task<List<Models.Approvals.PurchaseRequest>> GetAllPurchaseRequest();
+
+        #region Approvel
+        Task AddGoldPurchaseRequst(Domain.Approvals.PurchaseRequest request);
+        Task<List<PurchaseRequest>> GetAllPurchaseRequest();
         Task<bool> GoldApprove(int id);
         Task<bool> GoldReject(int id);
-        Task<Models.Approvals.PurchaseRequest> GetPurchaseById(int id);
+        Task<PurchaseRequest> GetPurchaseById(int id);
+        #endregion
     }
 }
