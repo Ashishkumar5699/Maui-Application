@@ -28,5 +28,26 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSAppTransportSecurity</key>
+    <dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+		<key>firstsite.com</key>
+		<dict>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+	</dict>
+	<key>pnjb.eastus.cloudapp.azure.com</key>
+	<dict>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+	</dict>
+	</dict>
+    </dict>
+
 </dict>
 </plist>

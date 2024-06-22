@@ -4,6 +4,7 @@ using Punjab_Ornaments.Domain.Customer;
 using Punjab_Ornaments.Domain.Products;
 using Punjab_Ornaments.Domain.Products.Details;
 using Punjab_Ornaments.Resources.Constant;
+using PunjabOrnaments.Common.Bills;
 using PunjabOrnaments.Common.Models.Response;
 using SQLite;
 
@@ -170,6 +171,11 @@ namespace Punjab_Ornaments.Infrastructure.Database
         }
 
         public Task<ResponseResult<LoginUser>> LoginUser(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
         {
             throw new NotImplementedException();
         }

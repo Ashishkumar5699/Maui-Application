@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Punjab_Ornaments.Infrastructure.Database;
 using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Domain;
 using Punjab_Ornaments.Domain.Sale;
 using Punjab_Ornaments.Domain.Customer;
+using PunjabOrnaments.Common.Bills;
+using Punjab_Ornaments.Infrastructure.Helpers;
 
 namespace Punjab_Ornaments.Presentation.Viewmodels.QuickSale
 {
     public partial class SalePageViewModel : BaseViewModel
     {
-
-        private ObservableCollection<SaleModel> _saleItems;
-        private GSTAmountModel _amountModel;
 
         public SalePageViewModel(IDataService localDataService, INavigationService navigationService) : base(localDataService, navigationService)
         {
@@ -23,28 +20,79 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.QuickSale
 
             UpdateCommand = new Command<int>(UpdateAction);
             GenerateBillCommand = new Command(GenerateBillAsync);
+            AddNewIteminSalesCommand = new Command(AddNewIteminSales);
 
-            Init();
+            InitializeAsync();
         }
 
+        #region Commands
         public ICommand UpdateCommand { get; }
+
         public ICommand GenerateBillCommand { get; }
 
-        private void Init()
+        public ICommand AddNewIteminSalesCommand { get; }
+        #endregion
+
+        private void InitializeAsync()
         {
-            for (int i = 1; i <= 5; i++)
-            {
-                SaleItems.Add(new SaleModel
-                {
-                    Id = i,
-                    AmountUpdateCommand = UpdateCommand
-                });
-            }
+            //for (int i = 1; i <= 5; i++)
+            //{
+            AddNewIteminSales();
+            //}
         }
 
-        private void GenerateBillAsync(object obj)
+        private void AddNewIteminSales()
         {
-            throw new NotImplementedException();
+            SaleItems.Add(new SaleModel
+            {
+                Id = SaleItems.Count + 1,
+                AmountUpdateCommand = UpdateCommand
+            });
+        }
+
+        private async void GenerateBillAsync()
+        {
+            var billmodel = new PrintBillModel();
+            billmodel.Consumer = new PunjabOrnaments.Common.Models.Products.Consumer
+            {
+                CustmorPrifix = "MR",
+                CustmorFirstName = "CustmorFirstName",
+                CustmorLastName = "CustmorLastName",
+                CustmorPhoneNumber = "CustmorPhoneNumber",
+                CustmorAddress1 = "CustmorAddress1",
+                CustmorAddress2 = "CustmorAddress2",
+                CustmorLandMark = "CustmorLandMark",
+                CustmorCity = "CustmorCity",
+                CustmorState = "CustmorState",
+                CustmorPinCode = "CustmorPinCode",
+            };
+
+            billmodel.ProductList = new List<ProductModel>
+            {
+                new ProductModel
+                {
+                    Description = "Description",
+                    HSN_Code = "HSN_Code",
+                    Purity = "Purity",
+                    Weight = 1,
+                    Rate = 100,
+                    Making_Charge = 10,
+                    Amount = 110,
+                }
+            };
+            billmodel.GSTAmount = new GSTAmount
+            {
+                Discount = 0,
+                TotalAfterDiscount = 110,
+                CGSt = (decimal)1.65,
+                IGST = (decimal)1.65,
+                GrandTotal = (decimal)113.3,
+            };
+
+            var abc = await _dataService.GenerateQuotation(billmodel);
+            var file = new SaveService();
+            var mc = new MemoryStream(abc.Data);
+            file.SaveAndView("test.pdf", "Application/pdf", mc);
         }
 
         private void UpdateAction(int id)

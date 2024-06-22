@@ -52,6 +52,7 @@ namespace Punjab_Ornaments.Infrastructure.RestService
             }
             catch (Exception ex)
             {
+                Preferences.Set(PreferenceConstant.LastError, ex.Message);
             }
 
             return data;

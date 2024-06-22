@@ -9,6 +9,7 @@ using Punjab_Ornaments.Domain.Products.Details;
 using PunjabOrnaments.Common.Models.Response;
 using Punjab_Ornaments.Domain.Products;
 using Punjab_Ornaments.Domain.Customer;
+using PunjabOrnaments.Common.Bills;
 
 namespace Punjab_Ornaments.Localization.Database
 {
@@ -27,7 +28,9 @@ namespace Punjab_Ornaments.Localization.Database
         {
 
         }
+        #endregion
 
+        #region Auth
         public async Task<ResponseResult<LoginUser>> LoginUser(string username, string password)
         {
 
@@ -43,7 +46,8 @@ namespace Punjab_Ornaments.Localization.Database
 
             return result;
         }
-
+        #endregion
+        #region gold
         public Task<int> AddGoldinStock(Gold gold)
         {
             throw new NotImplementedException();
@@ -68,7 +72,9 @@ namespace Punjab_Ornaments.Localization.Database
         {
             throw new NotImplementedException();
         }
+        #endregion
 
+        #region Approval
         public Task<List<PurchaseRequest>> GetAllPendingPurchaseRequests()
         {
             throw new NotImplementedException();
@@ -79,6 +85,9 @@ namespace Punjab_Ornaments.Localization.Database
             throw new NotImplementedException();
         }
 
+        #endregion
+
+        #region consumer
         public Task<int> AddCustomer(Customer customer)
         {
             throw new NotImplementedException();
@@ -104,6 +113,9 @@ namespace Punjab_Ornaments.Localization.Database
             throw new NotImplementedException();
         }
 
+        #endregion
+
+        #region Request
         public Task<int> AddPurchase(PurchaseRequest Purchaseitem)
         {
             throw new NotImplementedException();
@@ -143,7 +155,9 @@ namespace Punjab_Ornaments.Localization.Database
         {
             throw new NotImplementedException();
         }
+        #endregion
 
+        #region metal
         public Task<int> AddMetalType(Discriptions metelType)
         {
             throw new NotImplementedException();
@@ -177,6 +191,18 @@ namespace Punjab_Ornaments.Localization.Database
         public Task<List<Discriptions>> GetBrandByMetalType(string metalType)
         {
             throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Quicksale
+        public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        {
+            var result = await _iAPIService.GenerateQuotation(printBillModel);
+
+            ToastDuration duration = result.HasErrors || result.IsSystemError ? ToastDuration.Long : ToastDuration.Short;
+            await _alertService.ShowAlert(result.Message, duration, 14);
+            return result;
         }
         #endregion
 

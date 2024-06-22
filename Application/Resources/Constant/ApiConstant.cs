@@ -1,9 +1,11 @@
-﻿namespace Punjab_Ornaments.Resources.Constant
+﻿
+namespace Punjab_Ornaments.Resources.Constant
 {
     public static class ApiConstant
     {
-        public const string url = "https://pnjb.azurewebsites.net/";
-        //public const string url = "http://localhost:5000";
+        //public const string url = "https://pnjb.azurewebsites.net/";
+        //public const string url = "http://localhost:5000/";
+        public const string url = "http://pnjb.eastus.cloudapp.azure.com/";
         public const string base_url = url + "api/";
 
         #region Account
@@ -25,6 +27,10 @@
         public const string GetAllGoldPurchaseRequests = base_url + "Approval/Getallgoldpurchaserequests";
         public const string GoldApprove = base_url + "Approval/GoldApprove/";
         public const string GoldReject = base_url + "Approval/GoldReject/";
+        #endregion
+
+        #region Quick Sale
+        public const string GenerateQuote = base_url + "Pdf/GeneratePDFGPT";
         #endregion
     }
 }

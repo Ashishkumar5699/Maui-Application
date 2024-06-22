@@ -6,8 +6,8 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Auth
 {
     public class LoginPageViewModel : BaseViewModel
     {
-        private string _username;
-        private string _password;
+        private string _username = "string";
+        private string _password = "string";
 
         public LoginPageViewModel(IDataService localDataService, INavigationService navigationservice) : base(localDataService, navigationservice)
         {

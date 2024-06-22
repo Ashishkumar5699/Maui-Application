@@ -4,6 +4,8 @@ using Punjab_Ornaments.Domain.Auth;
 using Punjab_Ornaments.Domain.Customer;
 using Punjab_Ornaments.Domain.Products;
 using Punjab_Ornaments.Domain.Products.Details;
+using PunjabOrnaments.Common.Bills;
+using PunjabOrnaments.Common.Models.Response;
 
 namespace Punjab_Ornaments.Infrastructure.Database
 {
@@ -12,7 +14,7 @@ namespace Punjab_Ornaments.Infrastructure.Database
         void Initialize();
 
         #region auth
-        Task<PunjabOrnaments.Common.Models.Response.ResponseResult<LoginUser>> LoginUser(string username, string password);
+        Task<ResponseResult<LoginUser>> LoginUser(string username, string password);
 
         #endregion
 
@@ -64,6 +66,10 @@ namespace Punjab_Ornaments.Infrastructure.Database
         Task<List<Discriptions>> GetBrandByMetalType(string metalType);
         #endregion
 
+        #endregion
+
+        #region QuickSale
+        public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel);
         #endregion
     }
 }

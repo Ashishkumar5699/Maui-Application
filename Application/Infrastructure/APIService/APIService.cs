@@ -1,6 +1,7 @@
 ﻿using Punjab_Ornaments.Domain.Auth;
 using Punjab_Ornaments.Infrastructure.RestService;
 using Punjab_Ornaments.Resources.Constant;
+using PunjabOrnaments.Common.Bills;
 using PunjabOrnaments.Common.Models.Response;
 
 namespace Punjab_Ornaments.Infrastructure.APIService
@@ -64,6 +65,20 @@ namespace Punjab_Ornaments.Infrastructure.APIService
         public async Task<Domain.Approvals.PurchaseRequest> GetPurchaseById(int id)
         {
             var response = await _restService.GetAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GetGoldRequestDetail + id.ToString(), "", null);
+            return response;
+        }
+
+        public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        {
+            //var data = new MemoryStream().ToArray();
+            var response = new ResponseResult<byte[]>
+            {
+                HasErrors = true,
+                IsSystemError = true,
+            };
+
+            response = await _restService.PostAsync(ApiConstant.GenerateQuote, printBillModel,response);
+            response.Message ??= "Opening Pdf";
             return response;
         }
     }
