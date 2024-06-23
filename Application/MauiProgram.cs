@@ -8,7 +8,6 @@ using Punjab_Ornaments.Infrastructure.RestService;
 using Punjab_Ornaments.Localization.Database;
 using Punjab_Ornaments.Presentation.Viewmodels;
 using Punjab_Ornaments.Presentation.Viewmodels.Approval;
-using Punjab_Ornaments.Presentation.Viewmodels.Auth;
 using Punjab_Ornaments.Presentation.Viewmodels.Common;
 using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer;
 using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase;
@@ -16,7 +15,6 @@ using Punjab_Ornaments.Presentation.Viewmodels.QuickSale;
 using Punjab_Ornaments.Presentation.Viewmodels.Settings;
 using Punjab_Ornaments.Presentation.Views;
 using Punjab_Ornaments.Presentation.Views.Approval;
-using Punjab_Ornaments.Presentation.Views.Auth;
 using Punjab_Ornaments.Presentation.Views.Customer;
 using Punjab_Ornaments.Presentation.Views.Purchase;
 using Punjab_Ornaments.Presentation.Views.QuickSale;
@@ -50,12 +48,13 @@ public static class MauiProgram
 		//return builder.Build();
 		var app = builder.Build();
         ServiceHelper.Initialize(app.Services);
+        Sonaar.Mobile.UI.Common.ServiceHelper.Initialize(app.Services);
 		return app;
 	}
 	public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
 	{
 		//Auth
-        mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
+        //mauiAppBuilder.Services.AddSingleton<LoginPageViewModel>();
 
 		//Home Page
         mauiAppBuilder.Services.AddSingleton<HomePageViewModel>();
@@ -80,6 +79,7 @@ public static class MauiProgram
 		//Quick Sale
         mauiAppBuilder.Services.AddSingleton<SalePageViewModel>();
 
+        Sonaar.Mobile.UI.Registry.UIRegistry.ViewModelRegistry.RegisterVieModels(mauiAppBuilder);
 
         return mauiAppBuilder;
 	}
@@ -92,13 +92,17 @@ public static class MauiProgram
 		mauiAppBuilder.Services.AddSingleton<IAPIService, APIService>();
 		mauiAppBuilder.Services.AddSingleton<IRestService, RestService>();
 		mauiAppBuilder.Services.AddSingleton<IAlertService, AlertService>();
+
+        Sonaar.Mobile.UI.Registry.ServiceRegistry.AppServiceRegistry.RegisterViews(mauiAppBuilder);
+
 		return mauiAppBuilder;
 	}
+
 	public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
 	{
 
 		//Auth
-        mauiAppBuilder.Services.AddSingleton<LoginPage>();
+        //mauiAppBuilder.Services.AddSingleton<LoginPage>();
 
 		//Home Page
         mauiAppBuilder.Services.AddSingleton<HomePageView>();
@@ -123,6 +127,7 @@ public static class MauiProgram
 		//Quick Sale
         mauiAppBuilder.Services.AddSingleton<SalePageView>();
 
+        Sonaar.Mobile.UI.Registry.UIRegistry.ViewRegistry.RegisterViews(mauiAppBuilder);
 
         return mauiAppBuilder;
 	}

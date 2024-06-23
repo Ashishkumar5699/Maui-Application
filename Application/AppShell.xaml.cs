@@ -1,6 +1,6 @@
 ﻿using Punjab_Ornaments.Presentation.Views;
 using Punjab_Ornaments.Presentation.Views.Approval;
-using Punjab_Ornaments.Presentation.Views.Auth;
+//using Punjab_Ornaments.Presentation.Views.Auth;
 using Punjab_Ornaments.Presentation.Views.Customer;
 using Punjab_Ornaments.Presentation.Views.Purchase;
 using Punjab_Ornaments.Presentation.Views.QuickSale;
@@ -19,7 +19,7 @@ public partial class AppShell : Shell
     private void RegisterRoutes()
 	{
         //Auth
-        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+       // Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
 
         //Home
         Routing.RegisterRoute(nameof(HomePageView), typeof(HomePageView));

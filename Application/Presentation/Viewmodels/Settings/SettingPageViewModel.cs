@@ -1,8 +1,7 @@
-﻿using Punjab_Ornaments.Infrastructure.APIService;
-using Punjab_Ornaments.Infrastructure.Database;
+﻿using Punjab_Ornaments.Infrastructure.Database;
 using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Presentation.Views.Auth;
 using Punjab_Ornaments.Resources.Constant;
+using Sonaar.Mobile.UI.Authentication;
 using System.Windows.Input;
 
 namespace Punjab_Ornaments.Presentation.Viewmodels.Settings
@@ -29,7 +28,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Settings
         public async void LogoutAsync()
         {
             await Task.Delay(2000);
-            Application.Current.MainPage = new LoginPage();
+            Application.Current.MainPage = new AuthPage();
         }
 
         public async Task NavigateToMetalTypePageAsync()
