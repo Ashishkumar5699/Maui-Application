@@ -1,10 +1,10 @@
-﻿using Punjab_Ornaments.Domain.Auth;
-using Punjab_Ornaments.Infrastructure.RestService;
-using Punjab_Ornaments.Resources.Constant;
-using PunjabOrnaments.Common.Bills;
-using PunjabOrnaments.Common.Models.Response;
+﻿using Sonaar.Domain.Auth;
+using Sonaar.Resources.Constant;
+using Sonaar.Common.Bills;
+using Sonaar.Common.Models.Response;
+using Sonaar.Mobile.RestBridge.RestService;
 
-namespace Punjab_Ornaments.Infrastructure.APIService
+namespace Sonaar.Infrastructure.APIService
 {
     public class APIService : IAPIService
     {
@@ -24,13 +24,13 @@ namespace Punjab_Ornaments.Infrastructure.APIService
 
             if (string.IsNullOrEmpty(loginUser.UserName))
             {
-                response.Message = PunjabOrnaments.Common.Constants.GlobalMessages.InvalidUsername;
+                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidUsername;
                 return response;
             }
 
             if (string.IsNullOrEmpty(loginUser.Password))
             {
-                response.Message = PunjabOrnaments.Common.Constants.GlobalMessages.InvalidPassword;
+                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidPassword;
                 return response;
             }
 

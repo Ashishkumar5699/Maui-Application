@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:Punjab_Ornaments.Domain.Approvals"
-             x:Class="Punjab_Ornaments.Presentation.Views.Approval.ApprovalTemplates.Purchasetemplate"
-             xmlns:convv="clr-namespace:Punjab_Ornaments.Presentation.Converters"
+             xmlns:model="clr-namespace:Sonaar.Domain.Approvals"
+             x:Class="Sonaar.Presentation.Views.Approval.ApprovalTemplates.Purchasetemplate"
+             xmlns:convv="clr-namespace:Sonaar.Presentation.Converters"
              x:Name="PurchasetemplateView">
     <Frame BackgroundColor="{Binding IsApproved,Converter={convv:ApprovaltoColour}}" CornerRadius="0">
         <Frame.GestureRecognizers>

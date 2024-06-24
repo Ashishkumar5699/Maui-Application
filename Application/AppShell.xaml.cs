@@ -1,12 +1,12 @@
-﻿using Punjab_Ornaments.Presentation.Views;
-using Punjab_Ornaments.Presentation.Views.Approval;
-//using Punjab_Ornaments.Presentation.Views.Auth;
-using Punjab_Ornaments.Presentation.Views.Customer;
-using Punjab_Ornaments.Presentation.Views.Purchase;
-using Punjab_Ornaments.Presentation.Views.QuickSale;
-using Punjab_Ornaments.Presentation.Views.Settings;
+﻿using Sonaar.Presentation.Views;
+using Sonaar.Presentation.Views.Approval;
+//using Sonaar.Presentation.Views.Auth;
+using Sonaar.Presentation.Views.Customer;
+using Sonaar.Presentation.Views.Purchase;
+using Sonaar.Presentation.Views.QuickSale;
+using Sonaar.Presentation.Views.Settings;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 public partial class AppShell : Shell
 {

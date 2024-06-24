@@ -1,12 +1,12 @@
-﻿using Punjab_Ornaments.Infrastructure.APIService;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Domain.Products.Details;
-using Punjab_Ornaments.Resources.Constant;
+﻿using Sonaar.Infrastructure.APIService;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Domain.Products.Details;
+using Sonaar.Resources.Constant;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Settings
+namespace Sonaar.Presentation.Viewmodels.Settings
 {
     [QueryProperty(nameof(Id), "Id")]
     public partial class MetalTypePageViewModel : BaseViewModel

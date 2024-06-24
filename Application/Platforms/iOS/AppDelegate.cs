@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

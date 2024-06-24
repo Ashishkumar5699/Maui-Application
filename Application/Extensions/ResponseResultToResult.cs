@@ -1,6 +1,6 @@
-﻿using Punjab_Ornaments.Domain.Auth;
-using PunjabOrnaments.Common.Models.Response;
-namespace Punjab_Ornaments.Extensions
+﻿using Sonaar.Domain.Auth;
+using Sonaar.Common.Models.Response;
+namespace Sonaar.Extensions
 {
     public static class ResponseResultToResult
     {

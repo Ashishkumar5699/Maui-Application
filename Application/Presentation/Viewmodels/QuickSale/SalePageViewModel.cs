@@ -1,14 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Domain.Sale;
-using Punjab_Ornaments.Domain.Customer;
-using PunjabOrnaments.Common.Bills;
-using Punjab_Ornaments.Infrastructure.Helpers;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Domain.Sale;
+using Sonaar.Domain.Customer;
+using Sonaar.Common.Bills;
+using Sonaar.Infrastructure.Helpers;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.QuickSale
+namespace Sonaar.Presentation.Viewmodels.QuickSale
 {
     public partial class SalePageViewModel : BaseViewModel
     {
@@ -53,7 +53,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.QuickSale
         private async void GenerateBillAsync()
         {
             var billmodel = new PrintBillModel();
-            billmodel.Consumer = new PunjabOrnaments.Common.Models.Products.Consumer
+            billmodel.Consumer = new Sonaar.Common.Models.Products.Consumer
             {
                 CustmorPrifix = "MR",
                 CustmorFirstName = "CustmorFirstName",

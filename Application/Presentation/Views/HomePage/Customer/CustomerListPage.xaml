@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer"
-             xmlns:model="clr-namespace:Punjab_Ornaments.Domain.Customer"
-             x:Class="Punjab_Ornaments.Presentation.Views.Customer.CustomerListPage"
+             xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels.HomePage.Customer"
+             xmlns:model="clr-namespace:Sonaar.Domain.Customer"
+             x:Class="Sonaar.Presentation.Views.Customer.CustomerListPage"
              x:DataType="viewmodel:CustomerListViewModel"
              Title="Customer List Page">
     <Grid>

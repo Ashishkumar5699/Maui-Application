@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="Punjab_Ornaments.AppShell"
+    x:Class="Sonaar.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Punjab_Ornaments"
-    xmlns:Home="clr-namespace:Punjab_Ornaments.Presentation.Views"
-    xmlns:Approval="clr-namespace:Punjab_Ornaments.Presentation.Views.Approval"
-    xmlns:Setting="clr-namespace:Punjab_Ornaments.Presentation.Views.Settings"
-    xmlns:qucksale="clr-namespace:Punjab_Ornaments.Presentation.Views.QuickSale"
-    xmlns:dummy="clr-namespace:Punjab_Ornaments.Presentation.Views"
+    xmlns:local="clr-namespace:Sonaar"
+    xmlns:Home="clr-namespace:Sonaar.Presentation.Views"
+    xmlns:Approval="clr-namespace:Sonaar.Presentation.Views.Approval"
+    xmlns:Setting="clr-namespace:Sonaar.Presentation.Views.Settings"
+    xmlns:qucksale="clr-namespace:Sonaar.Presentation.Views.QuickSale"
+    xmlns:dummy="clr-namespace:Sonaar.Presentation.Views"
     Shell.FlyoutBehavior="Flyout">
 
     

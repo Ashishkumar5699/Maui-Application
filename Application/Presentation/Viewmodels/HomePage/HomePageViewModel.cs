@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Resources.Constant;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Resources.Constant;
 using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
@@ -12,7 +12,7 @@ using System.Windows.Input;
 using Color = Syncfusion.Drawing.Color;
 using SizeF = Syncfusion.Drawing.SizeF;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels
+namespace Sonaar.Presentation.Viewmodels
 {
     public partial class HomePageViewModel : BaseViewModel
     {
@@ -80,8 +80,8 @@ namespace Punjab_Ornaments.Presentation.Viewmodels
 
             //Get the font file stream from the assembly. 
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            string basePath = "Punjab_Ornaments.Resources.Fonts.";
-            //string basePath = "D:\\PunjabOrnaments\\MobileApp\\Resources\\Fonts\\";
+            string basePath = "Sonaar.Resources.Fonts.";
+            //string basePath = "D:\\Sonaar\\MobileApp\\Resources\\Fonts\\";
             Stream fontStream = assembly.GetManifestResourceStream(basePath + "OpenSans-Regular.ttf");
             //Create a PdfTrueTypeFont from the stream with the different sizes. 
             PdfTrueTypeFont headerFont = new PdfTrueTypeFont(fontStream, 30, PdfFontStyle.Regular);
@@ -247,7 +247,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels
             borderPen.DashPattern = new float[] { 3, 3 };
             graphics.DrawLine(borderPen, new Syncfusion.Drawing.PointF(0, pageHeight - 100), new Syncfusion.Drawing.PointF(pageWidth, pageHeight - 100));
 
-            basePath = "Punjab_Ornaments.Resources.Images.";
+            basePath = "Sonaar.Resources.Images.";
             //Get the image file stream from the assembly.
             Stream imageStream = assembly.GetManifestResourceStream(basePath + "Star.png");
 

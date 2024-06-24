@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Helpers
+﻿namespace Sonaar.Helpers
 {
     public static class Utilities
     {

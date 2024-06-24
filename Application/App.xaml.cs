@@ -1,6 +1,6 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
+﻿using Sonaar.Infrastructure.Database;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 public partial class App : Application
 {

@@ -94,8 +94,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<!--<PackageReference Include="CommunityToolkit.Maui" Version="9.0.1" />-->
+		<!--<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />-->
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
@@ -166,7 +166,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MAUIControls\CustomControlFramework\CustomControlFramework.csproj" />
+	  <!--<ProjectReference Include="..\MAUIControls\CustomControlFramework\CustomControlFramework.csproj" />-->
 	  <ProjectReference Include="..\Sonaar.Mobile.UI\Sonaar.Mobile.UI.csproj" />
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />
 	  <ProjectReference Include="..\Sonaar.Mobile.UI.Registry\Sonaar.Mobile.UI.Registry.csproj" />

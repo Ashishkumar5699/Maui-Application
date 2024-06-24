@@ -1,8 +1,8 @@
 ﻿using SQLite;
 
-namespace Punjab_Ornaments.Domain.Approvals
+namespace Sonaar.Domain.Approvals
 {
-    public class PurchaseRequest : PunjabOrnaments.Common.Approvals.PurchaseRequest
+    public class PurchaseRequest : Sonaar.Common.Approvals.PurchaseRequest
     {
         [PrimaryKey]
         [AutoIncrement]

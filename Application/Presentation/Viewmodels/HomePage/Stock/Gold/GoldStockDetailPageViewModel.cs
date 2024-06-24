@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Domain.Products;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Domain.Products;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels
+namespace Sonaar.Presentation.Viewmodels
 {
     [QueryProperty(nameof(Id), "id")]
     public partial class GoldStockDetailPageViewModel : BaseViewModel

@@ -1,26 +1,25 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
-using Punjab_Ornaments.Infrastructure.AlertService;
-using Punjab_Ornaments.Infrastructure.APIService;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Infrastructure.RestService;
-using Punjab_Ornaments.Localization.Database;
-using Punjab_Ornaments.Presentation.Viewmodels;
-using Punjab_Ornaments.Presentation.Viewmodels.Approval;
-using Punjab_Ornaments.Presentation.Viewmodels.Common;
-using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer;
-using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase;
-using Punjab_Ornaments.Presentation.Viewmodels.QuickSale;
-using Punjab_Ornaments.Presentation.Viewmodels.Settings;
-using Punjab_Ornaments.Presentation.Views;
-using Punjab_Ornaments.Presentation.Views.Approval;
-using Punjab_Ornaments.Presentation.Views.Customer;
-using Punjab_Ornaments.Presentation.Views.Purchase;
-using Punjab_Ornaments.Presentation.Views.QuickSale;
-using Punjab_Ornaments.Presentation.Views.Settings;
+using Sonaar.Infrastructure.AlertService;
+using Sonaar.Infrastructure.APIService;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Localization.Database;
+using Sonaar.Presentation.Viewmodels;
+using Sonaar.Presentation.Viewmodels.Approval;
+using Sonaar.Presentation.Viewmodels.Common;
+using Sonaar.Presentation.Viewmodels.HomePage.Customer;
+using Sonaar.Presentation.Viewmodels.HomePage.Purchase;
+using Sonaar.Presentation.Viewmodels.QuickSale;
+using Sonaar.Presentation.Viewmodels.Settings;
+using Sonaar.Presentation.Views;
+using Sonaar.Presentation.Views.Approval;
+using Sonaar.Presentation.Views.Customer;
+using Sonaar.Presentation.Views.Purchase;
+using Sonaar.Presentation.Views.QuickSale;
+using Sonaar.Presentation.Views.Settings;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 public static class MauiProgram
 {
@@ -90,7 +89,7 @@ public static class MauiProgram
 		//mauiAppBuilder.Services.AddSingleton<IDataService, SQLiteDataService>();
 		mauiAppBuilder.Services.AddSingleton<IDataService, RESTDataService>();
 		mauiAppBuilder.Services.AddSingleton<IAPIService, APIService>();
-		mauiAppBuilder.Services.AddSingleton<IRestService, RestService>();
+		//mauiAppBuilder.Services.AddSingleton<IRestService, RestService>();
 		mauiAppBuilder.Services.AddSingleton<IAlertService, AlertService>();
 
         Sonaar.Mobile.UI.Registry.ServiceRegistry.AppServiceRegistry.RegisterViews(mauiAppBuilder);

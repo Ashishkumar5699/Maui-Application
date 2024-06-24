@@ -1,5 +1,5 @@
 ﻿using System;
-using PunjabOrnaments.Common.Models.Response;
+using Sonaar.Common.Models.Response;
 using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Services.BusinessLayer.Auth

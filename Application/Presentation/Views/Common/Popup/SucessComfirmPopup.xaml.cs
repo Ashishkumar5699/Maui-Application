@@ -1,4 +1,4 @@
-namespace Punjab_Ornaments.Presentation.Views.Popup;
+namespace Sonaar.Presentation.Views.Popup;
 
 public partial class SucessComfirmPopup : ContentView
 {

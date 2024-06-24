@@ -1,8 +1,8 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase
+namespace Sonaar.Presentation.Viewmodels.HomePage.Purchase
 {
     public partial class AddPurchaseViewModel : BaseViewModel
     {

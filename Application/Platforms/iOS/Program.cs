@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 public class Program
 {

@@ -1,10 +1,10 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Resources.Constant;
+﻿using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Resources.Constant;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
+namespace Sonaar.Presentation.Viewmodels.Approval
 {
     public partial class ApprovalViewModel : BaseViewModel
     {

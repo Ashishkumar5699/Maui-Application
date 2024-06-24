@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels"
-             xmlns:model="clr-namespace:Punjab_Ornaments.Domain.Products"
+             xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels"
+             xmlns:model="clr-namespace:Sonaar.Domain.Products"
              x:DataType="viewmodel:GoldStockDetailPageViewModel"
-             x:Class="Punjab_Ornaments.Presentation.Views.GoldStockDetailPage"
+             x:Class="Sonaar.Presentation.Views.GoldStockDetailPage"
              Title="GoldStockDetailPage">
     <ScrollView>
         <VerticalStackLayout BindingContext="{Binding GoldStock}">

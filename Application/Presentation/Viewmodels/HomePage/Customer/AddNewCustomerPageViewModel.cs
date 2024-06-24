@@ -1,8 +1,8 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer
+namespace Sonaar.Presentation.Viewmodels.HomePage.Customer
 {
     public partial class AddNewCustomerPageViewModel : BaseViewModel
     {

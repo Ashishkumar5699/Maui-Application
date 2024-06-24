@@ -1,17 +1,17 @@
 ﻿using CommunityToolkit.Maui.Core;
-using Punjab_Ornaments.Infrastructure.AlertService;
-using Punjab_Ornaments.Infrastructure.APIService;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Domain;
-using Punjab_Ornaments.Domain.Approvals;
-using Punjab_Ornaments.Domain.Auth;
-using Punjab_Ornaments.Domain.Products.Details;
-using PunjabOrnaments.Common.Models.Response;
-using Punjab_Ornaments.Domain.Products;
-using Punjab_Ornaments.Domain.Customer;
-using PunjabOrnaments.Common.Bills;
+using Sonaar.Infrastructure.AlertService;
+using Sonaar.Infrastructure.APIService;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Domain;
+using Sonaar.Domain.Approvals;
+using Sonaar.Domain.Auth;
+using Sonaar.Domain.Products.Details;
+using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Products;
+using Sonaar.Domain.Customer;
+using Sonaar.Common.Bills;
 
-namespace Punjab_Ornaments.Localization.Database
+namespace Sonaar.Localization.Database
 {
     public class RESTDataService : IDataService
     {

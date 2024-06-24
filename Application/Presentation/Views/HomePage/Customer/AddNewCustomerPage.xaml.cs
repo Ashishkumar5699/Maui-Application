@@ -1,6 +1,6 @@
-using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Customer;
+using Sonaar.Presentation.Viewmodels.HomePage.Customer;
 
-namespace Punjab_Ornaments.Presentation.Views;
+namespace Sonaar.Presentation.Views;
 
 public partial class AddNewCustomerPage : ContentPage
 {

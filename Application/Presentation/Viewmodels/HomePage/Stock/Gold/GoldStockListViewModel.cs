@@ -1,12 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
-using Punjab_Ornaments.Resources.Constant;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
+using Sonaar.Resources.Constant;
 using System.Collections.ObjectModel;
-using Punjab_Ornaments.Domain.Products;
+using Sonaar.Domain.Products;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels
+namespace Sonaar.Presentation.Viewmodels
 {
     public partial class GoldStockListViewModel : BaseViewModel
     {

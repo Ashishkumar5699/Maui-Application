@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Resources.Constant
+﻿namespace Sonaar.Resources.Constant
 {
     public enum NavigationPath
     {

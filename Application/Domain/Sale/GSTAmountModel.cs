@@ -1,7 +1,7 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Punjab_Ornaments.Domain.Sale
+namespace Sonaar.Domain.Sale
 {
     public partial class GSTAmountModel : ObservableObject
     {

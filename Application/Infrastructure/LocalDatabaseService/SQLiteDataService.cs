@@ -1,14 +1,14 @@
-﻿using Punjab_Ornaments.Domain.Approvals;
-using Punjab_Ornaments.Domain.Auth;
-using Punjab_Ornaments.Domain.Customer;
-using Punjab_Ornaments.Domain.Products;
-using Punjab_Ornaments.Domain.Products.Details;
-using Punjab_Ornaments.Resources.Constant;
-using PunjabOrnaments.Common.Bills;
-using PunjabOrnaments.Common.Models.Response;
+﻿using Sonaar.Domain.Approvals;
+using Sonaar.Domain.Auth;
+using Sonaar.Domain.Customer;
+using Sonaar.Domain.Products;
+using Sonaar.Domain.Products.Details;
+using Sonaar.Resources.Constant;
+using Sonaar.Common.Bills;
+using Sonaar.Common.Models.Response;
 using SQLite;
 
-namespace Punjab_Ornaments.Infrastructure.Database
+namespace Sonaar.Infrastructure.Database
 {
     public partial class SQLiteDataService : IDataService
     {

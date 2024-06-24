@@ -1,4 +1,4 @@
-namespace Punjab_Ornaments.Presentation.Views.Settings.Templates;
+namespace Sonaar.Presentation.Views.Settings.Templates;
 
 public partial class MetalTypeTemplate : ContentView
 {

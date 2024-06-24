@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Maui.Core;
 
-namespace Punjab_Ornaments.Infrastructure.AlertService
+namespace Sonaar.Infrastructure.AlertService
 {
     public interface IAlertService
     {

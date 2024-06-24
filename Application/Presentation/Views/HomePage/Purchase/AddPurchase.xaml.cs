@@ -1,6 +1,6 @@
-using Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase;
+using Sonaar.Presentation.Viewmodels.HomePage.Purchase;
 
-namespace Punjab_Ornaments.Presentation.Views.Purchase;
+namespace Sonaar.Presentation.Views.Purchase;
 
 public partial class AddPurchase : ContentPage
 {

@@ -1,8 +1,8 @@
-﻿namespace Punjab_Ornaments.Resources.Constant
+﻿namespace Sonaar.Resources.Constant
 {
     public static class DatabaseConstant
     {
-        public const string DatabaseFilename = "Punjab_Ornaments.db3";
+        public const string DatabaseFilename = "Sonaar.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
             // open the database in read/write mode

@@ -1,10 +1,10 @@
 ﻿
-using Punjab_Ornaments.Domain.Auth;
-using Punjab_Ornaments.Domain.Approvals;
-using PunjabOrnaments.Common.Bills;
-using PunjabOrnaments.Common.Models.Response;
+using Sonaar.Domain.Auth;
+using Sonaar.Domain.Approvals;
+using Sonaar.Common.Bills;
+using Sonaar.Common.Models.Response;
 
-namespace Punjab_Ornaments.Infrastructure.APIService
+namespace Sonaar.Infrastructure.APIService
 {
     public interface IAPIService
     {

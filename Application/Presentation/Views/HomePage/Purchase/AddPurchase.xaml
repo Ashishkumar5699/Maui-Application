@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Punjab_Ornaments.Presentation.Views.Purchase.AddPurchase"
-             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels.HomePage.Purchase"
-             xmlns:model="clr-namespace:Punjab_Ornaments.Models.Stock"
+             x:Class="Sonaar.Presentation.Views.Purchase.AddPurchase"
+             xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels.HomePage.Purchase"
+             xmlns:model="clr-namespace:Sonaar.Models.Stock"
              x:DataType="viewmodel:AddPurchaseViewModel"
              Title="AddPurchase">
     <ScrollView>

@@ -1,6 +1,6 @@
 ﻿using System;
 using Sonaar.Mobile.RestBridge.RestService;
-using PunjabOrnaments.Common.Models.Response;
+using Sonaar.Common.Models.Response;
 using Sonaar.Mobile.Models.Auth;
 using Sonaar.Mobile.RestBridge.Urls;
 
@@ -23,13 +23,13 @@ namespace Sonaar.Services.BusinessLayer.Auth
 
             if (string.IsNullOrEmpty(loginUser.UserName))
             {
-                response.Message = PunjabOrnaments.Common.Constants.GlobalMessages.InvalidUsername;
+                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidUsername;
                 return response;
             }
 
             if (string.IsNullOrEmpty(loginUser.Password))
             {
-                response.Message = PunjabOrnaments.Common.Constants.GlobalMessages.InvalidPassword;
+                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidPassword;
                 return response;
             }
 

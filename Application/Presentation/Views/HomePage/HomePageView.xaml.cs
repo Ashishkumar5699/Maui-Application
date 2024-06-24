@@ -1,6 +1,6 @@
-using Punjab_Ornaments.Presentation.Viewmodels;
+using Sonaar.Presentation.Viewmodels;
 
-namespace Punjab_Ornaments.Presentation.Views;
+namespace Sonaar.Presentation.Views;
 
 public partial class HomePageView : ContentPage
 {

@@ -1,6 +1,6 @@
-using Punjab_Ornaments.Presentation.Viewmodels.Approval;
+using Sonaar.Presentation.Viewmodels.Approval;
 
-namespace Punjab_Ornaments.Presentation.Views.Approval;
+namespace Sonaar.Presentation.Views.Approval;
 
 public partial class PendingApprovalsView : ContentPage
 {

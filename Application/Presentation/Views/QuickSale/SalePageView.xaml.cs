@@ -1,6 +1,6 @@
-﻿using Punjab_Ornaments.Presentation.Viewmodels.QuickSale;
+﻿using Sonaar.Presentation.Viewmodels.QuickSale;
 
-namespace Punjab_Ornaments.Presentation.Views.QuickSale;
+namespace Sonaar.Presentation.Views.QuickSale;
 
 public partial class SalePageView : ContentPage
 {

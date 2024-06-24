@@ -1,8 +1,8 @@
-﻿using Punjab_Ornaments.Infrastructure.APIService;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Sonaar.Infrastructure.APIService;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Settings
+namespace Sonaar.Presentation.Viewmodels.Settings
 {
     public partial class MetalTypeDetailPageViewModel : BaseViewModel
     {

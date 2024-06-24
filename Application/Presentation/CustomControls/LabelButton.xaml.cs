@@ -1,4 +1,4 @@
-namespace Punjab_Ornaments.Presentation.CustomControls;
+namespace Sonaar.Presentation.CustomControls;
 
 public partial class LabelButton : ContentView
 {

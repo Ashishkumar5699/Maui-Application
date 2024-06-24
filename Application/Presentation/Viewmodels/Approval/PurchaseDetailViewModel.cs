@@ -1,8 +1,8 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
+namespace Sonaar.Presentation.Viewmodels.Approval
 {
     [QueryProperty(nameof(PurchaseRequestId), "PurchaseId")]
     public partial class PurchaseDetailViewModel : BaseViewModel

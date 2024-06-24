@@ -1,6 +1,6 @@
-using Punjab_Ornaments.Presentation.Viewmodels.Settings;
+using Sonaar.Presentation.Viewmodels.Settings;
 
-namespace Punjab_Ornaments.Presentation.Views.Settings;
+namespace Sonaar.Presentation.Views.Settings;
 
 public partial class MetalTypeDetailPage : ContentPage
 {

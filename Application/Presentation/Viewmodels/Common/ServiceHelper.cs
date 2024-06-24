@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Presentation.Viewmodels.Common
+﻿namespace Sonaar.Presentation.Viewmodels.Common
 {
     public class ServiceHelper
     {

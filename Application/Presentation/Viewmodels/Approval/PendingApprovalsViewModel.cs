@@ -1,8 +1,8 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 using System.Collections.ObjectModel;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Approval
+namespace Sonaar.Presentation.Viewmodels.Approval
 {
     public partial class PendingApprovalsViewModel : ApprovalViewModel
     {

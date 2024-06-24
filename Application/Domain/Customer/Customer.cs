@@ -1,8 +1,8 @@
 ﻿using SQLite;
 
-namespace Punjab_Ornaments.Domain.Customer
+namespace Sonaar.Domain.Customer
 {
-    public class Customer : PunjabOrnaments.Common.Models.Products.Consumer
+    public class Customer : Sonaar.Common.Models.Products.Consumer
     {
         [PrimaryKey]
         [AutoIncrement]

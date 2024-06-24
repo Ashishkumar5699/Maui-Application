@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using CommunityToolkit.Mvvm.ComponentModel;
-using PunjabOrnaments.Common.Models.Auth;
+using Sonaar.Common.Models.Auth;
 
 namespace Sonaar.Mobile.Models.Auth
 {

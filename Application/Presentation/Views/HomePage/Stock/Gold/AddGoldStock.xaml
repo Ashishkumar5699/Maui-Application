@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Punjab_Ornaments.Presentation.Viewmodels"
-             xmlns:model="clr-namespace:Punjab_Ornaments.Domain.Products"
+             xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels"
+             xmlns:model="clr-namespace:Sonaar.Domain.Products"
              x:DataType="model:Gold"
-             x:Class="Punjab_Ornaments.Presentation.Views.AddGoldStock"
+             x:Class="Sonaar.Presentation.Views.AddGoldStock"
              Title="AddGoldStock">
     <VerticalStackLayout Spacing="10">
         <Frame VerticalOptions="Center" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" CornerRadius="50">

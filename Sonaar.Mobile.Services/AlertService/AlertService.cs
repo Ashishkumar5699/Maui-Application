@@ -1,10 +1,10 @@
-﻿using CommunityToolkit.Maui.Alerts;
+﻿using System;
 using CommunityToolkit.Maui.Core;
-using System.Threading;
+using CommunityToolkit.Maui.Alerts;
 
-namespace Sonaar.Infrastructure.AlertService
+namespace Sonaar.Mobile.Services.AlertService
 {
-    public class AlertService : IAlertService
+	public class AlertService : IAlertService
     {
         private readonly CancellationTokenSource cancellationTokenSource;
 
@@ -21,3 +21,4 @@ namespace Sonaar.Infrastructure.AlertService
         }
     }
 }
+

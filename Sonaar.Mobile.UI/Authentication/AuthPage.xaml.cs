@@ -1,4 +1,6 @@
-﻿using Sonaar.Mobile.UI.Common;
+﻿using System;
+using Microsoft.Maui.Controls;
+using Sonaar.Mobile.UI.Common;
 
 namespace Sonaar.Mobile.UI.Authentication;
 

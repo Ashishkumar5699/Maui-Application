@@ -1,9 +1,9 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels
+namespace Sonaar.Presentation.Viewmodels
 {
     public class BaseViewModel : ObservableObject
     {
