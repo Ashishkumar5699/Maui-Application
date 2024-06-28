@@ -10,13 +10,11 @@ using Sonaar.Presentation.Viewmodels.Approval;
 using Sonaar.Presentation.Viewmodels.Common;
 using Sonaar.Presentation.Viewmodels.HomePage.Customer;
 using Sonaar.Presentation.Viewmodels.HomePage.Purchase;
-using Sonaar.Presentation.Viewmodels.QuickSale;
 using Sonaar.Presentation.Viewmodels.Settings;
 using Sonaar.Presentation.Views;
 using Sonaar.Presentation.Views.Approval;
 using Sonaar.Presentation.Views.Customer;
 using Sonaar.Presentation.Views.Purchase;
-using Sonaar.Presentation.Views.QuickSale;
 using Sonaar.Presentation.Views.Settings;
 
 namespace Sonaar;
@@ -75,9 +73,6 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<MetalTypePageViewModel>();
         mauiAppBuilder.Services.AddSingleton<MetalTypeDetailPageViewModel>();
 
-		//Quick Sale
-        mauiAppBuilder.Services.AddSingleton<SalePageViewModel>();
-
         Sonaar.Mobile.UI.Registry.UIRegistry.ViewModelRegistry.RegisterVieModels(mauiAppBuilder);
 
         return mauiAppBuilder;
@@ -122,9 +117,6 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<SettingPage>();
         mauiAppBuilder.Services.AddSingleton<MetalTypePage>();
         mauiAppBuilder.Services.AddSingleton<MetalTypeDetailPage>();
-
-		//Quick Sale
-        mauiAppBuilder.Services.AddSingleton<SalePageView>();
 
         Sonaar.Mobile.UI.Registry.UIRegistry.ViewRegistry.RegisterViews(mauiAppBuilder);
 

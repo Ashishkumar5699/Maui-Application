@@ -282,8 +282,8 @@ namespace Sonaar.Presentation.Viewmodels
             ms.Position = 0;
             //Saves the memory stream as file.
             //SaveService saveService = new();
-            Infrastructure.Helpers.SaveService saveService = new();
-            saveService.SaveAndView("Invoice.pdf", "application/pdf", ms);
+            //Infrastructure.Helpers.SaveService saveService = new();
+            //saveService.SaveAndView("Invoice.pdf", "application/pdf", ms);
             //}
             //#endregion
             ////#region Helper Methods

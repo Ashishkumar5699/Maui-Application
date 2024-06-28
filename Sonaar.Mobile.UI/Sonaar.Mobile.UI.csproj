@@ -34,13 +34,18 @@
 	  <None Remove="Authentication\" />
 	  <None Remove="Common\" />
 	  <None Remove="UnderConstructions\" />
+	  <None Remove="Mortgage\" />
+	  <None Remove="QuickSale\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Authentication\" />
 	  <Folder Include="Common\" />
 	  <Folder Include="UnderConstructions\" />
+	  <Folder Include="Mortgage\" />
+	  <Folder Include="QuickSale\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />
+	  <ProjectReference Include="..\Sonar.Mobile.Platform\Sonar.Mobile.Platform.csproj" />
 	</ItemGroup>
 </Project>

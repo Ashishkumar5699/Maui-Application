@@ -8,7 +8,7 @@ using Windows.Storage.Streams;
 using Windows.Storage;
 using Windows.UI.Popups;
 
-namespace Sonaar.Infrastructure.Helpers
+namespace Sonaar.Mobile.Services.SaveService
 {
     public partial class SaveService
     {

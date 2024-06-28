@@ -28,9 +28,11 @@
 
 	<ItemGroup>
 	  <None Remove="Auth\" />
+	  <None Remove="Print\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
+	  <Folder Include="Print\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.RestBridge\Sonaar.Mobile.RestBridge.csproj" />

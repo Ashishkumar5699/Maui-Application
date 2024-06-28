@@ -1,5 +1,4 @@
-﻿using System;
-using Sonaar.Mobile.Services.Navigation;
+﻿using Sonaar.Mobile.Services.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.UI.Common

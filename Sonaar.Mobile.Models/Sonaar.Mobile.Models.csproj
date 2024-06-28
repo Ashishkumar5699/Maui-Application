@@ -29,9 +29,19 @@
 
 	<ItemGroup>
 	  <None Remove="Auth\" />
+	  <None Remove="Client\" />
+	  <None Remove="Tax\" />
+	  <None Remove="Sale\" />
+	  <None Remove="Prints\" />
+	  <None Remove="Products\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
+	  <Folder Include="Client\" />
+	  <Folder Include="Tax\" />
+	  <Folder Include="Sale\" />
+	  <Folder Include="Prints\" />
+	  <Folder Include="Products\" />
 	</ItemGroup>
 	<Import Project="..\Common\Models\Sonaar.Common.Models.projitems" Label="Shared" Condition="Exists('..\Common\Models\Sonaar.Common.Models.projitems')" />
 </Project>

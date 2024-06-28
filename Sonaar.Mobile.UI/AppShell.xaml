@@ -2,6 +2,7 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:dummy="clr-namespace:Sonaar.Mobile.UI.UnderConstructions"
+       xmlns:mortgage="clr-namespace:Sonaar.Mobile.UI.Mortgage"
        x:Class="Sonaar.Mobile.UI.AppShell"
        Shell.FlyoutBehavior="Flyout">
 
@@ -36,7 +37,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Mortgage">
-        <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate mortgage:MortgagePage}"/>
     </FlyoutItem>
 
     <!--<FlyoutItem Title="Account">

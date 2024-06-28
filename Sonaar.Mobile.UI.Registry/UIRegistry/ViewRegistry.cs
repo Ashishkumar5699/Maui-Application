@@ -1,4 +1,4 @@
-﻿using Sonaar.Mobile.UI.Authentication;
+﻿using Sonaar.Mobile.UI;
 
 namespace Sonaar.Mobile.UI.Registry.UIRegistry
 {
@@ -6,7 +6,11 @@ namespace Sonaar.Mobile.UI.Registry.UIRegistry
 	{
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
-            mauiAppBuilder.Services.AddSingleton<AuthPage>();
+            mauiAppBuilder.Services.AddSingleton<Authentication.AuthPage>();
+
+            mauiAppBuilder.Services.AddSingleton<Mortgage.MortgagePage>();
+
+            mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageView>();
 
             return mauiAppBuilder;
         }

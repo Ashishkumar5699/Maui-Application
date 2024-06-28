@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mortgage="clr-namespace:Sonaar.Mobile.UI.Mortgage"
+             x:DataType="mortgage:MortgageViewModel"
+             x:Class="Sonaar.Mobile.UI.Mortgage.MortgagePage"
+             Title="MortgagePage">
+    <VerticalStackLayout>
+        <VerticalStackLayout IsEnabled="{Binding IsNotCalculated}">
+            <Label Text="Start Date"/>
+            <DatePicker Date="{Binding StartDate}" />
+
+            <Label Text="End Date"/>
+            <DatePicker Date="{Binding EndDate}" MinimumDate="{Binding StartDate}"/>
+
+            <Label Text="Date Calculation Type"/>
+            <HorizontalStackLayout RadioButtonGroup.GroupName="DateCalculationMode"
+                                   RadioButtonGroup.SelectedValue="{Binding SelectedDateCalculationMethod}">
+
+                <RadioButton Content="Month" Value="Month" IsChecked="True"/>
+
+                <RadioButton Content="Day" Value="Day"/>
+
+            </HorizontalStackLayout>
+
+            <Label Text="Mortgage Amount"/>
+            <Entry Text="{Binding MortagageAmount}" Keyboard="Numeric"/>
+
+            <Label Text="Intrest"/>
+            <Entry Text="{Binding IntrestRate}"/>
+
+            <Label Text="Total"/>
+            <Entry Text="{Binding TotalAmount}" IsReadOnly="True"/>
+
+            <HorizontalStackLayout RadioButtonGroup.GroupName="IntrestCalculationMode"
+                                   RadioButtonGroup.SelectedValue="{Binding SelectedIntrestCalculationMode}">
+
+                <RadioButton Content="Normal" Value="Normal" IsChecked="True"/>
+
+                <RadioButton Content="Re-new" Value="Renew"/>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+        <Button Text="Calculate" Command="{Binding CalculateActionCommand}">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsNotCalculated}" Value="True">
+                    <Setter Property="Text" Value="Calculate"/>
+                    <Setter Property="Command" Value="{Binding CalculateActionCommand}"/>
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsCalculated}" Value="True">
+                    <Setter Property="Text" Value="Reset"/>
+                    <Setter Property="Command" Value="{Binding ResetActionCommand}"/>
+                </DataTrigger>
+            </Button.Triggers>
+
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>

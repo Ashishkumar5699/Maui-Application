@@ -71,7 +71,6 @@
 	  <None Remove=".gitignore" />
 	  <None Remove=".git" />
 	  <None Remove="README.md" />
-	  <None Remove="Presentation\Views\QuickSale\" />
 	  <None Remove="Presentation\Viewmodels\QuickSale\" />
 	</ItemGroup>
 
@@ -172,7 +171,6 @@
 	  <ProjectReference Include="..\Sonaar.Mobile.UI.Registry\Sonaar.Mobile.UI.Registry.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Presentation\Views\QuickSale\" />
 	  <Folder Include="Presentation\Viewmodels\QuickSale\" />
 	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionPunjabOrnamentsHideInfoBar="True" /></VisualStudio></ProjectExtensions>

@@ -10,6 +10,7 @@ namespace Sonaar.Mobile.UI.Authentication
     public partial class AuthPageViewModel : BaseViewModel
     {
         private readonly IAuthService _authService;
+
         #region Constructor
         public AuthPageViewModel(INavigationService navigationService, IAuthService authService) : base(navigationService)
         {

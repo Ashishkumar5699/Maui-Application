@@ -1,6 +1,4 @@
-﻿using Sonaar.Presentation.Viewmodels.QuickSale;
-
-namespace Sonaar.Presentation.Views.QuickSale;
+﻿namespace Sonaar.Mobile.UI.QuickSale;
 
 public partial class SalePageView : ContentPage
 {
@@ -8,5 +6,6 @@ public partial class SalePageView : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
+
     }
 }

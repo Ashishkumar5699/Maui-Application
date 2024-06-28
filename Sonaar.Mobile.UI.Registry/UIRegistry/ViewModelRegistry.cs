@@ -1,5 +1,5 @@
 ﻿using System;
-using Sonaar.Mobile.UI.Authentication;
+using Sonaar.Mobile.UI;
 
 namespace Sonaar.Mobile.UI.Registry.UIRegistry
 {
@@ -7,7 +7,12 @@ namespace Sonaar.Mobile.UI.Registry.UIRegistry
 	{
         public static MauiAppBuilder RegisterVieModels(this MauiAppBuilder mauiAppBuilder)
         {
-            mauiAppBuilder.Services.AddSingleton<AuthPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<Authentication.AuthPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<Mortgage.MortgageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageViewModel>();
+
+            mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageViewModel>();
+
             return mauiAppBuilder;
         }
     }

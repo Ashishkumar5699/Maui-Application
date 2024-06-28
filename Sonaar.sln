@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Services.BusinessLay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.UI.Registry", "Sonaar.Mobile.UI.Registry\Sonaar.Mobile.UI.Registry.csproj", "{FD6325E6-539E-43C3-A99F-BC54ED90795D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonar.Mobile.Platform", "Sonar.Mobile.Platform\Sonar.Mobile.Platform.csproj", "{084D13A5-2C7A-4F68-B4EA-65E42DD03200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delete", "delete\delete.csproj", "{7DEDB6D9-8942-4DDE-A6D7-80A540E5A0B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,14 @@ Global
 		{FD6325E6-539E-43C3-A99F-BC54ED90795D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD6325E6-539E-43C3-A99F-BC54ED90795D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD6325E6-539E-43C3-A99F-BC54ED90795D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084D13A5-2C7A-4F68-B4EA-65E42DD03200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084D13A5-2C7A-4F68-B4EA-65E42DD03200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084D13A5-2C7A-4F68-B4EA-65E42DD03200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084D13A5-2C7A-4F68-B4EA-65E42DD03200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DEDB6D9-8942-4DDE-A6D7-80A540E5A0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DEDB6D9-8942-4DDE-A6D7-80A540E5A0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DEDB6D9-8942-4DDE-A6D7-80A540E5A0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DEDB6D9-8942-4DDE-A6D7-80A540E5A0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

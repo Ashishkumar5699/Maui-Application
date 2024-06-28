@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:Sonaar.Presentation.Viewmodels.QuickSale"
-             xmlns:model="clr-namespace:Sonaar.Domain.Sale"
-             x:DataType="vm:SalePageViewModel"
-             x:Class="Sonaar.Presentation.Views.QuickSale.SalePageView"
+             xmlns:model="clr-namespace:Sonaar.Mobile.Models.Sale;assembly=Sonaar.Mobile.Models"
+             x:Class="Sonaar.Mobile.UI.QuickSale.SalePageView"
              Title="SalePageView">
-    <ContentPage.Resources>
+        <ContentPage.Resources>
         <Style x:Key="GridSaperation" TargetType="Grid">
             <Setter Property="ColumnDefinitions" Value="*,3*"/>
         </Style>
