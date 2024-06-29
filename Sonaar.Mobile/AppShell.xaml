@@ -7,14 +7,8 @@
     xmlns:Home="clr-namespace:Sonaar.Presentation.Views"
     xmlns:Approval="clr-namespace:Sonaar.Presentation.Views.Approval"
     xmlns:Setting="clr-namespace:Sonaar.Presentation.Views.Settings"
-    xmlns:qucksale="clr-namespace:Sonaar.Presentation.Views.QuickSale"
     xmlns:dummy="clr-namespace:Sonaar.Presentation.Views"
     Shell.FlyoutBehavior="Flyout">
-
-    
-    <FlyoutItem Title="Quick Sale">
-        <ShellContent Title="Sale" ContentTemplate="{DataTemplate qucksale:SalePageView}"/>
-    </FlyoutItem>
 
     <FlyoutItem Title="Home">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>

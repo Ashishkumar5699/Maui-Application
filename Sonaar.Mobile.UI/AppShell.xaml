@@ -3,16 +3,17 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:dummy="clr-namespace:Sonaar.Mobile.UI.UnderConstructions"
        xmlns:mortgage="clr-namespace:Sonaar.Mobile.UI.Mortgage"
+       xmlns:quicksale="clr-namespace:Sonaar.Mobile.UI.QuickSale"
        x:Class="Sonaar.Mobile.UI.AppShell"
        Shell.FlyoutBehavior="Flyout">
 
     
-    <!--<FlyoutItem Title="Quick Sale">
-        <ShellContent Title="Sale" ContentTemplate="{DataTemplate qucksale:SalePageView}"/>
-    </FlyoutItem>-->
-
     <FlyoutItem Title="Home">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Quick Sale">
+        <ShellContent Title="Sale" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
     </FlyoutItem>
 
     <!--<FlyoutItem Title="Gold">

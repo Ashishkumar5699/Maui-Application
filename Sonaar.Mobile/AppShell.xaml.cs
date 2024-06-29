@@ -1,9 +1,7 @@
 ﻿using Sonaar.Presentation.Views;
 using Sonaar.Presentation.Views.Approval;
-//using Sonaar.Presentation.Views.Auth;
 using Sonaar.Presentation.Views.Customer;
 using Sonaar.Presentation.Views.Purchase;
-using Sonaar.Presentation.Views.QuickSale;
 using Sonaar.Presentation.Views.Settings;
 
 namespace Sonaar;
@@ -41,7 +39,5 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(MetalTypePage), typeof(MetalTypePage));
         Routing.RegisterRoute(nameof(MetalTypeDetailPage), typeof(MetalTypeDetailPage));
 
-        //QuckView
-        Routing.RegisterRoute(nameof(SalePageView), typeof(SalePageView));
     }
 }

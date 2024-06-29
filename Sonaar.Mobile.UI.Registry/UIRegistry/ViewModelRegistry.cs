@@ -11,8 +11,6 @@ namespace Sonaar.Mobile.UI.Registry.UIRegistry
             mauiAppBuilder.Services.AddSingleton<Mortgage.MortgageViewModel>();
             mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageViewModel>();
 
-            mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageViewModel>();
-
             return mauiAppBuilder;
         }
     }

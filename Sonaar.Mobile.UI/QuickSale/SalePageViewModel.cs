@@ -9,7 +9,7 @@ using Sonaar.Mobile.Models.Prints;
 using Sonaar.Mobile.Models.Products;
 using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
-using Sonar.Mobile.Platform.FileService;
+using Sonaar.Mobile.Services.SaveService;
 
 namespace Sonaar.Mobile.UI.QuickSale
 {
@@ -26,6 +26,8 @@ namespace Sonaar.Mobile.UI.QuickSale
         public SalePageViewModel(INavigationService navigationService, IPrintService printService) : base(navigationService)
         {
             _printService = printService;
+
+            SaleItems = new ObservableCollection<SaleModel>();
 
             InitializeAsync();
         }
