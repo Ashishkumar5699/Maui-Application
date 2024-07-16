@@ -16,7 +16,7 @@ namespace Sonaar.Presentation.Viewmodels.Approval
         {
             //var _pendingpurchaselist = await _dataService.GetAllCompletePurchases();
             var _purchaselist = await GetAllPendingPurchaseRequests();
-            PuchaseList = new ObservableCollection<Domain.Approvals.PurchaseRequest>(_purchaselist.Where(x => x.IsApproved != null));
+            //PuchaseList = new ObservableCollection<Domain.Approvals.PurchaseRequest>(_purchaselist.Where(x => x.IsApproved != null));
         }
         #endregion
     }

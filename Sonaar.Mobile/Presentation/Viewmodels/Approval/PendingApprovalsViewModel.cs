@@ -14,7 +14,7 @@ namespace Sonaar.Presentation.Viewmodels.Approval
         internal async Task OnAppearing()
         {
             var _purchaselist = await GetAllPendingPurchaseRequests();
-            PuchaseList = new ObservableCollection<Domain.Approvals.PurchaseRequest>(_purchaselist.Where(x => x.IsApproved == null));
+            //PuchaseList = new ObservableCollection<Domain.Approvals.PurchaseRequest>(_purchaselist.Where(x => x.IsApproved == null));
         }
         #endregion
     }

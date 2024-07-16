@@ -1,8 +1,9 @@
-﻿using Sonaar.Domain.Auth;
-using Sonaar.Resources.Constant;
+﻿using Sonaar.Resources.Constant;
 using Sonaar.Common.Bills;
-using Sonaar.Common.Models.Response;
 using Sonaar.Mobile.RestBridge.RestService;
+using Sonaar.Domain.Models.Response;
+using Sonaar.Mobile.Models.Auth;
+using Sonaar.Domain.Models.Constants;
 
 namespace Sonaar.Infrastructure.APIService
 {
@@ -24,13 +25,13 @@ namespace Sonaar.Infrastructure.APIService
 
             if (string.IsNullOrEmpty(loginUser.UserName))
             {
-                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidUsername;
+                response.Message = GlobalMessages.InvalidUsername;
                 return response;
             }
 
             if (string.IsNullOrEmpty(loginUser.Password))
             {
-                response.Message = Sonaar.Common.Constants.GlobalMessages.InvalidPassword;
+                response.Message = GlobalMessages.InvalidPassword;
                 return response;
             }
 

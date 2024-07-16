@@ -1,6 +1,6 @@
 ﻿using System;
 using CommunityToolkit.Maui.Core;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Prints;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Services.BusinessLayer.Auth;

@@ -2,7 +2,7 @@
 
 namespace Sonaar.Domain.Customer
 {
-    public class Customer : Sonaar.Common.Models.Products.Consumer
+    public class Customer : Sonaar.Domain.Models.Products.Consumer
     {
         [PrimaryKey]
         [AutoIncrement]

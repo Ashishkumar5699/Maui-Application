@@ -47,5 +47,6 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />
 	  <ProjectReference Include="..\Sonar.Mobile.Platform\Sonar.Mobile.Platform.csproj" />
+	  <ProjectReference Include="..\Sonaar.Services.BusinessLayer\Sonaar.Services.BusinessLayer.csproj" />
 	</ItemGroup>
 </Project>

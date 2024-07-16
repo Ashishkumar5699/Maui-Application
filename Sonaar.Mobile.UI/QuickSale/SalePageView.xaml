@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:Sonaar.Mobile.Models.Sale;assembly=Sonaar.Mobile.Models"
+             xmlns:vm="clr-namespace:Sonaar.Mobile.UI.QuickSale"
+             x:DataType="vm:SalePageViewModel"
              x:Class="Sonaar.Mobile.UI.QuickSale.SalePageView"
              Title="SalePageView">
-        <ContentPage.Resources>
+    <ContentPage.Resources>
         <Style x:Key="GridSaperation" TargetType="Grid">
             <Setter Property="ColumnDefinitions" Value="*,3*"/>
         </Style>
@@ -12,14 +14,15 @@
         <Style x:Key="BillGridSaperation" TargetType="Grid">
             <Setter Property="ColumnDefinitions" Value="20,3*,*,*,*,*,*,*"/>
         </Style>
-        <Style x:Key="EntryStyle" TargetType="Entry">
-            <Setter Property="ReturnCommand" Value="{Binding AmountUpdateCommand}"/>
-            <Setter Property="ReturnCommandParameter" Value="{Binding Id}"/>
 
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="Keyboard" Value="Numeric"/>
+            <!--<Setter Property="ReturnCommandParameter" Value="{Binding Id}"/>-->
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <VerticalStackLayout>
+        <Grid>
+            <VerticalStackLayout>
             <Grid Style="{StaticResource GridSaperation}">
                 <Label Text="Name"/>
                 <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorFirstName}"/>
@@ -46,6 +49,7 @@
                 <CollectionView ItemsSource="{Binding SaleItems}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
+                            <!--<vm:AddSaleItemView/>-->
                             <Grid Style="{StaticResource BillGridSaperation}" x:DataType="model:SaleModel">
                                 <Entry Text="{Binding Id}"/>
                                 <Entry Text="{Binding Description}" Grid.Column="1"/>
@@ -59,7 +63,7 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <Button Text="Add" Command="{Binding AddNewIteminSalesCommand}"/>
+                <Button Text="Add new Item" Command="{Binding AddNewItemPopupSalesCommand}"/>
                 <Grid ColumnDefinitions="3*,*,*" RowDefinitions="25,25,25,25,25,25">
                     <Label Grid.Column="1" Grid.Row="0" Text="Discount"/>
                     <Label Grid.Column="1" Grid.Row="1" Text="Total"/>
@@ -78,5 +82,12 @@
                 <Button Text="Generate" Command="{Binding GenerateBillCommand}"/>
             </StackLayout>
         </VerticalStackLayout>
+            <!--Popup-->
+            <!--<StackLayout IsVisible="{Binding ShowPopup}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30">
+                <vm:AddSaleItemView BindingContext="{Binding NewSaleItem}"/>
+                <Button Text="Add" Command="{Binding AddNewIteminSalesCommand}" />
+            </StackLayout>-->
+            <!--EndPopup-->
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

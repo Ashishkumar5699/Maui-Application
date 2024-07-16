@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels.Approval"
              xmlns:model="clr-namespace:Sonaar.Domain.Approvals"
-             x:DataType="viewmodel:PurchaseDetailViewModel"
              x:Class="Sonaar.Presentation.Views.Approval.PurchaseDetailPage"
              Title="PurchaseDetailPage">
+             <!--x:DataType="viewmodel:PurchaseDetailViewModel"-->
     <ContentPage.Resources>
         <x:Boolean x:Key="True">True</x:Boolean>
         <x:Boolean x:Key="False">False</x:Boolean>
@@ -17,7 +17,8 @@
                     <Frame>
                         <Image HeightRequest="200" WidthRequest="200" Source="dotnet_bot.png" />
                     </Frame>
-                    <VerticalStackLayout x:DataType="model:PurchaseRequest">
+                    <VerticalStackLayout>
+                    <!--<VerticalStackLayout x:DataType="model:PurchaseRequest">-->
                         <VerticalStackLayout VerticalOptions="CenterAndExpand">
                             <HorizontalStackLayout Spacing="10">
                                 <Label Text="MatelType" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>

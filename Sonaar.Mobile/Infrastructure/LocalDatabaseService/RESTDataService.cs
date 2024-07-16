@@ -4,12 +4,12 @@ using Sonaar.Infrastructure.APIService;
 using Sonaar.Infrastructure.Database;
 using Sonaar.Domain;
 using Sonaar.Domain.Approvals;
-using Sonaar.Domain.Auth;
 using Sonaar.Domain.Products.Details;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
 using Sonaar.Domain.Products;
 using Sonaar.Domain.Customer;
 using Sonaar.Common.Bills;
+using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Localization.Database
 {

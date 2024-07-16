@@ -43,5 +43,7 @@
 	  <Folder Include="Prints\" />
 	  <Folder Include="Products\" />
 	</ItemGroup>
-	<Import Project="..\Common\Models\Sonaar.Common.Models.projitems" Label="Shared" Condition="Exists('..\Common\Models\Sonaar.Common.Models.projitems')" />
+	<ItemGroup>
+	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />
+	</ItemGroup>
 </Project>

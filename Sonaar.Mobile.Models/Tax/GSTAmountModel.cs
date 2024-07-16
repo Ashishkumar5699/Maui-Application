@@ -11,15 +11,20 @@ namespace Sonaar.Mobile.Models.Tax
         [ObservableProperty]
         decimal discount;
 
-        public decimal TotalAfterDiscount => Total - Discount;
+        [ObservableProperty]
+        public decimal totalAfterDiscount;
 
-        public decimal CGSt => TotalAfterDiscount * (decimal)1.5 / 100;
+        [ObservableProperty]
+        public decimal cGSt;
 
-        public decimal SGST => TotalAfterDiscount * (decimal)1.5 / 100;
+        [ObservableProperty]
+        public decimal sGST;
 
-        public decimal IGST => TotalAfterDiscount * 3 / 100;
+        [ObservableProperty]
+        public decimal iGST;
 
-        public decimal GrandTotal => TotalAfterDiscount + CGSt + SGST;
+        [ObservableProperty]
+        public decimal grandTotal;
     }
 }
 

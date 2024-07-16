@@ -2,7 +2,8 @@
 
 namespace Sonaar.Domain.Products
 {
-    public class Silver : Sonaar.Common.Products.Silver
+    //TODO : delete this
+    public class Silver //: Sonaar.Domain.Products.Silver
     {
         [PrimaryKey]
         [AutoIncrement]

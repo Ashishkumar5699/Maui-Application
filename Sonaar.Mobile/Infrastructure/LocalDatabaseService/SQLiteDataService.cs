@@ -1,12 +1,12 @@
 ﻿using Sonaar.Domain.Approvals;
-using Sonaar.Domain.Auth;
 using Sonaar.Domain.Customer;
 using Sonaar.Domain.Products;
 using Sonaar.Domain.Products.Details;
 using Sonaar.Resources.Constant;
 using Sonaar.Common.Bills;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
 using SQLite;
+using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Infrastructure.Database
 {

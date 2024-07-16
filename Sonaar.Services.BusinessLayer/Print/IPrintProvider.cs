@@ -1,5 +1,5 @@
 ﻿using System;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Prints;
 
 namespace Sonaar.Services.BusinessLayer.Print

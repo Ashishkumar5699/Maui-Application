@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Sonaar.Common.Models", "Common\Models\Sonaar.Common.Models.shproj", "{601197A7-76E1-4C88-B263-D3F0ECF85C4C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.UI", "Sonaar.Mobile.UI\Sonaar.Mobile.UI.csproj", "{F63C55D6-1FB9-46C6-8206-D9D1852C410B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.Services", "Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj", "{B78810D9-99E3-4E12-92C0-BFD3851CA7C6}"
@@ -27,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonar.Mobile.Platform", "Sonar.Mobile.Platform\Sonar.Mobile.Platform.csproj", "{7CEC3E44-CEC5-49FF-9B27-4D43C3A80F56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile", "Sonaar.Mobile\Sonaar.Mobile.csproj", "{4CF49E85-47F8-4174-921F-F07B25711079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Domain", "Common\Sonaar.Domain\Sonaar.Domain.csproj", "{C7F86010-F44E-4162-9C55-4AA17E49A789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +66,10 @@ Global
 		{4CF49E85-47F8-4174-921F-F07B25711079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CF49E85-47F8-4174-921F-F07B25711079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CF49E85-47F8-4174-921F-F07B25711079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
