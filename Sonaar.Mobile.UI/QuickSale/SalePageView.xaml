@@ -49,7 +49,6 @@
                 <CollectionView ItemsSource="{Binding SaleItems}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <!--<vm:AddSaleItemView/>-->
                             <Grid Style="{StaticResource BillGridSaperation}" x:DataType="model:SaleModel">
                                 <Entry Text="{Binding Id}"/>
                                 <Entry Text="{Binding Description}" Grid.Column="1"/>
@@ -82,12 +81,6 @@
                 <Button Text="Generate" Command="{Binding GenerateBillCommand}"/>
             </StackLayout>
         </VerticalStackLayout>
-            <!--Popup-->
-            <!--<StackLayout IsVisible="{Binding ShowPopup}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30">
-                <vm:AddSaleItemView BindingContext="{Binding NewSaleItem}"/>
-                <Button Text="Add" Command="{Binding AddNewIteminSalesCommand}" />
-            </StackLayout>-->
-            <!--EndPopup-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -5,6 +5,7 @@ using Sonaar.Infrastructure.APIService;
 using Sonaar.Infrastructure.Database;
 using Sonaar.Infrastructure.Navigation;
 using Sonaar.Localization.Database;
+using Sonaar.Mobile.UI.Registry.PackageRegistry;
 using Sonaar.Presentation.Viewmodels;
 using Sonaar.Presentation.Viewmodels.Approval;
 using Sonaar.Presentation.Viewmodels.Common;
@@ -36,6 +37,7 @@ public static class MauiProgram
 		builder.RegisterAppServices();
 		builder.RegisterViewModels();
 		builder.RegisterViews();
+		builder.RegisterMauiPackage();
 
 
 #if DEBUG
