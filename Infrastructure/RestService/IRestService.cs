@@ -1,4 +1,4 @@
-﻿namespace Punjab_Ornaments.Infrastructure.RestService
+﻿namespace Sonaar.Infrastructure.RestService
 {
     public interface IRestService
     {

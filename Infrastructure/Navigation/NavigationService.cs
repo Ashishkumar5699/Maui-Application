@@ -1,9 +1,6 @@
-﻿
-using Punjab_Ornaments.Presentation.Viewmodels;
-using Punjab_Ornaments.Presentation.Viewmodels.Common;
-using Punjab_Ornaments.Resources.Constant;
+﻿using Sonaar.Resources.Constant;
 
-namespace Punjab_Ornaments.Infrastructure.Navigation
+namespace Sonaar.Infrastructure.Navigation
 {
     public partial class NavigationService : INavigationService
     {

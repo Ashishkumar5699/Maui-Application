@@ -1,18 +1,20 @@
-﻿using CommunityToolkit.Maui.Alerts;
-using CommunityToolkit.Maui.Core;
-using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Infrastructure.Navigation;
+﻿using Punjab_Ornaments.Presentation.Viewmodels;
+using Sonaar.Infrastructure.Database;
+using Sonaar.Infrastructure.Navigation;
 using System.Windows.Input;
 
-namespace Punjab_Ornaments.Presentation.Viewmodels.Auth
+namespace Sonaar.Presentation.Viewmodels.Auth
 {
     public class LoginPageViewModel : BaseViewModel
     {
         private string _username;
         private string _password;
 
-        public LoginPageViewModel(IDataService localDataService, INavigationService navigationservice) : base(localDataService, navigationservice)
+        private readonly IDataService _dataService;
+
+        public LoginPageViewModel(INavigationService navigationService, IDataService dataService) : base(navigationService)
         {
+            _dataService = dataService;
             LoginCommand = new Command(async () => await LoginAction());
         }
 
@@ -34,7 +36,7 @@ namespace Punjab_Ornaments.Presentation.Viewmodels.Auth
         {
             var isAuthorized = await _dataService.LoginUser(UserName, Password);
 
-            if (isAuthorized.Data != null && isAuthorized.Data.IsUserloggedin)
+            if (isAuthorized.Data != null && !string.IsNullOrEmpty(isAuthorized.Data.Token))
             {
                 Application.Current.MainPage = new AppShell();
             }

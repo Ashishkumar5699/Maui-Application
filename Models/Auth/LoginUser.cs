@@ -1,7 +1,11 @@
-﻿namespace Punjab_Ornaments.Models.Auth
+﻿namespace Sonaar.Models.Auth
 {
-    public class LoginUser : PunjabOrnaments.Common.Models.Auth.AuthUser
+    public class LoginUser
     {
-        public bool IsUserloggedin => !string.IsNullOrEmpty(Token);
+       public string UserName { get; set; }
+
+       public string Password { get; set; }
+
+        public string Token { get; set; }
     }
 }

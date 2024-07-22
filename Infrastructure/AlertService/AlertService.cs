@@ -2,7 +2,7 @@
 using CommunityToolkit.Maui.Core;
 using System.Threading;
 
-namespace Punjab_Ornaments.Infrastructure.AlertService
+namespace Sonaar.Infrastructure.AlertService
 {
     public class AlertService : IAlertService
     {

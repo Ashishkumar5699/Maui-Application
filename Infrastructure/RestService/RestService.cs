@@ -1,9 +1,9 @@
-﻿using Punjab_Ornaments.Resources.Constant;
+﻿using Sonaar.Resources.Constant;
 using System.Net;
 using System.Text.Json;
 using static SQLite.SQLite3;
 
-namespace Punjab_Ornaments.Infrastructure.RestService
+namespace Sonaar.Infrastructure.RestService
 {
     public class RestService : IRestService
     {

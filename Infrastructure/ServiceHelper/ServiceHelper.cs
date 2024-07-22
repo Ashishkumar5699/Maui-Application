@@ -1,7 +1,8 @@
-﻿namespace Punjab_Ornaments.Presentation.Viewmodels.Common
+﻿using System;
+namespace Punjab_Ornaments.Infrastructure.ServiceHelper
 {
-    public class ServiceHelper
-    {
+	public class ServiceHelper
+	{
         public static IServiceProvider Services { get; private set; }
 
         public static void Initialize(IServiceProvider serviceProvider) =>
@@ -10,3 +11,4 @@
         public static T GetService<T>() => Services.GetService<T>();
     }
 }
+

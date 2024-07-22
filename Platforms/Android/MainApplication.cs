@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 [Application]
 public class MainApplication : MauiApplication

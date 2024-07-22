@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Punjab Ornaments.Mobile", "Punjab Ornaments.Mobile.csproj", "{188F55BD-1C6A-4895-B9F3-F2F34540831B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sonaar.Mobile", "Sonaar.Mobile.csproj", "{188F55BD-1C6A-4895-B9F3-F2F34540831B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{187E51D8-BB99-4315-BFB4-00F5B76727F8}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,10 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.git = .git
 		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PunjabOrnaments.Common.Models", "Common\Models\PunjabOrnaments.Common.Models.shproj", "{601197A7-76E1-4C88-B263-D3F0ECF85C4C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlFramework", "Controls\CustomControlFramework\CustomControlFramework.csproj", "{D7AB599D-8A2D-4354-9EA3-49ECC3F5360B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +24,6 @@ Global
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{188F55BD-1C6A-4895-B9F3-F2F34540831B}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{D7AB599D-8A2D-4354-9EA3-49ECC3F5360B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7AB599D-8A2D-4354-9EA3-49ECC3F5360B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7AB599D-8A2D-4354-9EA3-49ECC3F5360B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7AB599D-8A2D-4354-9EA3-49ECC3F5360B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

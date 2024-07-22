@@ -1,7 +1,7 @@
-﻿using Punjab_Ornaments.Infrastructure.Database;
-using Punjab_Ornaments.Presentation.Views.Auth;
+﻿using Punjab_Ornaments.Presentation.Views;
+using Sonaar.Infrastructure.Database;
 
-namespace Punjab_Ornaments;
+namespace Sonaar;
 
 public partial class App : Application
 {
@@ -23,7 +23,7 @@ public partial class App : Application
         if (isUserAuth)
     		MainPage = new AppShell();
         else
-    		MainPage = new LoginPage();
+    		MainPage = new LoginPageView();
     }
 
     private void InitializeRequired(IDataService dataService)
