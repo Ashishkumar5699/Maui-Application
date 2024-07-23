@@ -7,7 +7,7 @@ namespace Sonaar.Mobile.UI.Registry.PackageRegistry
 	{
         public static MauiAppBuilder RegisterMauiPackage(this MauiAppBuilder mauiAppBuilder)
         {
-            mauiAppBuilder.UseMauiCommunityToolkit();
+            //mauiAppBuilder.UseMauiCommunityToolkit();
             return mauiAppBuilder;
         }
 

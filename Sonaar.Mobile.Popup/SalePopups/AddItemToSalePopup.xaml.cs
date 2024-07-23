@@ -1,7 +1,7 @@
 ﻿namespace Sonaar.Mobile.Popup.SalePopups;
-using CommunityToolkit.Maui.Views;
+using Sonaar.Mobile.Popup.Common;
 
-public partial class AddItemToSalePopup : Popup
+public partial class AddItemToSalePopup : PopupView
 {
 	public AddItemToSalePopup()
 	{

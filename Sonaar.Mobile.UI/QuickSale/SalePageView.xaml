@@ -62,7 +62,7 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <Button Text="Add new Item" Command="{Binding AddNewItemPopupSalesCommand}"/>
+
                 <Grid ColumnDefinitions="3*,*,*" RowDefinitions="25,25,25,25,25,25">
                     <Label Grid.Column="1" Grid.Row="0" Text="Discount"/>
                     <Label Grid.Column="1" Grid.Row="1" Text="Total"/>
@@ -81,6 +81,7 @@
                 <Button Text="Generate" Command="{Binding GenerateBillCommand}"/>
             </StackLayout>
         </VerticalStackLayout>
+            <Button Text="Add new Item" Command="{Binding AddNewItemPopupSalesCommand}" VerticalOptions="Center" HorizontalOptions="Center"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

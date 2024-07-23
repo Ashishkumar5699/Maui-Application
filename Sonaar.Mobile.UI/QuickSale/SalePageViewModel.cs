@@ -10,7 +10,6 @@ using Sonaar.Mobile.Models.Prints;
 using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
 using Sonar.Mobile.Platform.FileService;
-using Android.Hardware.Lights;
 using System.ComponentModel;
 
 namespace Sonaar.Mobile.UI.QuickSale
