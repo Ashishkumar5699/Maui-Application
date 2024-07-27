@@ -6,11 +6,11 @@ using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Models.Tax;
 using Sonaar.Mobile.Models.Sale;
 using Sonaar.Mobile.Models.Prints;
-//using Sonaar.Mobile.Models.Products;
 using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
 using Sonar.Mobile.Platform.FileService;
 using System.ComponentModel;
+using Sonaar.Mobile.Services.PopupService;
 
 namespace Sonaar.Mobile.UI.QuickSale
 {
@@ -19,6 +19,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Private Members
 
         private readonly IPrintService _printService;
+        private readonly ISalePopupService _salePopupService;
 
         private ObservableCollection<SaleModel> _saleItems;
         private GSTAmountModel _amountModel;
@@ -27,9 +28,10 @@ namespace Sonaar.Mobile.UI.QuickSale
 
         #region Constructor and InitializeAsync
 
-        public SalePageViewModel(INavigationService navigationService, IPrintService printService) : base(navigationService)
+        public SalePageViewModel(INavigationService navigationService, IPrintService printService, ISalePopupService salePopupService) : base(navigationService)
         {
             _printService = printService;
+            _salePopupService = salePopupService;
 
             CustmorDetail = new Consumer
             {
@@ -111,10 +113,21 @@ namespace Sonaar.Mobile.UI.QuickSale
         }
 
         [RelayCommand]
-        private void AddNewItemPopupSales()
+        private async Task AddNewItemPopupSales(SaleModel sale)
         {
-            ShowPopup = true;
-            NewSaleItem = new SaleModel();
+            var saleItem = new SaleModel();
+            if (sale != null)
+            {
+                saleItem.Id = sale.Id;
+                saleItem.Description = sale.Description;
+                saleItem.HSN_Code = sale.HSN_Code;
+                saleItem.Purity = sale.Purity;
+                saleItem.Weight = sale.Weight;
+                saleItem.Rate = sale.Rate;
+                saleItem.Making_Charge = sale.Making_Charge;
+            }
+
+            await _salePopupService.ShowClientMessage(saleItem);
         }
 
         [RelayCommand]

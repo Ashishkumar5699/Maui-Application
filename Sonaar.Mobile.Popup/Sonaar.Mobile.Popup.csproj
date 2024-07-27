@@ -35,4 +35,7 @@
 	  <Folder Include="SalePopups\" />
 	  <Folder Include="Common\" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Sonaar.Mobile.Models\Sonaar.Mobile.Models.csproj" />
+	</ItemGroup>
 </Project>

@@ -1,13 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Popup:PopupView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Sonaar.Mobile.Popup.SalePopups"
+             xmlns:model="clr-namespace:Sonaar.Mobile.Models.Sale;assembly=Sonaar.Mobile.Models"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:Popup="clr-namespace:Sonaar.Mobile.Popup.Common"
-             x:Class="Sonaar.Mobile.Popup.SalePopups.AddItemToSalePopup">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="Sonaar.Mobile.Popup.SalePopups.AddItemToSalePopup"
+             x:DataType="vm:AddItemToSalePopupViewModel"
+             >
+    <toolkit:Popup.Resources>
+        <Style TargetType="{x:Type Popup:PopupView}">
+            <Setter Property="Size" Value="400,200" />
+            <Setter Property="Color" Value="Green" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="CanBeDismissedByTappingOutsideOfPopup" Value="True" />
+        </Style>
+    </toolkit:Popup.Resources>
+    <toolkit:Popup.Content>
+        <VerticalStackLayout WidthRequest="500">
+            <Label Text="Add Sale Item" FontSize="Title" FontAttributes="Bold"/>
+
+            <Label Text="Description" />
+            <Entry Text="{Binding SaleItem.Description}" />
+
+            <Label Text="HSN Code"/>
+            <Entry Text="{Binding SaleItem.HSN_Code}"/>
+
+            <Label Text="Purity"/>
+            <Entry Text="{Binding SaleItem.Purity}"/>
+
+            <Label Text="Weight"/>
+            <Entry Text="{Binding SaleItem.Weight}" Keyboard="Numeric"/>
+
+            <Label Text="Rate" />
+            <Entry Text="{Binding SaleItem.Rate}" />
+
+            <Label Text="Making_Charge"/>
+            <Entry Text="{Binding SaleItem.Making_Charge}" />
+
+            <Label Text="{Binding SaleItem.Amount}" />
+            <!--<Label Text="{Binding Amount}" />-->
+            <HorizontalStackLayout>
+                <Button Text="Add" Clicked="Add_Button_Clicked"/>
+                <Button Text="Go Back" Clicked="Close_Button_Clicked"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </toolkit:Popup.Content>
 </Popup:PopupView>

@@ -3,6 +3,7 @@ using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Mobile.Services.AuthService;
 using Sonaar.Mobile.Services.Navigation;
+using Sonaar.Mobile.Services.PopupService;
 using Sonaar.Mobile.Services.PrintService;
 //using Sonaar.Mobile.Services.SaveService;
 using Sonaar.Services.BusinessLayer.Auth;
@@ -26,6 +27,8 @@ namespace Sonaar.Mobile.UI.Registry.ServiceRegistry
             mauiAppBuilder.Services.AddSingleton<IPrintProvider, PrintProvider>();
 
             mauiAppBuilder.Services.AddSingleton<IPrintProvider, PrintProvider>();
+
+            mauiAppBuilder.Services.AddSingleton<ISalePopupService, SalePopupService>();
 
             return mauiAppBuilder;
         }
