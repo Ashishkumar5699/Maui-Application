@@ -49,16 +49,9 @@ namespace Sonaar.Mobile.Models.Sale
             }
         }
 
-        public decimal Amount => Sonaar.Domain.Helper.Utilities.GetAmount(Rate,Making_Charge,Weight);
+        public decimal Amount => Sonaar.Domain.Helper.Utilities.GetAmount(Rate, Making_Charge, Weight);
 
-        public event EventHandler ChildUpdated;
-
-        // Method to update child entity
-        public void UpdateChildName(string newName)
-        {
-            //ChildName = newName;
-            ChildUpdated?.Invoke(this, EventArgs.Empty);
-        }
+        public bool IsExisting { get; set; }
     }
 }
 

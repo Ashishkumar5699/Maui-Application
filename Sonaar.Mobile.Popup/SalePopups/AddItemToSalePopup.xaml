@@ -40,7 +40,7 @@
             <Entry Text="{Binding SaleItem.Making_Charge}" />
 
             <Label Text="{Binding SaleItem.Amount}" />
-            <!--<Label Text="{Binding Amount}" />-->
+
             <HorizontalStackLayout>
                 <Button Text="Add" Clicked="Add_Button_Clicked"/>
                 <Button Text="Go Back" Clicked="Close_Button_Clicked"/>
