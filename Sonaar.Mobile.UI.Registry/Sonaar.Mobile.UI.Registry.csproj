@@ -29,10 +29,12 @@
 	<ItemGroup>
 	  <None Remove="UIRegistry\" />
 	  <None Remove="ServiceRegistry\" />
+	  <None Remove="PackageRegistry\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="UIRegistry\" />
 	  <Folder Include="ServiceRegistry\" />
+	  <Folder Include="PackageRegistry\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.UI\Sonaar.Mobile.UI.csproj" />

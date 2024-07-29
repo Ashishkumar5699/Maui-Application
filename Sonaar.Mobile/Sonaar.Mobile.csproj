@@ -44,6 +44,9 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -173,6 +176,7 @@
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />
 	  <ProjectReference Include="..\Sonaar.Mobile.UI.Registry\Sonaar.Mobile.UI.Registry.csproj" />
 	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />
+	  <ProjectReference Include="..\Sonaar.Mobile.Popup\Sonaar.Mobile.Popup.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Presentation\Viewmodels\QuickSale\" />

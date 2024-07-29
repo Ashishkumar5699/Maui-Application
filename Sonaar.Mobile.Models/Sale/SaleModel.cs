@@ -1,22 +1,20 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.Models.Sale
 {
-	public partial class SaleModel : ObservableObject, INotifyPropertyChanged
+    public partial class SaleModel : ObservableObject, INotifyPropertyChanged
     {
         public int Id { get; set; }
 
         [ObservableProperty]
-        public string description;
+        string description;
 
         [ObservableProperty]
-        public string hSN_Code;
+        string hSN_Code;
 
         [ObservableProperty]
-        public string purity;
+        string purity;
 
         private decimal _weight;
         public decimal Weight
@@ -29,7 +27,7 @@ namespace Sonaar.Mobile.Models.Sale
             }
         }
 
-        public decimal _rate;
+        private decimal _rate;
         public decimal Rate
         {
             get => _rate;
@@ -40,7 +38,7 @@ namespace Sonaar.Mobile.Models.Sale
             }
         }
 
-        public decimal _making_Charge;
+        private decimal _making_Charge;
         public decimal Making_Charge
         {
             get => _making_Charge;
@@ -51,16 +49,9 @@ namespace Sonaar.Mobile.Models.Sale
             }
         }
 
-        public decimal Amount => Sonaar.Domain.Helper.Utilities.GetAmount(Rate,Making_Charge,Weight);
+        public decimal Amount => Sonaar.Domain.Helper.Utilities.GetAmount(Rate, Making_Charge, Weight);
 
-        public event EventHandler ChildUpdated;
-
-        // Method to update child entity
-        public void UpdateChildName(string newName)
-        {
-            //ChildName = newName;
-            ChildUpdated?.Invoke(this, EventArgs.Empty);
-        }
+        public bool IsExisting { get; set; }
     }
 }
 

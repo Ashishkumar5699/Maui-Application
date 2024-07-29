@@ -1,5 +1,4 @@
-﻿using System;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.Models.Tax
 {
@@ -12,19 +11,19 @@ namespace Sonaar.Mobile.Models.Tax
         decimal discount;
 
         [ObservableProperty]
-        public decimal totalAfterDiscount;
+        decimal totalAfterDiscount;
 
         [ObservableProperty]
-        public decimal cGSt;
+        decimal cGSt;
 
         [ObservableProperty]
-        public decimal sGST;
+        decimal sGST;
 
         [ObservableProperty]
-        public decimal iGST;
+        decimal iGST;
 
         [ObservableProperty]
-        public decimal grandTotal;
+        decimal grandTotal;
     }
 }
 

@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile", "Sonaar.Mob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Domain", "Common\Sonaar.Domain\Sonaar.Domain.csproj", "{C7F86010-F44E-4162-9C55-4AA17E49A789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.Popup", "Sonaar.Mobile.Popup\Sonaar.Mobile.Popup.csproj", "{AC839472-27ED-46B8-9DF6-18ACA381E02B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7F86010-F44E-4162-9C55-4AA17E49A789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC839472-27ED-46B8-9DF6-18ACA381E02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC839472-27ED-46B8-9DF6-18ACA381E02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC839472-27ED-46B8-9DF6-18ACA381E02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC839472-27ED-46B8-9DF6-18ACA381E02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
