@@ -37,7 +37,7 @@
                     <Label Text="Mobile" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                     <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
                 </Grid>
-                <CollectionView ItemsSource="{Binding SaleItems}" VerticalOptions="FillAndExpand" HeightRequest="500">
+                <CollectionView ItemsSource="{Binding SaleItems}" VerticalOptions="FillAndExpand" HeightRequest="400">
                     <CollectionView.Header>
                         <Grid Style="{StaticResource BillGridSaperation}">
                             <Label Text="Id" HorizontalOptions="Center"/>

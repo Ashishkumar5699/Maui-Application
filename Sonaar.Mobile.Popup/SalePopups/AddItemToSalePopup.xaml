@@ -34,10 +34,10 @@
             <Entry Text="{Binding SaleItem.Weight}" Keyboard="Numeric"/>
 
             <Label Text="Rate" />
-            <Entry Text="{Binding SaleItem.Rate}" />
+            <Entry Text="{Binding SaleItem.Rate}" Keyboard="Numeric"/>
 
             <Label Text="Making_Charge"/>
-            <Entry Text="{Binding SaleItem.Making_Charge}" />
+            <Entry Text="{Binding SaleItem.Making_Charge}" Keyboard="Numeric"/>
 
             <Label Text="{Binding SaleItem.Amount}" />
 
