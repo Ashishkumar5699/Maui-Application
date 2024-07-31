@@ -34,6 +34,7 @@
 	  <None Remove="Sale\" />
 	  <None Remove="Prints\" />
 	  <None Remove="Products\" />
+	  <None Remove="Company\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
@@ -42,6 +43,7 @@
 	  <Folder Include="Sale\" />
 	  <Folder Include="Prints\" />
 	  <Folder Include="Products\" />
+	  <Folder Include="Company\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />

@@ -82,9 +82,17 @@ namespace Sonaar.Mobile.UI.QuickSale
             var billmodel = new PrintBillModel
             {
                 Consumer = CustmorDetail,
-
+                DateofBill = DateTime.Today,
+                BillType = Domain.Models.Bills.BillTypeEnum.Quotation,
                 ProductList = new List<SaleModel>(SaleItems),
                 GSTAmount = AmountModel,
+                FirmDetail = new Models.Company.FirmDetail
+                {
+                    FirmName = "FirmName",
+                    FirmAddress = "FirmAddress",
+                    FirmGSTNumber = "FirmGSTNumber",
+                    FirmPhoneNumber = "FirmPhoneNumber",
+                },
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
