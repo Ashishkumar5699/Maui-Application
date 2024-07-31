@@ -93,12 +93,12 @@ namespace Sonaar.Presentation.Viewmodels.Approval
             if (Purchaseitem == null)
                 return;
 
-            ApproveRejectbtnvisible = Purchaseitem.IsApproved == null;
+            //ApproveRejectbtnvisible = Purchaseitem.IsApproved == null;
 
             if (ApproveRejectbtnvisible)
                 return;
             
-            Deletebtnvisible = Purchaseitem.IsApproved == 0;
+            //Deletebtnvisible = Purchaseitem.IsApproved == 0;
             AddtoStockbtnvisible = !Deletebtnvisible;
         }
         private async Task ApprovedAsync(bool isapproved)

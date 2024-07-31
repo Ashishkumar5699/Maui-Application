@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.UI.Common
 {
-	public class BaseViewModel : ObservableObject
+	public abstract class BaseViewModel : ObservableObject
     {
         protected readonly INavigationService _navigationService;
 
@@ -12,7 +12,7 @@ namespace Sonaar.Mobile.UI.Common
             _navigationService = navigationService;
         }
 
-        protected virtual Task InitializeAsync(object obj)
+        public virtual Task InitializeAsync(object obj = null)
         {
             return Task.CompletedTask;
         }

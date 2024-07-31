@@ -6,10 +6,10 @@ using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Models.Tax;
 using Sonaar.Mobile.Models.Sale;
 using Sonaar.Mobile.Models.Prints;
-using Sonaar.Mobile.Models.Products;
 using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
-using Sonaar.Mobile.Services.SaveService;
+using Sonar.Mobile.Platform.FileService;
+using Sonaar.Mobile.Services.PopupService;
 
 namespace Sonaar.Mobile.UI.QuickSale
 {
@@ -18,23 +18,23 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Private Members
 
         private readonly IPrintService _printService;
+        private readonly ISalePopupService _salePopupService;
+
+        private ObservableCollection<SaleModel> _saleItems;
+        private GSTAmountModel _amountModel;
 
         #endregion
 
         #region Constructor and InitializeAsync
 
-        public SalePageViewModel(INavigationService navigationService, IPrintService printService) : base(navigationService)
+        public SalePageViewModel(INavigationService navigationService, IPrintService printService, ISalePopupService salePopupService) : base(navigationService)
         {
             _printService = printService;
+            _salePopupService = salePopupService;
 
+            CustmorDetail = new Consumer();
             SaleItems = new ObservableCollection<SaleModel>();
-
-            InitializeAsync();
-        }
-
-        public void InitializeAsync()
-        {
-            AddNewIteminSales();
+            AmountModel = new GSTAmountModel();
         }
 
         #endregion
@@ -42,80 +42,92 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Commands
 
         [RelayCommand]
-        private void UpdateAction(int id)
+        private async Task AddNewItemPopupSales(SaleModel sale)
         {
-            decimal amount = 0;
-            foreach (var item in SaleItems)
+            var saleItem = new SaleModel
             {
-                if (item.Id == id)
-                    item.Amount = (item.Rate + item.Making_Charge) * item.Weight;
+                Id = SaleItems.Count + 1,
+            };
 
-                amount += item.Amount;
+            if (sale != null)
+            {
+                saleItem.Id = sale.Id;
+                saleItem.Description = sale.Description;
+                saleItem.HSN_Code = sale.HSN_Code;
+                saleItem.Purity = sale.Purity;
+                saleItem.Weight = sale.Weight;
+                saleItem.Rate = sale.Rate;
+                saleItem.Making_Charge = sale.Making_Charge;
+                saleItem.IsExisting = true;
             }
-            AmountModel.Total = amount;
-            OnPropertyChanged(nameof(SaleItems));
-            OnPropertyChanged(nameof(AmountModel));
 
+            var result = await _salePopupService.ShowClientMessage(saleItem);
+            if(result != null)
+            {
+                SaleItems.Add(result);
+
+                CalculateGSTAmount();
+            }
+        }
+
+        [RelayCommand]
+        private void RemoveItemSales(SaleModel sale)
+        {
+            SaleItems.Remove(sale);
         }
 
         [RelayCommand]
         private async Task GenerateBill()
         {
-            var billmodel = new PrintBillModel();
-            billmodel.Consumer = new Consumer
+            var billmodel = new PrintBillModel
             {
-                CustmorPrifix = "MR",
-                CustmorFirstName = "CustmorFirstName",
-                CustmorLastName = "CustmorLastName",
-                CustmorPhoneNumber = "CustmorPhoneNumber",
-                CustmorAddress1 = "CustmorAddress1",
-                CustmorAddress2 = "CustmorAddress2",
-                CustmorLandMark = "CustmorLandMark",
-                CustmorCity = "CustmorCity",
-                CustmorState = "CustmorState",
-                CustmorPinCode = "CustmorPinCode",
-            };
-
-            billmodel.ProductList = new List<ProductModel>
-            {
-                new ProductModel
+                Consumer = CustmorDetail,
+                DateofBill = DateTime.Today,
+                BillType = Domain.Models.Bills.BillTypeEnum.Quotation,
+                ProductList = new List<SaleModel>(SaleItems),
+                GSTAmount = AmountModel,
+                FirmDetail = new Models.Company.FirmDetail
                 {
-                    Description = "Description",
-                    HSN_Code = "HSN_Code",
-                    Purity = "Purity",
-                    Weight = 1,
-                    Rate = 100,
-                    Making_Charge = 10,
-                    Amount = 110,
-                }
-            };
-            billmodel.GSTAmount = new GSTAmount
-            {
-                Discount = 0,
-                TotalAfterDiscount = 110,
-                CGSt = (decimal)1.65,
-                IGST = (decimal)1.65,
-                GrandTotal = (decimal)113.3,
+                    FirmName = "FirmName",
+                    FirmAddress = "FirmAddress",
+                    FirmGSTNumber = "FirmGSTNumber",
+                    FirmPhoneNumber = "FirmPhoneNumber",
+                },
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
-            var file = new SaveService();
-            var mc = new MemoryStream(abc.Data);
-            file.SaveAndView("test.pdf", "Application/pdf", mc);
+            if(abc.Data != null)
+            {
+                var file = new SaveService();
+                var mc = new MemoryStream(abc.Data);
+                file.SaveAndView("test.pdf", "Application/pdf", mc);
+            }
         }
 
 
         #endregion
 
-        #region HelperFunctions
+        #region Helper Functions
 
-        private void AddNewIteminSales()
+        private string CalculateGSTAmount()
         {
-            SaleItems.Add(new SaleModel
-            {
-                Id = SaleItems.Count + 1,
-                AmountUpdateCommand = UpdateActionCommand
-            });
+            AmountModel.Total = CalculateTotalWithoutGST();
+            AmountModel.Discount = Discount;
+            AmountModel.TotalAfterDiscount = AmountModel.Total - AmountModel.Discount;
+
+            AmountModel.CGSt = AmountModel.SGST = AmountModel.TotalAfterDiscount * (decimal)1.5 / 100;
+
+            AmountModel.GrandTotal = AmountModel.TotalAfterDiscount + AmountModel.CGSt + AmountModel.SGST;
+
+            return null;
+        }
+
+        private decimal CalculateTotalWithoutGST()
+        {
+
+            var total = SaleItems.Sum(x => x.Amount);
+
+            return total;
         }
 
         #endregion
@@ -123,14 +135,36 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Bindbale Properties
 
         [ObservableProperty]
-        Customer custmorDetail;
+        Consumer custmorDetail;
 
         [ObservableProperty]
-        GSTAmountModel amountModel;
+        SaleModel newSaleItem;
 
-        [ObservableProperty]
-        ObservableCollection<SaleModel> saleItems;
+        public GSTAmountModel AmountModel
+        {
+            get => _amountModel;
+            set => SetProperty(ref _amountModel, value);
+        }
 
+        public ObservableCollection<SaleModel> SaleItems
+        {
+            get => _saleItems;
+            set
+            {
+                if(_saleItems != value)
+                {
+                    SetProperty(ref _saleItems, value);
+                    //CalculateTotalAmount();
+                }
+            }
+        }
+
+        private decimal _discount;
+        public decimal Discount
+        {
+            get => _discount;
+            set => SetProperty(ref _discount, value, CalculateGSTAmount() );
+        }
         #endregion
 
     }

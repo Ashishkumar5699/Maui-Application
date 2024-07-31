@@ -6,6 +6,13 @@ public partial class SalePageView : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
+    }
 
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        var vm = BindingContext as SalePageViewModel;
+        vm.InitializeAsync();
     }
 }

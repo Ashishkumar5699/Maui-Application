@@ -1,6 +1,6 @@
 ﻿using System;
 using CommunityToolkit.Maui.Core;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Prints;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Services.BusinessLayer.Auth;
@@ -20,6 +20,17 @@ namespace Sonaar.Mobile.Services.PrintService
         }
         public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
         {
+            printBillModel.FirmDetail = new Models.Company.FirmDetail
+            {
+                FirmName = "FirmName",
+                FirmAddress = "FirmAddress",
+                FirmGSTNumber = "FirmGSTNumber",
+                FirmPhoneNumber = "FirmPhoneNumber",
+            };
+
+            printBillModel.DateofBill = DateTime.Today;
+            printBillModel.BillType = Domain.Models.Bills.BillTypeEnum.Quotation;
+
             var result = await _restService.GenerateQuotation(printBillModel);
 
             ToastDuration duration = result.HasErrors || result.IsSystemError ? ToastDuration.Long : ToastDuration.Short;

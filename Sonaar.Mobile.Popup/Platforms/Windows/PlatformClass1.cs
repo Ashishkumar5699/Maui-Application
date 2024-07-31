@@ -1,4 +1,4 @@
-﻿namespace Sonar.Mobile.Platform;
+﻿namespace Sonaar.Mobile.Popup;
 
 // All the code in this file is only included on Windows.
 public class PlatformClass1

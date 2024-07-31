@@ -25,7 +25,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="CommunityToolkit.Maui.Core" Version="9.0.1" />
+		<PackageReference Include="CommunityToolkit.Maui.Core" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 	</ItemGroup>
@@ -47,5 +47,6 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />
 	  <ProjectReference Include="..\Sonar.Mobile.Platform\Sonar.Mobile.Platform.csproj" />
+	  <ProjectReference Include="..\Sonaar.Services.BusinessLayer\Sonaar.Services.BusinessLayer.csproj" />
 	</ItemGroup>
 </Project>

@@ -65,8 +65,8 @@ namespace Sonaar.Presentation.Viewmodels
         [RelayCommand]
         public void AddNewItem()
         {
-            Gold gold = new() { Code = Code, Weight = Weight, Image = Image, Brand = "Dhanya" , Carrot = Carrot};
-            _dataService.AddGoldinStock(gold);
+            //Gold gold = new() { Code = Code, Weight = Weight, Image = Image, Brand = "Dhanya" , Carrot = Carrot};
+            //_dataService.AddGoldinStock(gold);
             _navigationService.PopAsync();
         }
 

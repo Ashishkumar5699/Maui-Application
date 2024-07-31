@@ -1,27 +1,57 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.Models.Sale
 {
-	public class SaleModel
-	{
+    public partial class SaleModel : ObservableObject, INotifyPropertyChanged
+    {
         public int Id { get; set; }
 
-        public ICommand AmountUpdateCommand { get; set; }
+        [ObservableProperty]
+        string description;
 
-        public string Description { get; set; }
+        [ObservableProperty]
+        string hSN_Code;
 
-        public string HSN_Code { get; set; }
+        [ObservableProperty]
+        string purity;
 
-        public string Purity { get; set; }
+        private decimal _weight;
+        public decimal Weight
+        {
+            get => _weight;
+            set
+            {
+                SetProperty(ref _weight, value);
+                OnPropertyChanged(nameof(Amount));
+            }
+        }
 
-        public decimal Weight { get; set; }
+        private decimal _rate;
+        public decimal Rate
+        {
+            get => _rate;
+            set
+            {
+                SetProperty(ref _rate, value);
+                OnPropertyChanged(nameof(Amount));
+            }
+        }
 
-        public decimal Rate { get; set; }
+        private decimal _making_Charge;
+        public decimal Making_Charge
+        {
+            get => _making_Charge;
+            set
+            {
+                SetProperty(ref _making_Charge, value);
+                OnPropertyChanged(nameof(Amount));
+            }
+        }
 
-        public decimal Making_Charge { get; set; }
+        public decimal Amount => Sonaar.Domain.Helper.Utilities.GetAmount(Rate, Making_Charge, Weight);
 
-        public decimal Amount { get; set; }
+        public bool IsExisting { get; set; }
     }
 }
 

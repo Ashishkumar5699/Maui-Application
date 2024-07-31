@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels"
              xmlns:model="clr-namespace:Sonaar.Domain.Products"
-             x:DataType="viewmodel:GoldStockListViewModel"
              x:Class="Sonaar.Presentation.Views.GoldStockList"
              x:Name="GoldStockListPage"
              Title="Gold Stock View">
+             <!--x:DataType="viewmodel:GoldStockListViewModel"-->
     <Grid>
         <CollectionView ItemsSource="{Binding GoldStockList}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame x:DataType="model:Gold">
+                    <!--<Frame x:DataType="model:Gold">-->
+                    <Frame>
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GoldStockListViewModel}}, Path=NavigatetoDetailPageCommand}"

@@ -2,16 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels"
-             xmlns:model="clr-namespace:Sonaar.Domain.Products"
-             x:DataType="viewmodel:GoldStockDetailPageViewModel"
              x:Class="Sonaar.Presentation.Views.GoldStockDetailPage"
              Title="GoldStockDetailPage">
+             <!--x:DataType="viewmodel:GoldStockDetailPageViewModel"-->
+             <!--xmlns:model="clr-namespace:Sonaar.Domain.Products"-->
     <ScrollView>
         <VerticalStackLayout BindingContext="{Binding GoldStock}">
             <Frame>
                 <Image HeightRequest="200" WidthRequest="200" Source="dotnet_bot.png" />
             </Frame>
-                <VerticalStackLayout x:DataType="model:Gold">
+                <!--<VerticalStackLayout x:DataType="model:Gold">-->
+                <VerticalStackLayout >
                     <VerticalStackLayout VerticalOptions="CenterAndExpand">
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Code  " FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>

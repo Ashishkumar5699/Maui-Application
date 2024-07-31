@@ -1,8 +1,8 @@
 ﻿
-using Sonaar.Domain.Auth;
 using Sonaar.Domain.Approvals;
 using Sonaar.Common.Bills;
-using Sonaar.Common.Models.Response;
+using Sonaar.Domain.Models.Response;
+using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Infrastructure.APIService
 {

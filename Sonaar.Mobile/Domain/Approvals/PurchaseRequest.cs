@@ -2,7 +2,8 @@
 
 namespace Sonaar.Domain.Approvals
 {
-    public class PurchaseRequest : Sonaar.Common.Approvals.PurchaseRequest
+    //TODO: Delete this model
+    public class PurchaseRequest //: Sonaar.Domain.Approvals.PurchaseRequest
     {
         [PrimaryKey]
         [AutoIncrement]

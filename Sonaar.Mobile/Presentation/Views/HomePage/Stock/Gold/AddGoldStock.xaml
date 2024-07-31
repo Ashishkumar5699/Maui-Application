@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels"
              xmlns:model="clr-namespace:Sonaar.Domain.Products"
-             x:DataType="model:Gold"
              x:Class="Sonaar.Presentation.Views.AddGoldStock"
              Title="AddGoldStock">
+             <!--x:DataType="model:Gold"-->
     <VerticalStackLayout Spacing="10">
         <Frame VerticalOptions="Center" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" CornerRadius="50">
             <Image Source="dotnet_bot.png" />

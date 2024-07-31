@@ -34,6 +34,7 @@
 	  <None Remove="Sale\" />
 	  <None Remove="Prints\" />
 	  <None Remove="Products\" />
+	  <None Remove="Company\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
@@ -42,6 +43,9 @@
 	  <Folder Include="Sale\" />
 	  <Folder Include="Prints\" />
 	  <Folder Include="Products\" />
+	  <Folder Include="Company\" />
 	</ItemGroup>
-	<Import Project="..\Common\Models\Sonaar.Common.Models.projitems" Label="Shared" Condition="Exists('..\Common\Models\Sonaar.Common.Models.projitems')" />
+	<ItemGroup>
+	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />
+	</ItemGroup>
 </Project>
