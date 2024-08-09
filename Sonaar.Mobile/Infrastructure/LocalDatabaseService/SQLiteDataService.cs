@@ -3,7 +3,6 @@ using Sonaar.Domain.Customer;
 using Sonaar.Domain.Products;
 using Sonaar.Domain.Products.Details;
 using Sonaar.Resources.Constant;
-using Sonaar.Common.Bills;
 using Sonaar.Domain.Models.Response;
 using SQLite;
 using Sonaar.Mobile.Models.Auth;
@@ -175,10 +174,10 @@ namespace Sonaar.Infrastructure.Database
             throw new NotImplementedException();
         }
 
-        public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
     //    #region Gold

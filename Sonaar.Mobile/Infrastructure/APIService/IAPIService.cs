@@ -1,6 +1,5 @@
 ﻿
 using Sonaar.Domain.Approvals;
-using Sonaar.Common.Bills;
 using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Auth;
 
@@ -20,8 +19,8 @@ namespace Sonaar.Infrastructure.APIService
         Task<PurchaseRequest> GetPurchaseById(int id);
         #endregion
 
-        #region QuickSale
-        public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel);
-        #endregion
+        //#region QuickSale
+        //public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel);
+        //#endregion
     }
 }

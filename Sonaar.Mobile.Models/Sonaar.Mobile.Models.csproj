@@ -32,18 +32,18 @@
 	  <None Remove="Client\" />
 	  <None Remove="Tax\" />
 	  <None Remove="Sale\" />
-	  <None Remove="Prints\" />
 	  <None Remove="Products\" />
 	  <None Remove="Company\" />
+	  <None Remove="QuickSale\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
 	  <Folder Include="Client\" />
 	  <Folder Include="Tax\" />
 	  <Folder Include="Sale\" />
-	  <Folder Include="Prints\" />
 	  <Folder Include="Products\" />
 	  <Folder Include="Company\" />
+	  <Folder Include="QuickSale\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />

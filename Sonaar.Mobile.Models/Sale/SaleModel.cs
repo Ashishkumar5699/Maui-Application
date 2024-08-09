@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.Models.Sale
 {
-    public partial class SaleModel : ObservableObject, INotifyPropertyChanged
+    public partial class SaleModel : ObservableObject
     {
         public int Id { get; set; }
 

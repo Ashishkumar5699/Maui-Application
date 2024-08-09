@@ -5,6 +5,9 @@ namespace Sonaar.Mobile.Models.Tax
 	public partial class GSTAmountModel : ObservableObject
     {
         [ObservableProperty]
+        decimal totalBeforeDiscount;
+
+        [ObservableProperty]
         decimal total;
 
         [ObservableProperty]

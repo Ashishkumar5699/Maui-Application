@@ -1,9 +1,9 @@
 ﻿using System.IO;
 
-namespace Sonar.Mobile.Platform.FileService
+namespace Sonaar.Mobile.PlatformService.FileService
 
 // All the code in this file is only included on Windows.
-public class PlatformClass1
+public class SaveService
 {
     public static partial void SaveAndView(string filename, string contentType, MemoryStream stream)
     {

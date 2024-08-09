@@ -1,9 +1,8 @@
 ﻿using Sonaar.Resources.Constant;
-using Sonaar.Common.Bills;
 using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Auth;
-using Sonaar.Domain.Models.Constants;
+using Sonaar.Domain.Constants;
 
 namespace Sonaar.Infrastructure.APIService
 {
@@ -69,18 +68,18 @@ namespace Sonaar.Infrastructure.APIService
             return response;
         }
 
-        public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
-        {
-            //var data = new MemoryStream().ToArray();
-            var response = new ResponseResult<byte[]>
-            {
-                HasErrors = true,
-                IsSystemError = true,
-            };
+        //public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        //{
+        //    //var data = new MemoryStream().ToArray();
+        //    var response = new ResponseResult<byte[]>
+        //    {
+        //        HasErrors = true,
+        //        IsSystemError = true,
+        //    };
 
-            response = await _restService.PostAsync(ApiConstant.GenerateQuote, printBillModel,response);
-            response.Message ??= "Opening Pdf";
-            return response;
-        }
+        //    response = await _restService.PostAsync(ApiConstant.GenerateQuote, printBillModel,response);
+        //    response.Message ??= "Opening Pdf";
+        //    return response;
+        //}
     }
 }
