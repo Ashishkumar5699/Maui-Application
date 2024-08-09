@@ -2,13 +2,11 @@
 using Sonaar.Infrastructure.AlertService;
 using Sonaar.Infrastructure.APIService;
 using Sonaar.Infrastructure.Database;
-using Sonaar.Domain;
 using Sonaar.Domain.Approvals;
 using Sonaar.Domain.Products.Details;
 using Sonaar.Domain.Models.Response;
 using Sonaar.Domain.Products;
 using Sonaar.Domain.Customer;
-using Sonaar.Common.Bills;
 using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Localization.Database
@@ -195,16 +193,16 @@ namespace Sonaar.Localization.Database
 
         #endregion
 
-        #region Quicksale
-        public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
-        {
-            var result = await _iAPIService.GenerateQuotation(printBillModel);
+        //#region Quicksale
+        //public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        //{
+        //    var result = await _iAPIService.GenerateQuotation(printBillModel);
 
-            ToastDuration duration = result.HasErrors || result.IsSystemError ? ToastDuration.Long : ToastDuration.Short;
-            await _alertService.ShowAlert(result.Message, duration, 14);
-            return result;
-        }
-        #endregion
+        //    ToastDuration duration = result.HasErrors || result.IsSystemError ? ToastDuration.Long : ToastDuration.Short;
+        //    await _alertService.ShowAlert(result.Message, duration, 14);
+        //    return result;
+        //}
+        //#endregion
 
     }
 }

@@ -4,7 +4,7 @@ using Java.IO;
 using Environment = Android.OS.Environment;
 using Application = Android.App.Application;
 
-namespace Sonar.Mobile.Platform.FileService
+namespace Sonaar.Mobile.PlatformService.FileService
 {
 	public partial class SaveService
 	{

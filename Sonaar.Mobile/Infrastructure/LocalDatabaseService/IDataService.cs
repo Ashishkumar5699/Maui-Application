@@ -2,7 +2,6 @@
 using Sonaar.Domain.Customer;
 using Sonaar.Domain.Products;
 using Sonaar.Domain.Products.Details;
-using Sonaar.Common.Bills;
 using Sonaar.Domain.Models.Response;
 using Sonaar.Mobile.Models.Auth;
 
@@ -67,8 +66,8 @@ namespace Sonaar.Infrastructure.Database
 
         #endregion
 
-        #region QuickSale
-        public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel);
-        #endregion
+        //#region QuickSale
+        //public Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel);
+        //#endregion
     }
 }

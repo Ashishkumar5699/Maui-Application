@@ -177,6 +177,7 @@
 	  <ProjectReference Include="..\Sonaar.Mobile.UI.Registry\Sonaar.Mobile.UI.Registry.csproj" />
 	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />
 	  <ProjectReference Include="..\Sonaar.Mobile.Popup\Sonaar.Mobile.Popup.csproj" />
+	  <ProjectReference Include="..\Sonaar.Services.BusinessLayer\Sonaar.Services.BusinessLayer.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Presentation\Viewmodels\QuickSale\" />

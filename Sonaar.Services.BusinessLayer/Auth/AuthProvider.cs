@@ -3,6 +3,7 @@ using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Mobile.Models.Auth;
 using Sonaar.Mobile.RestBridge.Urls;
 using Sonaar.Domain.Models.Response;
+using Sonaar.Domain.Constants;
 
 namespace Sonaar.Services.BusinessLayer.Auth
 {
@@ -23,13 +24,13 @@ namespace Sonaar.Services.BusinessLayer.Auth
 
             if (string.IsNullOrEmpty(loginUser.UserName))
             {
-                response.Message = Sonaar.Domain.Models.Constants.GlobalMessages.InvalidUsername;
+                response.Message = GlobalMessages.InvalidUsername;
                 return response;
             }
 
             if (string.IsNullOrEmpty(loginUser.Password))
             {
-                response.Message = Sonaar.Domain.Models.Constants.GlobalMessages.InvalidPassword;
+                response.Message = GlobalMessages.InvalidPassword;
                 return response;
             }
 

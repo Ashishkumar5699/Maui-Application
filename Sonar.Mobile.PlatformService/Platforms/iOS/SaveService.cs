@@ -2,7 +2,7 @@
 using QuickLook;
 using UIKit;
 
-namespace Sonar.Mobile.Platform.FileService
+namespace Sonaar.Mobile.PlatformService.FileService
 {
     public partial class SaveService
     {

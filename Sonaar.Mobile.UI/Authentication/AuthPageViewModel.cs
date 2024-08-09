@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Sonaar.Mobile.Services.AuthService;
@@ -15,9 +16,10 @@ namespace Sonaar.Mobile.UI.Authentication
         public AuthPageViewModel(INavigationService navigationService, IAuthService authService) : base(navigationService)
         {
             _authService = authService;
+
         }
         #endregion
-
+       
         #region Commands and Action
 
         [RelayCommand]

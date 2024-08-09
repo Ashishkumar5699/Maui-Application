@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using AutoMapper;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Sonaar.Infrastructure.AlertService;
 using Sonaar.Infrastructure.APIService;
@@ -18,6 +19,7 @@ using Sonaar.Presentation.Views.Approval;
 using Sonaar.Presentation.Views.Customer;
 using Sonaar.Presentation.Views.Purchase;
 using Sonaar.Presentation.Views.Settings;
+using Sonaar.Services.BusinessLayer.Mapper;
 
 namespace Sonaar;
 
@@ -26,21 +28,32 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+        builder
             .UseMauiApp<App>()
             .UseMauiCommunityToolkit()
-			.ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
-		builder.RegisterAppServices();
+        //builder.BussinessServices();
+
+        //builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
+        //builder.Configuration(services =>
+        // {
+        //     // Register AutoMapper
+        //     services.AddAutoMapper(typeof(MappingProfile));
+        //     // Other service registrations
+        // });
+
+        builder.RegisterAppServices();
 		builder.RegisterViewModels();
 		builder.RegisterViews();
 		builder.RegisterMauiPackage();
         builder.RegisterPopups();
-
+        builder.ConfigureAppDependies();
 
 #if DEBUG
         builder.Logging.AddDebug();
@@ -126,5 +139,12 @@ public static class MauiProgram
 
         return mauiAppBuilder;
 	}
+
+    public static MauiAppBuilder ConfigureAppDependies(this MauiAppBuilder mauiAppBuilder)
+    {
+        mauiAppBuilder.Services.ConfigureAutoMappers();
+        return mauiAppBuilder;
+    }
+
 }
 

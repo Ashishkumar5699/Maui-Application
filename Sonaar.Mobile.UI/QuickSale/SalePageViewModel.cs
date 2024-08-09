@@ -5,11 +5,10 @@ using Sonaar.Mobile.UI.Common;
 using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Models.Tax;
 using Sonaar.Mobile.Models.Sale;
-using Sonaar.Mobile.Models.Prints;
 using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
-using Sonar.Mobile.Platform.FileService;
 using Sonaar.Mobile.Services.PopupService;
+using Sonaar.Mobile.Models.QuickSale;
 
 namespace Sonaar.Mobile.UI.QuickSale
 {
@@ -83,22 +82,23 @@ namespace Sonaar.Mobile.UI.QuickSale
             {
                 Consumer = CustmorDetail,
                 DateofBill = DateTime.Today,
-                BillType = Domain.Models.Bills.BillTypeEnum.Quotation,
+                BillType = Domain.Enum.BillType.Quotation,
                 ProductList = new List<SaleModel>(SaleItems),
                 GSTAmount = AmountModel,
-                FirmDetail = new Models.Company.FirmDetail
-                {
-                    FirmName = "FirmName",
-                    FirmAddress = "FirmAddress",
-                    FirmGSTNumber = "FirmGSTNumber",
-                    FirmPhoneNumber = "FirmPhoneNumber",
-                },
+                //FirmDetail = new Domain.Models.Company.FirmDetail
+                //{
+                //    FirmName = "FirmName",
+                //    FirmAddress = "FirmAddress",
+                //    FirmGSTNumber = "FirmGSTNumber",
+                //    FirmPhoneNumber = "FirmPhoneNumber",
+                //},
+
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
             if(abc.Data != null)
             {
-                var file = new SaveService();
+                var file = new PlatformService.FileService.SaveService();
                 var mc = new MemoryStream(abc.Data);
                 file.SaveAndView("test.pdf", "Application/pdf", mc);
             }
