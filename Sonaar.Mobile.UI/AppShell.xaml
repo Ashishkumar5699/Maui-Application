@@ -46,6 +46,10 @@
         <ShellContent Title="Home" ContentTemplate="{DataTemplate mortgage:MortgagePage}"/>
     </FlyoutItem>
 
+    <FlyoutItem Title="Custmors">
+        <ShellContent Title="Custmors" ContentTemplate="{DataTemplate mortgage:MortgagePage}"/>
+    </FlyoutItem>
+
     <!--<FlyoutItem Title="Account">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate Setting:SettingPage}"/>
     </FlyoutItem>-->

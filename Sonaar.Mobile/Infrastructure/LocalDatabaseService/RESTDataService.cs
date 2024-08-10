@@ -6,7 +6,6 @@ using Sonaar.Domain.Approvals;
 using Sonaar.Domain.Products.Details;
 using Sonaar.Domain.Models.Response;
 using Sonaar.Domain.Products;
-using Sonaar.Domain.Customer;
 using Sonaar.Mobile.Models.Auth;
 
 namespace Sonaar.Localization.Database
@@ -85,33 +84,33 @@ namespace Sonaar.Localization.Database
 
         #endregion
 
-        #region consumer
-        public Task<int> AddCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+        //#region consumer
+        //public Task<int> AddCustomer(Customer customer)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<int> UpdateCustpmer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<int> UpdateCustpmer(Customer customer)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<int> DeleteCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<int> DeleteCustomer(Customer customer)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<List<Customer>> GetAllCustomers()
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<List<Customer>> GetAllCustomers()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<List<Customer>> GetCustomerByPhone(int phone)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<List<Customer>> GetCustomerByPhone(int phone)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        #endregion
+        //#endregion
 
         #region Request
         public Task<int> AddPurchase(PurchaseRequest Purchaseitem)

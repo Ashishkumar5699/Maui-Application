@@ -30,13 +30,13 @@
 	  <None Remove="Auth\" />
 	  <None Remove="Print\" />
 	  <None Remove="Mapper\" />
-	  <None Remove="Registory\" />
+	  <None Remove="Consumer\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
 	  <Folder Include="Print\" />
 	  <Folder Include="Mapper\" />
-	  <Folder Include="Registory\" />
+	  <Folder Include="Consumer\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.RestBridge\Sonaar.Mobile.RestBridge.csproj" />

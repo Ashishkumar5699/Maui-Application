@@ -31,11 +31,11 @@ namespace Sonaar.Infrastructure.Database
         #endregion
 
         #region CustomerSection
-        Task<int> AddCustomer(Customer customer);
-        Task<int> UpdateCustpmer(Customer customer);
-        Task<int> DeleteCustomer(Customer customer);
-        Task<List<Customer>> GetAllCustomers();
-        Task<List<Customer>> GetCustomerByPhone(int phone);
+        //Task<int> AddCustomer(Customer customer);
+        //Task<int> UpdateCustpmer(Customer customer);
+        //Task<int> DeleteCustomer(Customer customer);
+        //Task<List<Customer>> GetAllCustomers();
+        //Task<List<Customer>> GetCustomerByPhone(int phone);
         #endregion
 
         #region PurchaseSection
