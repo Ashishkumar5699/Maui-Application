@@ -13,8 +13,13 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Quick Sale">
-        <ShellContent Title="Sale" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+        <ShellContent Title="New Quotation" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+        <ShellContent Title="Quotation List" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
     </FlyoutItem>
+    
+    <!--<FlyoutItem Title="Quotations">
+        <ShellContent Title="Sale" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+    </FlyoutItem>-->
 
     <!--<FlyoutItem Title="Gold">
         <Tab Title="Home Page">

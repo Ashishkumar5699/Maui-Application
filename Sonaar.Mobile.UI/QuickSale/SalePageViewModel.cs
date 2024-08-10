@@ -61,7 +61,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             }
 
             var result = await _salePopupService.ShowClientMessage(saleItem);
-            if(result != null)
+            if (result != null)
             {
                 SaleItems.Add(result);
 
@@ -96,7 +96,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
-            if(abc.Data != null)
+            if (abc.Data != null)
             {
                 var file = new PlatformService.FileService.SaveService();
                 var mc = new MemoryStream(abc.Data);
@@ -151,7 +151,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             get => _saleItems;
             set
             {
-                if(_saleItems != value)
+                if (_saleItems != value)
                 {
                     SetProperty(ref _saleItems, value);
                     //CalculateTotalAmount();
@@ -163,7 +163,11 @@ namespace Sonaar.Mobile.UI.QuickSale
         public decimal Discount
         {
             get => _discount;
-            set => SetProperty(ref _discount, value, CalculateGSTAmount() );
+            set
+            {
+                SetProperty(ref _discount, value);
+                CalculateGSTAmount();
+            }
         }
         #endregion
 

@@ -75,18 +75,18 @@
                         </StackLayout>
                     </CollectionView.EmptyView>
                 </CollectionView>
-                <Grid ColumnDefinitions="3*,*,*" RowDefinitions="25,25,25,25,25,25">
+                <Grid ColumnDefinitions="3*,*,*" RowDefinitions="35,25,25,25,25,25">
                     <Label Grid.Column="1" Grid.Row="0" Text="Discount"/>
                     <Label Grid.Column="1" Grid.Row="1" Text="Total"/>
-                    <Label Grid.Column="1" Grid.Row="2" Text="CGSt"/>
-                    <Label Grid.Column="1" Grid.Row="3" Text="SGSt"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="SGSt"/>
+                    <Label Grid.Column="1" Grid.Row="3" Text="CGSt"/>
                     <Label Grid.Column="1" Grid.Row="4" Text="IGSt"/>
                     <Label Grid.Column="1" Grid.Row="5" Text="Grand TOTAL"/>
 
-                    <Entry Grid.Column="2" Grid.Row="0" Text="{Binding Discount}"/>
+                    <Entry Grid.Column="2" Grid.Row="0" Text="{Binding Discount}" Keyboard="Numeric"/>
                     <Label Grid.Column="2" Grid.Row="1" Text="{Binding AmountModel.TotalAfterDiscount}"/>
-                    <Label Grid.Column="2" Grid.Row="2" Text="{Binding AmountModel.CGSt}"/>
-                    <Label Grid.Column="2" Grid.Row="3" Text="{Binding AmountModel.SGST}"/>
+                    <Label Grid.Column="2" Grid.Row="2" Text="{Binding AmountModel.SGST}"/>
+                    <Label Grid.Column="2" Grid.Row="3" Text="{Binding AmountModel.CGSt}"/>
                     <Label Grid.Column="2" Grid.Row="4" Text="{Binding AmountModel.IGST}"/>
                     <Label Grid.Column="2" Grid.Row="5" Text="{Binding AmountModel.GrandTotal}"/>
                 </Grid>

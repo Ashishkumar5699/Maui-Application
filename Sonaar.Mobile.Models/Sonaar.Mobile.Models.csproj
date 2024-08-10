@@ -35,6 +35,7 @@
 	  <None Remove="Products\" />
 	  <None Remove="Company\" />
 	  <None Remove="QuickSale\" />
+	  <None Remove="Common\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Auth\" />
@@ -44,6 +45,7 @@
 	  <Folder Include="Products\" />
 	  <Folder Include="Company\" />
 	  <Folder Include="QuickSale\" />
+	  <Folder Include="Common\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Common\Sonaar.Domain\Sonaar.Domain.csproj" />
