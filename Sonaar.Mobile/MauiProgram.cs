@@ -16,7 +16,6 @@ using Sonaar.Presentation.Viewmodels.HomePage.Purchase;
 using Sonaar.Presentation.Viewmodels.Settings;
 using Sonaar.Presentation.Views;
 using Sonaar.Presentation.Views.Approval;
-using Sonaar.Presentation.Views.Customer;
 using Sonaar.Presentation.Views.Purchase;
 using Sonaar.Presentation.Views.Settings;
 using Sonaar.Services.BusinessLayer.Mapper;
@@ -36,17 +35,6 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-
-        //builder.BussinessServices();
-
-        //builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-
-        //builder.Configuration(services =>
-        // {
-        //     // Register AutoMapper
-        //     services.AddAutoMapper(typeof(MappingProfile));
-        //     // Other service registrations
-        // });
 
         builder.RegisterAppServices();
 		builder.RegisterViewModels();
@@ -122,7 +110,7 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<AddGoldStock>();
         mauiAppBuilder.Services.AddSingleton<GoldStockDetailPage>();
         mauiAppBuilder.Services.AddSingleton<AddNewCustomerPage>();
-        mauiAppBuilder.Services.AddSingleton<CustomerListPage>();
+        //mauiAppBuilder.Services.AddSingleton<CustomerListPage>();
         mauiAppBuilder.Services.AddSingleton<AddPurchase>();
 
 		//Approval Page

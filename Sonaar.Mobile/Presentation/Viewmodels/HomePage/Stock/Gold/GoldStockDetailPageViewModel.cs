@@ -11,16 +11,18 @@ namespace Sonaar.Presentation.Viewmodels
         #region private Members
         private int _id;
         #endregion
+
         #region Constructor and override methods
         public GoldStockDetailPageViewModel(IDataService localDataService, INavigationService navigationservice) : base(localDataService, navigationservice)
         {
         }
         #endregion
-        public async Task OnAppearing()
-        {
-            var GoldStockDetailList = await _dataService.GetGoldStockById(Id);
-            GoldStock = GoldStockDetailList.FirstOrDefault();
-        }
+
+        //public async Task OnAppearing()
+        //{
+        //    var GoldStockDetailList = await _dataService.GetGoldStockById(Id);
+        //    GoldStock = GoldStockDetailList.FirstOrDefault();
+        //}
 
         #region Bindable Properties
 

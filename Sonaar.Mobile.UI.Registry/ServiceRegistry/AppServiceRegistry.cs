@@ -1,17 +1,17 @@
-﻿using System;
-using Sonaar.Mobile.RestBridge.RestService;
+﻿using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Mobile.Services.AuthService;
+using Sonaar.Mobile.Services.CustomerService;
 using Sonaar.Mobile.Services.Navigation;
 using Sonaar.Mobile.Services.PopupService;
 using Sonaar.Mobile.Services.PrintService;
-//using Sonaar.Mobile.Services.SaveService;
 using Sonaar.Services.BusinessLayer.Auth;
+using Sonaar.Services.BusinessLayer.Consumer;
 using Sonaar.Services.BusinessLayer.Print;
 
 namespace Sonaar.Mobile.UI.Registry.ServiceRegistry
 {
-	public static class AppServiceRegistry
+    public static class AppServiceRegistry
 	{
         public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
         {
@@ -29,6 +29,9 @@ namespace Sonaar.Mobile.UI.Registry.ServiceRegistry
             mauiAppBuilder.Services.AddSingleton<IPrintProvider, PrintProvider>();
 
             mauiAppBuilder.Services.AddSingleton<ISalePopupService, SalePopupService>();
+
+            mauiAppBuilder.Services.AddSingleton<ICustomerService, CustomerService>();
+            mauiAppBuilder.Services.AddSingleton<IConsumerProvider, ConsumerProvider>();
 
             return mauiAppBuilder;
         }

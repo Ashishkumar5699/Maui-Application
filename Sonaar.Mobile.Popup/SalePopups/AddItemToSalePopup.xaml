@@ -6,8 +6,7 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:Popup="clr-namespace:Sonaar.Mobile.Popup.Common"
              x:Class="Sonaar.Mobile.Popup.SalePopups.AddItemToSalePopup"
-             x:DataType="vm:AddItemToSalePopupViewModel"
-             >
+             x:DataType="vm:AddItemToSalePopupViewModel">
     <toolkit:Popup.Resources>
         <Style TargetType="{x:Type Popup:PopupView}">
             <Setter Property="Size" Value="400,200" />
@@ -25,10 +24,14 @@
             <Entry Text="{Binding SaleItem.Description}" />
 
             <Label Text="HSN Code"/>
-            <Entry Text="{Binding SaleItem.HSN_Code}"/>
+            <Picker SelectedItem="{Binding SelectedHSN}"
+                    ItemsSource="{Binding HsnList}"
+                    ItemDisplayBinding="{Binding Discreption}" />
 
             <Label Text="Purity"/>
-            <Entry Text="{Binding SaleItem.Purity}"/>
+            <Picker SelectedItem="{Binding SelectedPurity}"
+                    ItemsSource="{Binding PurityList}"
+                    ItemDisplayBinding="{Binding Discreption}" />
 
             <Label Text="Weight"/>
             <Entry Text="{Binding SaleItem.Weight}" Keyboard="Numeric"/>
@@ -37,7 +40,10 @@
             <Entry Text="{Binding SaleItem.Rate}" Keyboard="Numeric"/>
 
             <Label Text="Making_Charge"/>
-            <Entry Text="{Binding SaleItem.Making_Charge}" Keyboard="Numeric"/>
+            <Picker SelectedItem="{Binding SelectedMaking}"
+                    ItemsSource="{Binding MakingList}"
+                    ItemDisplayBinding="{Binding Discreption}" />
+            <!--<Entry Text="{Binding SaleItem.Making_Charge}" Keyboard="Numeric"/>-->
 
             <Label Text="{Binding SaleItem.Amount}" />
 

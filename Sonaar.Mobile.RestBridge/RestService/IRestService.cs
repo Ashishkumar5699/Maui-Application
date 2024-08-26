@@ -3,7 +3,7 @@ namespace Sonaar.Mobile.RestBridge.RestService
 {
 	public interface IRestService
 	{
-        Task<TResult> GetAsync<TResult>(string uri, string token = "", Dictionary<string, string> headers = null);
+        Task<TResult> GetAsync<TResult>(string uri, TResult data, string token = "", Dictionary<string, string> headers = null);
 
         Task<TResult> PutAsync<TResult>(string uri, TResult data, string token = "", Dictionary<string, string> headers = null);
 

@@ -36,6 +36,7 @@
 	  <None Remove="UnderConstructions\" />
 	  <None Remove="Mortgage\" />
 	  <None Remove="QuickSale\" />
+	  <None Remove="Customer\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Authentication\" />
@@ -43,6 +44,7 @@
 	  <Folder Include="UnderConstructions\" />
 	  <Folder Include="Mortgage\" />
 	  <Folder Include="QuickSale\" />
+	  <Folder Include="Customer\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />

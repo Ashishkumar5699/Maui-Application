@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using Sonaar.Mobile.Services.Navigation;
 using Sonaar.Mobile.UI.Common;
-using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Models.Tax;
 using Sonaar.Mobile.Models.Sale;
 using Sonaar.Mobile.Services.PrintService;
@@ -31,7 +30,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             _printService = printService;
             _salePopupService = salePopupService;
 
-            CustmorDetail = new Consumer();
+            CustmorDetail = new Sonaar.Mobile.Models.Client.Customer();
             SaleItems = new ObservableCollection<SaleModel>();
             AmountModel = new GSTAmountModel();
         }
@@ -43,10 +42,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         [RelayCommand]
         private async Task AddNewItemPopupSales(SaleModel sale)
         {
-            var saleItem = new SaleModel
-            {
-                Id = SaleItems.Count + 1,
-            };
+            var saleItem = new SaleModel();
 
             if (sale != null)
             {
@@ -61,8 +57,10 @@ namespace Sonaar.Mobile.UI.QuickSale
             }
 
             var result = await _salePopupService.ShowClientMessage(saleItem);
-            if(result != null)
+            if (result != null)
             {
+                result.Id = SaleItems.Count + 1;
+
                 SaleItems.Add(result);
 
                 CalculateGSTAmount();
@@ -96,7 +94,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
-            if(abc.Data != null)
+            if (abc.Data != null)
             {
                 var file = new PlatformService.FileService.SaveService();
                 var mc = new MemoryStream(abc.Data);
@@ -135,7 +133,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Bindbale Properties
 
         [ObservableProperty]
-        Consumer custmorDetail;
+        Models.Client.Customer custmorDetail;
 
         [ObservableProperty]
         SaleModel newSaleItem;
@@ -151,7 +149,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             get => _saleItems;
             set
             {
-                if(_saleItems != value)
+                if (_saleItems != value)
                 {
                     SetProperty(ref _saleItems, value);
                     //CalculateTotalAmount();
@@ -163,7 +161,11 @@ namespace Sonaar.Mobile.UI.QuickSale
         public decimal Discount
         {
             get => _discount;
-            set => SetProperty(ref _discount, value, CalculateGSTAmount() );
+            set
+            {
+                SetProperty(ref _discount, value);
+                CalculateGSTAmount();
+            }
         }
         #endregion
 
