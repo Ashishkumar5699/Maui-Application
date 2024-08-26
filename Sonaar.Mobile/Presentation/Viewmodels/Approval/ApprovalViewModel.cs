@@ -34,7 +34,12 @@ namespace Sonaar.Presentation.Viewmodels.Approval
         #endregion
 
         #region Methods
-        public async Task<List<Domain.Approvals.PurchaseRequest>> GetAllPendingPurchaseRequests() => await _dataService.GetAllPendingPurchases();
+        public async Task<List<Domain.Approvals.PurchaseRequest>> GetAllPendingPurchaseRequests()
+        {
+            await Task.Delay(100);
+            return new List<Domain.Approvals.PurchaseRequest>();
+        }
+            //=> await _dataService.GetAllPendingPurchases();
 
         private async Task NavigateToPurchaseDetailPageAsync(int purchaseid) => await _navigationService.NavigateToAsync(NavigationPath.PurchaseDetailPage, "PurchaseId", purchaseid);
         #endregion

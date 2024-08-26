@@ -1,6 +1,6 @@
 ﻿using Sonaar.Resources.Constant;
 using Sonaar.Mobile.RestBridge.RestService;
-using Sonaar.Domain.Models.Response;
+using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.Auth;
 using Sonaar.Domain.Constants;
 
@@ -39,46 +39,32 @@ namespace Sonaar.Infrastructure.APIService
             return response;
         }
 
-        public async Task AddGoldPurchaseRequst(Domain.Approvals.PurchaseRequest request)
-        {
-           var responce =  await _restService.PutAsync(ApiConstant.AddPurchaseRequest, request);
-        }
-
-        public async Task<List<Domain.Approvals.PurchaseRequest>> GetAllPurchaseRequest()
-        {
-            //var response = await _restService.GetAsync<List<Domain.Purchase.PurchaseResponse>>(ApiConstant.GetAllGoldPurchaseRequests, "", null);
-            var response = await _restService.GetAsync<List<Domain.Approvals.PurchaseRequest>>(ApiConstant.GetAllGoldPurchaseRequests, "", null);
-            return new List<Domain.Approvals.PurchaseRequest>(response);
-        }
-
-        public async Task<bool> GoldApprove(int id)
-        {
-            var response = await _restService.PutAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GoldApprove + id.ToString(), null);
-            return response != null;
-        }
-        public async Task<bool> GoldReject(int id)
-        {
-            var response = await _restService.PutAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GoldReject + id.ToString(), null);
-            return response != null;
-        }
-
-        public async Task<Domain.Approvals.PurchaseRequest> GetPurchaseById(int id)
-        {
-            var response = await _restService.GetAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GetGoldRequestDetail + id.ToString(), "", null);
-            return response;
-        }
-
-        //public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
+        //public async Task AddGoldPurchaseRequst(Domain.Approvals.PurchaseRequest request)
         //{
-        //    //var data = new MemoryStream().ToArray();
-        //    var response = new ResponseResult<byte[]>
-        //    {
-        //        HasErrors = true,
-        //        IsSystemError = true,
-        //    };
+        //   var responce =  await _restService.PutAsync(ApiConstant.AddPurchaseRequest, request);
+        //}
 
-        //    response = await _restService.PostAsync(ApiConstant.GenerateQuote, printBillModel,response);
-        //    response.Message ??= "Opening Pdf";
+        //public async Task<List<Domain.Approvals.PurchaseRequest>> GetAllPurchaseRequest()
+        //{
+        //    //var response = await _restService.GetAsync<List<Domain.Purchase.PurchaseResponse>>(ApiConstant.GetAllGoldPurchaseRequests, "", null);
+        //    var response = await _restService.GetAsync<List<Domain.Approvals.PurchaseRequest>>(ApiConstant.GetAllGoldPurchaseRequests, new List<Domain.Approvals.PurchaseRequest>(), null);
+        //    return new List<Domain.Approvals.PurchaseRequest>(response);
+        //}
+
+        //public async Task<bool> GoldApprove(int id)
+        //{
+        //    var response = await _restService.PutAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GoldApprove + id.ToString(), null);
+        //    return response != null;
+        //}
+        //public async Task<bool> GoldReject(int id)
+        //{
+        //    var response = await _restService.PutAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GoldReject + id.ToString(), null);
+        //    return response != null;
+        //}
+
+        //public async Task<Domain.Approvals.PurchaseRequest> GetPurchaseById(int id)
+        //{
+        //    var response = await _restService.GetAsync<Domain.Approvals.PurchaseRequest>(ApiConstant.GetGoldRequestDetail + id.ToString(), new Domain.Approvals.PurchaseRequest(), "", null);
         //    return response;
         //}
     }

@@ -6,8 +6,7 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:Popup="clr-namespace:Sonaar.Mobile.Popup.Common"
              x:Class="Sonaar.Mobile.Popup.SalePopups.AddItemToSalePopup"
-             x:DataType="vm:AddItemToSalePopupViewModel"
-             >
+             x:DataType="vm:AddItemToSalePopupViewModel">
     <toolkit:Popup.Resources>
         <Style TargetType="{x:Type Popup:PopupView}">
             <Setter Property="Size" Value="400,200" />

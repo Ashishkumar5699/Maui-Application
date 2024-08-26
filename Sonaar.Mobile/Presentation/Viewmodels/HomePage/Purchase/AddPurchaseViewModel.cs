@@ -44,7 +44,7 @@ namespace Sonaar.Presentation.Viewmodels.HomePage.Purchase
             if (PurchaseItemValidation(purchaseItem))
             {
                 //await _apiservice.AddGoldPurchaseRequst(purchaseItem);
-                await _dataService.AddPurchase(purchaseItem);
+                //await _dataService.AddPurchase(purchaseItem);
 
                 await _navigationService.PopAsync();
             }

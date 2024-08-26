@@ -29,8 +29,8 @@ namespace Sonaar.Presentation.Viewmodels.Approval
         }
         internal async Task OnAppearing()
         {
-            var purchaseitem = await _dataService.GetPurchaseById(PurchaseRequestId);
-            Purchaseitem = purchaseitem.FirstOrDefault();
+            //var purchaseitem = await _dataService.GetPurchaseById(PurchaseRequestId);
+            //Purchaseitem = new Domain.Approvals.PurchaseRequest();//purchaseitem.FirstOrDefault();
             Init();
         }
         #endregion
@@ -103,7 +103,7 @@ namespace Sonaar.Presentation.Viewmodels.Approval
         }
         private async Task ApprovedAsync(bool isapproved)
         {
-            var issucess = await _dataService.ApprovedPurchase(PurchaseRequestId, isapproved ? 1 : 0);
+            //var issucess = await _dataService.ApprovedPurchase(PurchaseRequestId, isapproved ? 1 : 0);
             await OnAppearing();
         }
 

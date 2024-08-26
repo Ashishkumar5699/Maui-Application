@@ -1,5 +1,5 @@
 ﻿using System;
-using Sonaar.Domain.Models.Response;
+using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.Client;
 
 namespace Sonaar.Mobile.Services.CustomerService
@@ -14,7 +14,7 @@ namespace Sonaar.Mobile.Services.CustomerService
 
         Task<List<Customer>> GetAllCustomers();
 
-        Task<List<Customer>> GetCustomerByPhone(int phone);
+        Task<ResponseResult<List<Customer>>> GetCustomerByPhone(int phone);
     }
 }
 

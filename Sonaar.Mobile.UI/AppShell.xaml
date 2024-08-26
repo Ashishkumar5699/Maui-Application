@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:dummy="clr-namespace:Sonaar.Mobile.UI.UnderConstructions"
        xmlns:mortgage="clr-namespace:Sonaar.Mobile.UI.Mortgage"
+       xmlns:custmor="clr-namespace:Sonaar.Mobile.UI.Customer"
        xmlns:quicksale="clr-namespace:Sonaar.Mobile.UI.QuickSale"
        x:Class="Sonaar.Mobile.UI.AppShell"
        Shell.FlyoutBehavior="Flyout">
@@ -14,7 +15,7 @@
 
     <FlyoutItem Title="Quick Sale">
         <ShellContent Title="New Quotation" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
-        <ShellContent Title="Quotation List" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+        <!--<ShellContent Title="Quotation List" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>-->
     </FlyoutItem>
     
     <!--<FlyoutItem Title="Quotations">
@@ -47,7 +48,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Custmors">
-        <ShellContent Title="Custmors" ContentTemplate="{DataTemplate mortgage:MortgagePage}"/>
+        <ShellContent Title="Custmors" ContentTemplate="{DataTemplate custmor:CustomerListPage}"/>
     </FlyoutItem>
 
     <!--<FlyoutItem Title="Account">

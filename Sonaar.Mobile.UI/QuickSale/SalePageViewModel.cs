@@ -43,10 +43,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         [RelayCommand]
         private async Task AddNewItemPopupSales(SaleModel sale)
         {
-            var saleItem = new SaleModel
-            {
-                Id = SaleItems.Count + 1,
-            };
+            var saleItem = new SaleModel();
 
             if (sale != null)
             {
@@ -63,6 +60,8 @@ namespace Sonaar.Mobile.UI.QuickSale
             var result = await _salePopupService.ShowClientMessage(saleItem);
             if (result != null)
             {
+                result.Id = SaleItems.Count + 1;
+
                 SaleItems.Add(result);
 
                 CalculateGSTAmount();

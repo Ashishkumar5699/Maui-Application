@@ -13,7 +13,8 @@ namespace Sonaar.Mobile.Services.PopupService
 
         public async Task<SaleModel> ShowClientMessage(SaleModel saleModel)
         {
-            var result = await _popupService.ShowPopupAsync(new AddItemToSalePopupViewModel(saleModel));
+            var vm = new AddItemToSalePopupViewModel(saleModel);
+            var result = await _popupService.ShowPopupAsync(vm);
 
             if (result is SaleModel _saleItem)
                 return _saleItem;

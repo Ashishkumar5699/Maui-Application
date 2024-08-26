@@ -123,7 +123,7 @@ namespace Sonaar.Presentation.Viewmodels.HomePage.Customer
         
         async Task AddCustomerAsync()
         {
-            Domain.Customer.Customer customer = new()
+            Sonaar.Mobile.Models.Client.Customer customer = new()
             {
                 CustmorPrifix = Prifix,
                 CustmorFirstName = FirstName,
@@ -137,7 +137,7 @@ namespace Sonaar.Presentation.Viewmodels.HomePage.Customer
                 CustmorPinCode = PinCode,
 
             };
-            await _dataService.AddCustomer(customer);
+            //await _dataService.AddCustomer(customer);
             await _navigationService.PopAsync();
         }
 

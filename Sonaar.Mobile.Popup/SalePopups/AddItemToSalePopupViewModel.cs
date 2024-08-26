@@ -15,6 +15,10 @@ namespace Sonaar.Mobile.Popup.SalePopups
             AddpickerItemSource();
         }
 
+        public AddItemToSalePopupViewModel()
+        {
+
+        }
         #endregion
 
         #region Methods

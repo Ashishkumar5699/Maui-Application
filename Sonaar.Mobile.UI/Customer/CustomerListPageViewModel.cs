@@ -21,7 +21,6 @@ namespace Sonaar.Mobile.UI.Customer
 
         public override async Task InitializeAsync(object obj = null)
         {
-            await Task.Delay(100);
             var listofCustomers = await _customerService.GetAllCustomers();
             CustomerList = new ObservableCollection<Models.Client.Customer>(listofCustomers);
         }

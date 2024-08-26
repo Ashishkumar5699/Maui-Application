@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Maui.Core;
-using Sonaar.Domain.Models.Response;
+using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.QuickSale;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Services.BusinessLayer.Print;

@@ -1,13 +1,12 @@
-﻿using System;
-using Sonaar.Mobile.RestBridge.RestService;
+﻿using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Mobile.Models.Auth;
 using Sonaar.Mobile.RestBridge.Urls;
-using Sonaar.Domain.Models.Response;
 using Sonaar.Domain.Constants;
+using Sonaar.Domain.Response;
 
 namespace Sonaar.Services.BusinessLayer.Auth
 {
-	public class AuthProvider : IAuthProvider
+    public class AuthProvider : IAuthProvider
     {
         private readonly IRestService _restService;
         public AuthProvider(IRestService restService)

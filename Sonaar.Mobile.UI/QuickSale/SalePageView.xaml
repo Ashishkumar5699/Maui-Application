@@ -13,7 +13,7 @@
         </Style>
 
         <Style x:Key="BillGridSaperation" TargetType="Grid">
-            <Setter Property="ColumnDefinitions" Value="50,2*,*,*,*,*,*,*,50"/>
+            <Setter Property="ColumnDefinitions" Value="50,2*,*,*,*,*,*,*"/>
         </Style>
     </ContentPage.Resources>
 
@@ -25,19 +25,46 @@
     <ContentPage.Content>
         <Grid>
             <VerticalStackLayout>
-                <Grid Style="{StaticResource GridSaperation}" Padding="10">
-                    <Label Text="Name" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                    <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorFirstName}"/>
+                <Grid ColumnDefinitions="*,*">
+                    <VerticalStackLayout>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Name" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorFirstName}"/>
+                        </Grid>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Address" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorAddress1}"/>
+                        </Grid>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Adhar Number" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
+                        </Grid>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="State" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" >
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Mobile" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Keyboard="Telephone" Text="{Binding CustmorDetail.CustmorFirstName}"/>
+                        </Grid>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="City" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorAddress1}"/>
+                        </Grid>
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Zip" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
+                        </Grid>
+
+                        <Grid Style="{StaticResource GridSaperation}" Padding="10">
+                            <Label Text="Country" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
+                        </Grid>
+                    </VerticalStackLayout>
                 </Grid>
-                <Grid Style="{StaticResource GridSaperation}" Padding="10">
-                    <Label Text="Address" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                    <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorAddress1}"/>
-                </Grid>
-                <Grid Style="{StaticResource GridSaperation}" Padding="10">
-                    <Label Text="Mobile" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                    <Entry Grid.Column="1" Text="{Binding CustmorDetail.CustmorPhoneNumber}"/>
-                </Grid>
-                <CollectionView ItemsSource="{Binding SaleItems}" VerticalOptions="FillAndExpand" HeightRequest="400">
+                <CollectionView ItemsSource="{Binding SaleItems}" VerticalOptions="FillAndExpand" HeightRequest="300">
                     <CollectionView.Header>
                         <Grid Style="{StaticResource BillGridSaperation}">
                             <Label Text="Id" HorizontalOptions="Center"/>
@@ -52,19 +79,36 @@
                     </CollectionView.Header>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Style="{StaticResource BillGridSaperation}" x:DataType="model:SaleModel">
-                                <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                <Label Text="{Binding Description}" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                <Label Text="{Binding HSN_Code}" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                <Label Text="{Binding Purity}" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                <Label Text="{Binding Weight}" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" />
-                                <Label Text="{Binding Rate}" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" />
-                                <Label Text="{Binding Making_Charge}" Grid.Column="6" VerticalOptions="Center" HorizontalOptions="Center" />
-                                <Label Text="{Binding Amount}" Grid.Column="7" VerticalOptions="Center" HorizontalOptions="Center"/>
-                                <Button Text="X" Grid.Column="8" BackgroundColor="Transparent" TextColor="Blue" HorizontalOptions="Center"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=RemoveItemSalesCommand}"
-                                        CommandParameter="{Binding .}" />
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Delete" BackgroundColor="LightPink"
+                                                   Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=RemoveItemSalesCommand}"
+                                                   CommandParameter="{Binding .}"/>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Edit" BackgroundColor="LightGreen"
+                                                   Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=AddNewItemPopupSalesCommand}"
+                                                   CommandParameter="{Binding .}" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <!-- Content -->
+                                <Grid Style="{StaticResource BillGridSaperation}" x:DataType="model:SaleModel">
+                                    <Label Text="{Binding Id}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Description}" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding HSN_Code}" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Purity}" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Weight}" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Rate}" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Making_Charge}" Grid.Column="6" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Amount}" Grid.Column="7" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <!--<Button Text="Del" TextColor="Red" Grid.Column="8" BackgroundColor="Transparent" HorizontalOptions="Center"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=RemoveItemSalesCommand}"
+                                            CommandParameter="{Binding .}" />-->
                                 </Grid>
+                            </SwipeView>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                     <CollectionView.EmptyView>

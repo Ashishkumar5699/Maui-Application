@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
 
 namespace Sonaar.Mobile.RestBridge.RestService
@@ -25,15 +24,22 @@ namespace Sonaar.Mobile.RestBridge.RestService
             throw new NotImplementedException();
         }
 
-        public async Task<TResult> GetAsync<TResult>(string uri, string token = "", Dictionary<string, string> headers = null)
+        public async Task<TResult> GetAsync<TResult>(string uri, TResult data, string token = "", Dictionary<string, string> headers = null)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, uri);
-            var content = new StringContent("", null, "text/plain");
-            request.Content = content;
-            var response = await _client.SendAsync(request);
-            var serialized = HandleResponse(response);
-            var result = JsonSerializer.Deserialize<TResult>(serialized.Result, _serializerOptions);
-            return result;
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, uri);
+                var content = new StringContent("", null, "text/plain");
+                request.Content = content;
+                var response = await _client.SendAsync(request);
+                var serialized = HandleResponse(response);
+                var result = JsonSerializer.Deserialize<TResult>(serialized.Result, _serializerOptions);
+                return result;
+            }
+            catch (Exception ex)
+            {
+            }
+            return data;
         }
 
         public async Task<TResult> PutAsync<TResult>(string url, TResult data, string token = "", Dictionary<string, string> headers = null)
@@ -46,9 +52,7 @@ namespace Sonaar.Mobile.RestBridge.RestService
                 request.Content = content;
                 var response = await _client.SendAsync(request);
                 var serialized = HandleResponse(response);
-                TResult result = await Task.Run(() => JsonSerializer.Deserialize<TResult>(serialized.Result, _serializerOptions));
-
-                return result;
+                data = await Task.Run(() => JsonSerializer.Deserialize<TResult>(serialized.Result, _serializerOptions));
             }
             catch (Exception ex)
             {
@@ -112,19 +116,19 @@ namespace Sonaar.Mobile.RestBridge.RestService
                 {
                     response.EnsureSuccessStatusCode();
                 }
-                if (response.StatusCode == HttpStatusCode.Unauthorized)
-                {
-                }
-                if (response.StatusCode == HttpStatusCode.NotFound)
-                {
-                }
-                if (response.StatusCode == HttpStatusCode.BadRequest)
-                {
-                }
-                {
-                }
+                //if (response.StatusCode == HttpStatusCode.Unauthorized)
+                //{
+                //}
+                //if (response.StatusCode == HttpStatusCode.NotFound)
+                //{
+                //}
+                //if (response.StatusCode == HttpStatusCode.BadRequest)
+                //{
+                //}
+                //{
+                //}
 
-                var abc = await response.Content.ReadAsStringAsync();
+                //var abc = await response.Content.ReadAsStringAsync();
                 return await response.Content.ReadAsStringAsync();
 
             }

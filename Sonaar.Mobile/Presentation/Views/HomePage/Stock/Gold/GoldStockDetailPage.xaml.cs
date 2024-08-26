@@ -9,10 +9,11 @@ public partial class GoldStockDetailPage : ContentPage
 		InitializeComponent();
 		BindingContext = viewModel;
     }
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        var vm = BindingContext as GoldStockDetailPageViewModel;
-        await vm.OnAppearing();
-    }
+
+    //protected override async void OnAppearing()
+    //{
+    //    base.OnAppearing();
+    //    var vm = BindingContext as GoldStockDetailPageViewModel;
+    //    await vm.OnAppearing();
+    //}
 }

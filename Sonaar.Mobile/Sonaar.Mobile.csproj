@@ -77,6 +77,7 @@
 	  <None Remove="Presentation\Viewmodels\QuickSale\" />
 	  <None Remove="Domain\Auth\" />
 	  <None Remove="Extensions\" />
+	  <None Remove="Domain\Approvals\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -132,9 +133,6 @@
 	  <MauiXaml Update="Presentation\Views\Approval\PurchaseDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Presentation\Views\HomePage\Customer\CustomerListPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Presentation\Views\HomePage\Purchase\AddPurchase.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -183,6 +181,7 @@
 	  <Folder Include="Presentation\Viewmodels\QuickSale\" />
 	  <Folder Include="Domain\Auth\" />
 	  <Folder Include="Extensions\" />
+	  <Folder Include="Domain\Approvals\" />
 	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionPunjabOrnamentsHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 

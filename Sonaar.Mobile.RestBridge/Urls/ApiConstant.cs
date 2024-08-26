@@ -21,6 +21,12 @@ namespace Sonaar.Mobile.RestBridge.Urls
         public const string GenerateQuote = base_url + "Pdf/GeneratePDFGPT";
 
         #endregion
+
+        #region Customers
+
+        public const string Contacts = base_url + "Contacts/GetAllContacts";
+
+        #endregion
     }
 }
 

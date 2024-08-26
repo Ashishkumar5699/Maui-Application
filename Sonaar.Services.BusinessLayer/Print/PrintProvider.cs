@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Sonaar.Domain.Dto;
-using Sonaar.Domain.Models.Response;
+using Sonaar.Domain.Dto.ReportGeneration;
+using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.QuickSale;
 using Sonaar.Mobile.RestBridge.RestService;
 using Sonaar.Mobile.RestBridge.Urls;
@@ -29,8 +29,7 @@ namespace Sonaar.Services.BusinessLayer.Print
             };
 
             var printBillDto = _mapper.Map<PrintBillDto>(printBillModel);
-            //var printBillDto = new object();
-            //var data = new MemoryStream().ToArray();
+
             var response = new ResponseResult<byte[]>
             {
                 HasErrors = true,

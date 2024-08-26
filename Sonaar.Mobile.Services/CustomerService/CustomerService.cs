@@ -1,14 +1,12 @@
-﻿using System;
-using CommunityToolkit.Maui.Core;
-using Sonaar.Domain.Models.Response;
+﻿using CommunityToolkit.Maui.Core;
+using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Services.AlertService;
 using Sonaar.Services.BusinessLayer.Consumer;
-using Sonaar.Services.BusinessLayer.Print;
 
 namespace Sonaar.Mobile.Services.CustomerService
 {
-	public class CustomerService : ICustomerService
+    public class CustomerService : ICustomerService
     {
         #region Private Members
         private readonly IConsumerProvider _restService;
@@ -36,12 +34,16 @@ namespace Sonaar.Mobile.Services.CustomerService
             throw new NotImplementedException();
         }
 
-        public Task<List<Customer>> GetAllCustomers()
+        public async Task<List<Customer>> GetAllCustomers()
         {
-            throw new NotImplementedException();
+            var result = await _restService.GetAllCustomers();
+
+            ToastDuration duration = result.HasErrors || result.IsSystemError ? ToastDuration.Long : ToastDuration.Short;
+            await _alertService.ShowAlert(result.Message, duration, 14);
+            return result.Data?.ToList() ?? new List<Customer>();
         }
 
-        public Task<List<Customer>> GetCustomerByPhone(int phone)
+        public Task<ResponseResult<List<Customer>>> GetCustomerByPhone(int phone)
         {
             throw new NotImplementedException();
         }
