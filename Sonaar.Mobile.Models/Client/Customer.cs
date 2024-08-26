@@ -1,8 +1,10 @@
-﻿namespace Sonaar.Mobile.Models.Client
+﻿using Sonaar.Domain.Dto.CustomerDirectory;
+
+namespace Sonaar.Mobile.Models.Client
 {
-    public class Customer : Consumer
+    public class Customer : ConsumerDTO
     {
-        public int CustmorId { get; set; }
+        public int ContactId { get; set; }
     }
 }
 

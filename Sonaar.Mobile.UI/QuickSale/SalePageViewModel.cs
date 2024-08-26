@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using Sonaar.Mobile.Services.Navigation;
 using Sonaar.Mobile.UI.Common;
-using Sonaar.Mobile.Models.Client;
 using Sonaar.Mobile.Models.Tax;
 using Sonaar.Mobile.Models.Sale;
 using Sonaar.Mobile.Services.PrintService;
@@ -31,7 +30,7 @@ namespace Sonaar.Mobile.UI.QuickSale
             _printService = printService;
             _salePopupService = salePopupService;
 
-            CustmorDetail = new Consumer();
+            CustmorDetail = new Sonaar.Mobile.Models.Client.Customer();
             SaleItems = new ObservableCollection<SaleModel>();
             AmountModel = new GSTAmountModel();
         }
@@ -134,7 +133,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         #region Bindbale Properties
 
         [ObservableProperty]
-        Consumer custmorDetail;
+        Models.Client.Customer custmorDetail;
 
         [ObservableProperty]
         SaleModel newSaleItem;

@@ -16,7 +16,7 @@ namespace Sonaar.Mobile.Models.QuickSale
 
         public Linker.Models.Company.FirmDetail FirmDetail { get; set; }
 
-        public required Consumer Consumer { get; set; }
+        public required Customer Consumer { get; set; }
 
         public required List<SaleModel> ProductList { get; set; }
 

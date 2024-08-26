@@ -18,6 +18,7 @@ namespace Sonaar.Presentation.Viewmodels.HomePage.Customer
         private string state;
         private string pinCode;
         #endregion
+
         #region Commands
         public ICommand AddCustomerCommand => new Command(async () => await AddCustomerAsync());
         #endregion
@@ -125,16 +126,16 @@ namespace Sonaar.Presentation.Viewmodels.HomePage.Customer
         {
             Sonaar.Mobile.Models.Client.Customer customer = new()
             {
-                CustmorPrifix = Prifix,
-                CustmorFirstName = FirstName,
-                CustmorLastName = LastName,
-                CustmorPhoneNumber = PhoneNumber,
-                CustmorAddress1 = Address1,
-                CustmorAddress2 = Address2,
-                CustmorLandMark = LandMark,
-                CustmorCity = City,
-                CustmorState = State,
-                CustmorPinCode = PinCode,
+                ContactPrifix = Prifix,
+                ContactFirstName = FirstName,
+                ContactLastName = LastName,
+                ContactPhoneNumber = PhoneNumber,
+                ContactAddress1 = Address1,
+                ContactAddress2 = Address2,
+                ContactLandMark = LandMark,
+                ContactCity = City,
+                ContactState = State,
+                ContactPinCode = PinCode,
 
             };
             //await _dataService.AddCustomer(customer);
