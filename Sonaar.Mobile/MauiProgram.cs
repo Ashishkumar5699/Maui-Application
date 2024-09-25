@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CommunityToolkit.Maui;
+﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Sonaar.Infrastructure.AlertService;
 using Sonaar.Infrastructure.APIService;
@@ -11,7 +10,6 @@ using Sonaar.Mobile.UI.Registry.UIRegistry;
 using Sonaar.Presentation.Viewmodels;
 using Sonaar.Presentation.Viewmodels.Approval;
 using Sonaar.Presentation.Viewmodels.Common;
-using Sonaar.Presentation.Viewmodels.HomePage.Customer;
 using Sonaar.Presentation.Viewmodels.HomePage.Purchase;
 using Sonaar.Presentation.Viewmodels.Settings;
 using Sonaar.Presentation.Views;
@@ -63,9 +61,9 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<StockViewModel>();
         mauiAppBuilder.Services.AddSingleton<GoldStockListViewModel>();
         mauiAppBuilder.Services.AddSingleton<GoldStockDetailPageViewModel>();
-        mauiAppBuilder.Services.AddSingleton<AddNewCustomerPageViewModel>();
+        //mauiAppBuilder.Services.AddSingleton<AddNewCustomerPageViewModel>();
         mauiAppBuilder.Services.AddSingleton<PendingApprovalsViewModel>();
-        mauiAppBuilder.Services.AddSingleton<CustomerListViewModel>();
+        //mauiAppBuilder.Services.AddSingleton<CustomerListViewModel>();
 
         //Approval Page
         mauiAppBuilder.Services.AddSingleton<AddPurchaseViewModel>();
@@ -109,7 +107,7 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddSingleton<GoldStockList>();
         mauiAppBuilder.Services.AddSingleton<AddGoldStock>();
         mauiAppBuilder.Services.AddSingleton<GoldStockDetailPage>();
-        mauiAppBuilder.Services.AddSingleton<AddNewCustomerPage>();
+        //mauiAppBuilder.Services.AddSingleton<AddNewCustomerPage>();
         //mauiAppBuilder.Services.AddSingleton<CustomerListPage>();
         mauiAppBuilder.Services.AddSingleton<AddPurchase>();
 

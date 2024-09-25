@@ -5,7 +5,7 @@ namespace Sonaar.Services.BusinessLayer.Consumer
 {
     public interface IConsumerProvider
     {
-        Task<ResponseResult<Customer>> AddCustomer(Customer printBillModel);
+        Task<ExecResult> AddCustomer(Customer printBillModel);
 
         Task<ResponseResult<IEnumerable<Customer>>> GetAllCustomers();
     }

@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using Sonaar.Mobile.Services.CustomerService;
 using Sonaar.Mobile.Services.Navigation;
 using Sonaar.Mobile.UI.Common;
@@ -13,6 +14,7 @@ namespace Sonaar.Mobile.UI.Customer
         #region private Menbers
         private readonly ICustomerService _customerService;
         private ObservableCollection<Models.Client.Customer> _unfilteredContactsGroups;
+        
         #endregion
 
         #region Constructor and initial methods
@@ -57,7 +59,22 @@ namespace Sonaar.Mobile.UI.Customer
                 //    .ToList();
             }
         }
+
+        [RelayCommand]
+        public async Task AddNewContact()
+        {
+            try
+            {
+                await _navigationService.NavigateToAsync(NavigationPath.AddNewCustomerPage);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         #endregion
+
         #region BindableProperties
 
         [ObservableProperty]

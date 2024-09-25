@@ -20,7 +20,7 @@ namespace Sonaar.Mobile.Services.CustomerService
         }
 
         #region Methods
-        public async Task<ResponseResult<Customer>> AddCustomer(Customer customer)
+        public async Task<ExecResult> AddCustomer(Customer customer)
         {
             var result = await _restService.AddCustomer(customer);
 
@@ -43,9 +43,18 @@ namespace Sonaar.Mobile.Services.CustomerService
             return result.Data?.ToList() ?? new List<Customer>();
         }
 
-        public Task<ResponseResult<List<Customer>>> GetCustomerByPhone(int phone)
+        public async Task<Customer> GetCustomerByPhone(long phone)
         {
-            throw new NotImplementedException();
+            var custmorList = (await _restService.GetAllCustomers())?.Data?.ToList();
+            if(custmorList != null)
+            {
+                var customer = custmorList.Where(x => x.ContactPhoneNumber == phone.ToString()).FirstOrDefault();
+                if(customer != null) return customer;
+            }
+            
+            await _alertService.ShowAlert("No cusumer Found", ToastDuration.Long, 14);
+
+            return null;
         }
 
         public Task<ResponseResult<Customer>> UpdateCustpmer(Customer customer)

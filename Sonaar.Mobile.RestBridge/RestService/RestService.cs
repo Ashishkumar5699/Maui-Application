@@ -29,11 +29,11 @@ namespace Sonaar.Mobile.RestBridge.RestService
             try
             {
                 var request = new HttpRequestMessage(HttpMethod.Get, uri);
-                var content = new StringContent("", null, "text/plain");
-                request.Content = content;
+                // var content = new StringContent("", null, "text/plain");
+                // request.Content = content;
                 var response = await _client.SendAsync(request);
-                var serialized = HandleResponse(response);
-                var result = JsonSerializer.Deserialize<TResult>(serialized.Result, _serializerOptions);
+                var serialized = await HandleResponse(response);
+                var result = JsonSerializer.Deserialize<TResult>(serialized, _serializerOptions);
                 return result;
             }
             catch (Exception ex)

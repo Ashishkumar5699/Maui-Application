@@ -37,10 +37,10 @@ namespace Sonaar.Mobile.UI.Authentication
         #region Bindbale Property
 
         [ObservableProperty]
-        public string userName = "string";
+        public string userName;
 
         [ObservableProperty]
-        public string password = "string";
+        public string password;
 
         #endregion
 

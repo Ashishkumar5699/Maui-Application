@@ -6,7 +6,7 @@ namespace Sonaar.Mobile.Services.CustomerService
 {
 	public interface ICustomerService
 	{
-        Task<ResponseResult<Customer>> AddCustomer(Customer customer);
+        Task<ExecResult> AddCustomer(Customer customer);
 
         Task<ResponseResult<Customer>> UpdateCustpmer(Customer customer);
 
@@ -14,7 +14,7 @@ namespace Sonaar.Mobile.Services.CustomerService
 
         Task<List<Customer>> GetAllCustomers();
 
-        Task<ResponseResult<List<Customer>>> GetCustomerByPhone(int phone);
+        Task<Customer> GetCustomerByPhone(long phone);
     }
 }
 

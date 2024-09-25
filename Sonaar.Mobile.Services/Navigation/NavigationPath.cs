@@ -12,7 +12,7 @@ namespace Sonaar.Mobile.Services.Navigation
         GoldStockList,
         AddGoldStock,
         GoldStockDetailPage,
-        AddNewCustomerPage,
+        //AddNewCustomerPage,
         CustomerListPage,
         AddPurchase,
 
@@ -25,6 +25,8 @@ namespace Sonaar.Mobile.Services.Navigation
         SettingPage,
         MetalTypePage,
         MetalTypeDetailPage,
+
+        AddNewCustomerPage,
     }
 }
 

@@ -9,9 +9,9 @@
        Shell.FlyoutBehavior="Flyout">
 
     
-    <FlyoutItem Title="Home">
+    <!--<FlyoutItem Title="Home">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <FlyoutItem Title="Quick Sale">
         <ShellContent Title="New Quotation" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
@@ -35,17 +35,17 @@
         </Tab>
     </FlyoutItem>-->
 
-    <FlyoutItem Title="Silver">
+    <!--<FlyoutItem Title="Silver">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
-    </FlyoutItem>
+    </FlyoutItem>-->
 
-    <FlyoutItem Title="Diamond">
+    <!--<FlyoutItem Title="Diamond">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
-    </FlyoutItem>
+    </FlyoutItem>-->
 
-    <FlyoutItem Title="Mortgage">
+    <!--<FlyoutItem Title="Mortgage">
         <ShellContent Title="Home" ContentTemplate="{DataTemplate mortgage:MortgagePage}"/>
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <FlyoutItem Title="Custmors">
         <ShellContent Title="Custmors" ContentTemplate="{DataTemplate custmor:CustomerListPage}"/>

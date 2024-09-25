@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:Sonaar.Presentation.Viewmodels.HomePage.Customer"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:control="clr-namespace:Sonaar.Presentation.CustomControls"
-             x:DataType="viewmodel:AddNewCustomerPageViewModel"
-             x:Class="Sonaar.Presentation.Views.AddNewCustomerPage"
-             Title="Add New Customer"
-             BackgroundColor="LightGray">
-    <Frame VerticalOptions="CenterAndExpand" Margin="10" BackgroundColor="LightBlue">
+             xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
+             x:DataType="customer:AddNewCustomerPageViewModel"
+             x:Class="Sonaar.Mobile.UI.Customer.AddNewCustomerPage"
+             Title="AddNewCustomerPage">
+    <ContentPage.Content>
+        <Frame VerticalOptions="FillAndExpand" Margin="10" BackgroundColor="LightBlue">
             <VerticalStackLayout>
                 <Grid  ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="First Name" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
                     <Grid Grid.Column="1" ColumnDefinitions="*,2*">
-                        <Picker Title="Prefix" BackgroundColor="White" SelectedItem="{Binding Prifix}">
+                        <Picker Title="Prefix" BackgroundColor="White" SelectedItem="{Binding Customer.ContactPrifix}">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Mr.</x:String>
@@ -23,43 +21,45 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
-                        <control:LabelButton Grid.Column="1" Title="First Name" Text="{Binding FirstName}"/>
+                        <!--<control:LabelButton Grid.Column="1" Title="First Name" Text="{Binding FirstName}"/>-->
+                        <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="First Name" Text="{Binding Customer.ContactFirstName}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                         <!--<Entry Grid.Column="1" FontAttributes="Bold" Placeholder="First Name" Text="{Binding FirstName}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>-->
                     </Grid>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="Last Name" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Last Name" Text="{Binding LastName}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Last Name" Text="{Binding Customer.ContactLastName}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="Mobile Number" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Keyboard="Telephone" Text="{Binding PhoneNumber}" BackgroundColor="White" Placeholder="Mobile Number" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Keyboard="Telephone" Text="{Binding Customer.ContactPhoneNumber}" BackgroundColor="White" Placeholder="Mobile Number" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="Address Line 1" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Address Line 1" Text="{Binding Address1}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Address Line 1" Text="{Binding Customer.ContactAddress1}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="Address Line 2" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Address Line 2" Text="{Binding Address2}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Address Line 2" Text="{Binding Customer.ContactAddress2}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="LandMark" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="LabdMark" Text="{Binding LandMark}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="LabdMark" Text="{Binding Customer.ContactLandMark}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="City" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="City" Text="{Binding City}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="City" Text="{Binding Customer.ContactCity}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="State" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="State" Text="{Binding State}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="State" Text="{Binding Customer.ContactState}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="PinCode" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" MaxLength="6" Keyboard="Numeric" BackgroundColor="White" Placeholder="PinCode" Text="{Binding PinCode}" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" MaxLength="6" Keyboard="Numeric" BackgroundColor="White" Placeholder="PinCode" Text="{Binding Customer.ContactPinCode}" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Button Text="Add" Command="{Binding AddCustomerCommand}"/>
             </VerticalStackLayout>
         </Frame>
+    </ContentPage.Content>
 </ContentPage>
