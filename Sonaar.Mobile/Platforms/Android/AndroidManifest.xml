@@ -1,17 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<application android:allowBackup="true"
-				 android:icon="@android:mipmap/sym_def_app_icon"
-				 android:roundIcon="@mipmap/appicon_round"
-				 android:supportsRtl="true" android:usesCleartextTraffic="true">
-		<provider
-		   android:name="androidx.core.content.FileProvider"
-		   android:authorities="${applicationId}.provider"
-		   android:exported="false"
-		   android:grantUriPermissions="true">
-			<meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.Sonaar" android:versionCode="2" android:versionName="1.1" android:minSdkVersion="32" android:targetSdkVersion="34">
+	<application android:allowBackup="true" android:icon="@mipmap/newappicon" android:supportsRtl="true" android:usesCleartextTraffic="true" android:label="Sonaar">
+		<provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
 		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
