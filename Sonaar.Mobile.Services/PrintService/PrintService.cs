@@ -16,6 +16,7 @@ namespace Sonaar.Mobile.Services.PrintService
             _restService = restService;
             _alertService = alertService;
         }
+        
         public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
         {
             var result = await _restService.GenerateQuotation(printBillModel);

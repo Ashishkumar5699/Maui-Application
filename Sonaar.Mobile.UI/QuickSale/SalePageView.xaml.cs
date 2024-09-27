@@ -1,11 +1,20 @@
-﻿namespace Sonaar.Mobile.UI.QuickSale;
+﻿using CustomControlFramework.Page;
 
-public partial class SalePageView : ContentPage
+namespace Sonaar.Mobile.UI.QuickSale;
+
+public partial class SalePageView : ContentPageMobileBase
 {
 	public SalePageView(SalePageViewModel viewModel)
 	{
-		InitializeComponent();
-		BindingContext = viewModel;
+        try
+        {
+		    InitializeComponent();
+		    BindingContext = viewModel;
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 
 

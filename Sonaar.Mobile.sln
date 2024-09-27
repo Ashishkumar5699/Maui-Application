@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.Popup", "Sona
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonaar.Mobile.PlatformService", "Sonar.Mobile.PlatformService\Sonaar.Mobile.PlatformService.csproj", "{9F7EA296-AE92-40A6-B611-01B15384FA27}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MAUIControls", "MAUIControls", "{4CC06C92-8607-492E-8AA3-D666E69DBD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlFramework", "MAUIControls\CustomControlFramework\CustomControlFramework.csproj", "{12F98D65-264B-4218-A17E-C166FB9B89FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +80,10 @@ Global
 		{9F7EA296-AE92-40A6-B611-01B15384FA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F7EA296-AE92-40A6-B611-01B15384FA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F7EA296-AE92-40A6-B611-01B15384FA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F98D65-264B-4218-A17E-C166FB9B89FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F98D65-264B-4218-A17E-C166FB9B89FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F98D65-264B-4218-A17E-C166FB9B89FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F98D65-264B-4218-A17E-C166FB9B89FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +95,8 @@ Global
 		..\PunjabOrnaments.Common\PunjabOrnaments.Common.projitems*{188f55bd-1c6a-4895-b9f3-f2f34540831b}*SharedItemsImports = 5
 		..\PunjabOrnaments.Common\PunjabOrnaments.Common.projitems*{601197a7-76e1-4c88-b263-d3f0ecf85c4c}*SharedItemsImports = 13
 		..\PunjabOrnaments.Common\PunjabOrnaments.Common.projitems*{b20e75f2-da7f-4667-8a1a-fcbc62725077}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12F98D65-264B-4218-A17E-C166FB9B89FC} = {4CC06C92-8607-492E-8AA3-D666E69DBD18}
 	EndGlobalSection
 EndGlobal

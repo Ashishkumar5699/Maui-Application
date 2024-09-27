@@ -5,8 +5,14 @@
              xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
              x:DataType="customer:CustomerListPageViewModel"
              x:Class="Sonaar.Mobile.UI.Customer.CustomerListPage"
+             x:Name="_customerlistpage"
              Title="Contact Page">
-   <VerticalStackLayout>
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="Add" Command="{Binding BindingContext.AddNewContactCommand, Source={x:Reference _customerlistpage}}"/>-->
+        <!-- <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/> -->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <VerticalStackLayout>
         <SearchBar Placeholder="Search" Text="{Binding SearchText, Mode=TwoWay}"
                    SearchCommand="{Binding SearchCommand}"
                    BackgroundColor="{AppThemeBinding Light=White, Dark=Black}" />
@@ -56,6 +62,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <!--<Button Text="Add" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateToAddnewPageCommand}"/>-->
+        <!--<Button Text="Add" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Command="{Binding AddNewContactCommand}"/>-->
     </VerticalStackLayout>
+    </ContentPage.Content>
 </ContentPage>

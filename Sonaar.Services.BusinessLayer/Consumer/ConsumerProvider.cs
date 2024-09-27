@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Sonaar.Domain.Dto.CustomerDirectory;
 using Sonaar.Domain.Entities.Contacts;
 using Sonaar.Domain.Response;
 using Sonaar.Mobile.Models.Client;
@@ -7,24 +8,19 @@ using Sonaar.Mobile.RestBridge.Urls;
 
 namespace Sonaar.Services.BusinessLayer.Consumer
 {
-    public class ConsumerProvider : IConsumerProvider
+    public class ConsumerProvider(IRestService restService, IMapper mapper) : BaseBussinessLayer(mapper), IConsumerProvider
     {
-        private readonly IRestService _restService;
-        private readonly IMapper _mapper;
+        private readonly IRestService _restService = restService;
+        private readonly IMapper _mapper = mapper;
 
-        public ConsumerProvider(IRestService restService, IMapper mapper)
-		{
-            _restService = restService;
-            _mapper = mapper;
-		}
-
-        public async Task<ResponseResult<Customer>> AddCustomer(Customer printBillModel)
+        public async Task<ExecResult> AddCustomer(Customer customer)
         {
-            var response = new ResponseResult<Customer>();
+            var response = new ExecResult();
 
             try
             {
-                response = await _restService.PostAsync(ApiConstant.Contacts, printBillModel, response);
+                var CustmorDTO = _mapper.Map<ConsumerDTO>(customer);
+                response = await _restService.PostAsync(ApiConstant.Contacts, CustmorDTO, response);
             }
             catch (Exception ex)
             {

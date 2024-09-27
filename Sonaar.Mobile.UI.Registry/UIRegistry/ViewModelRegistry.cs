@@ -1,9 +1,6 @@
-﻿using System;
-using Sonaar.Mobile.UI;
-
-namespace Sonaar.Mobile.UI.Registry.UIRegistry
+﻿namespace Sonaar.Mobile.UI.Registry.UIRegistry
 {
-	public static class ViewModelRegistry
+    public static class ViewModelRegistry
 	{
         public static MauiAppBuilder RegisterVieModels(this MauiAppBuilder mauiAppBuilder)
         {
@@ -14,6 +11,8 @@ namespace Sonaar.Mobile.UI.Registry.UIRegistry
             mauiAppBuilder.Services.AddSingleton<QuickSale.SalePageViewModel>();
 
             mauiAppBuilder.Services.AddSingleton<Customer.CustomerListPageViewModel>();
+
+            mauiAppBuilder.Services.AddSingleton<Customer.AddNewCustomerPageViewModel>();
 
             return mauiAppBuilder;
         }

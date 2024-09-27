@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 using AutoMapper;
 
 namespace Sonaar.Services.BusinessLayer.Mapper
@@ -15,6 +16,8 @@ namespace Sonaar.Services.BusinessLayer.Mapper
             CreateMap<Sonaar.Mobile.Models.Sale.SaleModel, Sonaar.Domain.Bills.ProductModel>();
 
             CreateMap<Sonaar.Mobile.Models.Tax.GSTAmountModel, Sonaar.Domain.Bills.GSTAmount>();
+
+            CreateMap<Sonaar.Mobile.Models.Client.Customer,Sonaar.Domain.Dto.CustomerDirectory.ConsumerDTO>();
 
             #endregion
 

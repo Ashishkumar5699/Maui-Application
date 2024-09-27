@@ -8,6 +8,8 @@ using Sonaar.Mobile.Services.PrintService;
 using CommunityToolkit.Mvvm.Input;
 using Sonaar.Mobile.Services.PopupService;
 using Sonaar.Mobile.Models.QuickSale;
+using CommunityToolkit.Mvvm.Messaging;
+using Sonaar.Mobile.Services.CustomerService;
 
 namespace Sonaar.Mobile.UI.QuickSale
 {
@@ -17,6 +19,7 @@ namespace Sonaar.Mobile.UI.QuickSale
 
         private readonly IPrintService _printService;
         private readonly ISalePopupService _salePopupService;
+        private readonly ICustomerService _customerService;
 
         private ObservableCollection<SaleModel> _saleItems;
         private GSTAmountModel _amountModel;
@@ -25,12 +28,13 @@ namespace Sonaar.Mobile.UI.QuickSale
 
         #region Constructor and InitializeAsync
 
-        public SalePageViewModel(INavigationService navigationService, IPrintService printService, ISalePopupService salePopupService) : base(navigationService)
+        public SalePageViewModel(INavigationService navigationService, IPrintService printService, ISalePopupService salePopupService,ICustomerService customerService) : base(navigationService)
         {
             _printService = printService;
             _salePopupService = salePopupService;
+            _customerService = customerService;
 
-            CustmorDetail = new Sonaar.Mobile.Models.Client.Customer();
+            // CustmorDetail = new Sonaar.Mobile.Models.Client.Customer();
             SaleItems = new ObservableCollection<SaleModel>();
             AmountModel = new GSTAmountModel();
         }
@@ -64,6 +68,7 @@ namespace Sonaar.Mobile.UI.QuickSale
                 SaleItems.Add(result);
 
                 CalculateGSTAmount();
+                CheckCondition2();
             }
         }
 
@@ -71,6 +76,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         private void RemoveItemSales(SaleModel sale)
         {
             SaleItems.Remove(sale);
+            CheckCondition2();
         }
 
         [RelayCommand]
@@ -83,14 +89,6 @@ namespace Sonaar.Mobile.UI.QuickSale
                 BillType = Domain.Enum.BillType.Quotation,
                 ProductList = new List<SaleModel>(SaleItems),
                 GSTAmount = AmountModel,
-                //FirmDetail = new Domain.Models.Company.FirmDetail
-                //{
-                //    FirmName = "FirmName",
-                //    FirmAddress = "FirmAddress",
-                //    FirmGSTNumber = "FirmGSTNumber",
-                //    FirmPhoneNumber = "FirmPhoneNumber",
-                //},
-
             };
 
             var abc = await _printService.GenerateQuotation(billmodel);
@@ -102,6 +100,53 @@ namespace Sonaar.Mobile.UI.QuickSale
             }
         }
 
+        [RelayCommand]
+        private async Task AddNewContact()
+        {
+            await _navigationService.NavigateToAsync(NavigationPath.AddNewCustomerPage);
+        }
+
+        [RelayCommand]
+        private async Task LoadCustmor(string phone)
+        {
+            try
+            {
+                if(phone.Length == 10)
+                {
+                    IsBusy = true;
+                    if (long.TryParse(phone,out var PhoneNumber))
+                    {
+                        var cusmor = await _customerService.GetCustomerByPhone(PhoneNumber);
+                        if(Condition1 = cusmor != null)
+                        {
+                            CustmorDetail = cusmor;
+                            UpdateProgress();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _ = Application.Current.MainPage.DisplayAlert("Error", ex.ToString(), "ok");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private void ResetCustmor()
+        {
+            CustmorDetail = null;
+            Condition1 = false;
+            UpdateProgress();
+        }
+
+        private void UpdateProgress()
+        {
+            Progress = (Condition1 ? 0.25 : 0) + (Condition2 ? 0.25 : 0) + (Condition3 ? 0.25 : 0) + (Condition4 ? 0.25 : 0);
+        }
 
         #endregion
 
@@ -128,6 +173,12 @@ namespace Sonaar.Mobile.UI.QuickSale
             return total;
         }
 
+        private void CheckCondition2()
+        {
+            Condition2 = SaleItems.Any();
+            UpdateProgress();
+        }
+
         #endregion
 
         #region Bindbale Properties
@@ -152,7 +203,6 @@ namespace Sonaar.Mobile.UI.QuickSale
                 if (_saleItems != value)
                 {
                     SetProperty(ref _saleItems, value);
-                    //CalculateTotalAmount();
                 }
             }
         }
@@ -167,6 +217,19 @@ namespace Sonaar.Mobile.UI.QuickSale
                 CalculateGSTAmount();
             }
         }
+
+        [ObservableProperty]
+        private bool condition1 = false;//add contact
+
+        [ObservableProperty]
+        private bool condition2;//add itemtoSale
+
+        [ObservableProperty]
+        private bool condition3;//add saler signatue
+
+        [ObservableProperty]
+        private bool condition4;//add custmore signature
+
         #endregion
 
     }
