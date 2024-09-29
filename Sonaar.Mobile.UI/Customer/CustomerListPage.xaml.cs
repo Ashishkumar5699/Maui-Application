@@ -1,6 +1,8 @@
-﻿namespace Sonaar.Mobile.UI.Customer;
+﻿using CustomControlFramework.Page;
 
-public partial class CustomerListPage : ContentPage
+namespace Sonaar.Mobile.UI.Customer;
+
+public partial class CustomerListPage : ContentPageMobileBase
 {
 	private readonly CustomerListPageViewModel customerListViewModel;
 
