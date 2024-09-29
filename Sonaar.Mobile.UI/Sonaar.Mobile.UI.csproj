@@ -38,6 +38,7 @@
 	  <None Remove="Mortgage\" />
 	  <None Remove="QuickSale\" />
 	  <None Remove="Customer\" />
+	  <None Remove="QuickSale\SaleSection\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Authentication\" />
@@ -46,6 +47,7 @@
 	  <Folder Include="Mortgage\" />
 	  <Folder Include="QuickSale\" />
 	  <Folder Include="Customer\" />
+	  <Folder Include="QuickSale\SaleSection\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Sonaar.Mobile.Services\Sonaar.Mobile.Services.csproj" />

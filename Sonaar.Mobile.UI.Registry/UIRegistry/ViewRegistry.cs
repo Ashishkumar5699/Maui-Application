@@ -16,6 +16,7 @@ namespace Sonaar.Mobile.UI.Registry.UIRegistry
             mauiAppBuilder.Services.AddSingleton<Customer.CustomerListPage>();
 
             mauiAppBuilder.Services.AddSingleton<Customer.AddNewCustomerPage>();
+            mauiAppBuilder.Services.AddSingleton<QuickSale.SaleSection.PendingSalePage>();
 
             return mauiAppBuilder;
         }

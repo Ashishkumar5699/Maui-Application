@@ -13,6 +13,7 @@
             mauiAppBuilder.Services.AddSingleton<Customer.CustomerListPageViewModel>();
 
             mauiAppBuilder.Services.AddSingleton<Customer.AddNewCustomerPageViewModel>();
+            mauiAppBuilder.Services.AddSingleton<QuickSale.SaleSection.PendingSalePageViewModel>();
 
             return mauiAppBuilder;
         }

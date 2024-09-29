@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<page:ContentPageMobileBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:page="clr-namespace:CustomControlFramework.Page;assembly=CustomControlFramework"
-             xmlns:model="clr-namespace:Sonaar.Mobile.Models.Sale;assembly=Sonaar.Mobile.Models"
-             xmlns:vm="clr-namespace:Sonaar.Mobile.UI.QuickSale"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:entry="clr-namespace:CustomControlFramework.Entry;assembly=CustomControlFramework"
-             xmlns:expander="clr-namespace:CustomControlFramework.Layout;assembly=CustomControlFramework"
-             xmlns:Converter="clr-namespace:CustomControlFramework.Converter;assembly=CustomControlFramework"
-             x:Class="Sonaar.Mobile.UI.QuickSale.SalePageView"
-             x:DataType="vm:SalePageViewModel" x:Name="_salePage" BindingContext="{x:Reference _salePage}"
-             Title="{Binding Title}" ShowActivityIndicator="{Binding IsBusy}"
-             ShowProgres="True" >
+<page:ContentPageMobileBase Title="{Binding Title}" ShowActivityIndicator="{Binding IsBusy}"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:CustomControlFramework.Page;assembly=CustomControlFramework"
+    xmlns:model="clr-namespace:Sonaar.Mobile.Models.Sale;assembly=Sonaar.Mobile.Models"
+    xmlns:vm="clr-namespace:Sonaar.Mobile.UI.QuickSale"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:entry="clr-namespace:CustomControlFramework.Entry;assembly=CustomControlFramework"
+    xmlns:expander="clr-namespace:CustomControlFramework.Layout;assembly=CustomControlFramework"
+    xmlns:Converter="clr-namespace:CustomControlFramework.Converter;assembly=CustomControlFramework"
+    x:Class="Sonaar.Mobile.UI.QuickSale.SalePageView"
+    x:DataType="vm:SalePageViewModel" x:Name="_salePage" BindingContext="{x:Reference _salePage}" >
     <page:ContentPageMobileBase.Resources>
         <Style x:Key="GridSaperation" TargetType="Grid">
             <Setter Property="ColumnDefinitions" Value="*,3*"/>

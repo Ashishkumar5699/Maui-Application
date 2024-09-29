@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.Sonaar" android:versionCode="2" android:versionName="1.1" android:minSdkVersion="32" android:targetSdkVersion="34">
-	<application android:allowBackup="true" android:icon="@mipmap/newappicon" android:supportsRtl="true" android:usesCleartextTraffic="true" android:label="Sonaar">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.PunjabOrnaments.PunjabOrnaments" android:versionName="4.1" android:minSdkVersion="32" android:targetSdkVersion="34" android:versionCode="4">
+	<application android:allowBackup="true" android:icon="@mipmap/newappicon" android:supportsRtl="true" android:usesCleartextTraffic="true" android:label="Pubjab Ornaments">
 		<provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
 		</provider>

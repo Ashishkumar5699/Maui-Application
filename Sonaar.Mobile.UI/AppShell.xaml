@@ -13,14 +13,16 @@
         <ShellContent Title="Home" ContentTemplate="{DataTemplate dummy:UnderConstruction}"/>
     </FlyoutItem>-->
 
-    <FlyoutItem Title="Quick Sale">
+    <FlyoutItem Title="New Quotation">
         <ShellContent Title="New Quotation" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
         <!--<ShellContent Title="Quotation List" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>-->
     </FlyoutItem>
     
-    <!--<FlyoutItem Title="Quotations">
-        <ShellContent Title="Sale" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
-    </FlyoutItem>-->
+    <FlyoutItem Title="Sale List">
+        <ShellContent Title="Quotation" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+        <ShellContent Title="Pending" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+        <ShellContent Title="Completed" ContentTemplate="{DataTemplate quicksale:SalePageView}"/>
+    </FlyoutItem>
 
     <!--<FlyoutItem Title="Gold">
         <Tab Title="Home Page">
