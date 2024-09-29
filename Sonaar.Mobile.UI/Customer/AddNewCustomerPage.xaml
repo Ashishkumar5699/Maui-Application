@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
-             x:DataType="customer:AddNewCustomerPageViewModel"
-             x:Class="Sonaar.Mobile.UI.Customer.AddNewCustomerPage"
-             Title="AddNewCustomerPage">
-    <ContentPage.Content>
+<page:ContentPageMobileBase Title="{Binding Title}" ShowActivityIndicator="{Binding IsBusy}" 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:CustomControlFramework.Page;assembly=CustomControlFramework"
+    xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
+    x:DataType="customer:AddNewCustomerPageViewModel"
+    x:Class="Sonaar.Mobile.UI.Customer.AddNewCustomerPage">
+    <page:ContentPageMobileBase.Content>
         <Frame VerticalOptions="FillAndExpand" Margin="10" BackgroundColor="LightBlue">
             <VerticalStackLayout>
                 <Grid  ColumnDefinitions="*,2*" ColumnSpacing="10">
@@ -30,6 +31,21 @@
                     <Label Grid.Column="0" Text="Last Name" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
                     <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Last Name" Text="{Binding Customer.ContactLastName}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
                 </Grid>
+
+                <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
+                    <Label Grid.Column="0" Text="Adhar Number" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Adhar Number" Text="{Binding Customer.AdharNumber}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
+                </Grid>
+                <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
+                    <Label Grid.Column="0" Text="Pan Number" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="Pan Number" Text="{Binding Customer.PanNumber}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
+                </Grid>
+                <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
+                    <Label Grid.Column="0" Text="GST Number" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="GST Number" Text="{Binding Customer.CustmorGSTNumber}" BackgroundColor="White" ClearButtonVisibility="WhileEditing" />
+                </Grid>
+
+
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="Mobile Number" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
                     <Entry Grid.Column="1" FontAttributes="Bold" Keyboard="Telephone" Text="{Binding Customer.ContactPhoneNumber}" BackgroundColor="White" Placeholder="Mobile Number" ClearButtonVisibility="WhileEditing"/>
@@ -61,5 +77,5 @@
                 <Button Text="Add" Command="{Binding AddCustomerCommand}"/>
             </VerticalStackLayout>
         </Frame>
-    </ContentPage.Content>
-</ContentPage>
+    </page:ContentPageMobileBase.Content>
+</page:ContentPageMobileBase>

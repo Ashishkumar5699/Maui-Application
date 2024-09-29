@@ -1,7 +1,8 @@
 ﻿namespace Sonaar.Mobile.UI.Customer;
-using Microsoft.Extensions.Logging;
 
-public partial class AddNewCustomerPage : ContentPage
+using CustomControlFramework.Page;
+
+public partial class AddNewCustomerPage : ContentPageMobileBase
 {
     private readonly AddNewCustomerPageViewModel addNewCustomerPageViewModel;
 
