@@ -22,7 +22,6 @@ namespace Sonaar.Mobile.UI.QuickSale
         private readonly ICustomerService _customerService;
 
         private ObservableCollection<SaleModel> _saleItems;
-        private GSTAmountModel _amountModel;
 
         #endregion
 
@@ -34,9 +33,10 @@ namespace Sonaar.Mobile.UI.QuickSale
             _salePopupService = salePopupService;
             _customerService = customerService;
 
-            // CustmorDetail = new Sonaar.Mobile.Models.Client.Customer();
             SaleItems = new ObservableCollection<SaleModel>();
             AmountModel = new GSTAmountModel();
+
+            Title = "Quotation Page";
         }
 
         #endregion
@@ -67,7 +67,6 @@ namespace Sonaar.Mobile.UI.QuickSale
 
                 SaleItems.Add(result);
 
-                CalculateGSTAmount();
                 CheckCondition2();
             }
         }
@@ -146,6 +145,7 @@ namespace Sonaar.Mobile.UI.QuickSale
         private void UpdateProgress()
         {
             Progress = (Condition1 ? 0.25 : 0) + (Condition2 ? 0.25 : 0) + (Condition3 ? 0.25 : 0) + (Condition4 ? 0.25 : 0);
+            AllConditionCompleted = Progress == 1;
         }
 
         #endregion
@@ -175,6 +175,7 @@ namespace Sonaar.Mobile.UI.QuickSale
 
         private void CheckCondition2()
         {
+            CalculateGSTAmount();
             Condition2 = SaleItems.Any();
             UpdateProgress();
         }
@@ -189,11 +190,8 @@ namespace Sonaar.Mobile.UI.QuickSale
         [ObservableProperty]
         SaleModel newSaleItem;
 
-        public GSTAmountModel AmountModel
-        {
-            get => _amountModel;
-            set => SetProperty(ref _amountModel, value);
-        }
+        [ObservableProperty]
+        GSTAmountModel amountModel;
 
         public ObservableCollection<SaleModel> SaleItems
         {
@@ -219,17 +217,19 @@ namespace Sonaar.Mobile.UI.QuickSale
         }
 
         [ObservableProperty]
-        private bool condition1 = false;//add contact
+        private bool condition1;//add contact
 
         [ObservableProperty]
         private bool condition2;//add itemtoSale
 
         [ObservableProperty]
-        private bool condition3;//add saler signatue
+        private bool condition3 = true;//add saler signatue
 
         [ObservableProperty]
-        private bool condition4;//add custmore signature
+        private bool condition4 = true;//add custmore signature
 
+        [ObservableProperty]
+        bool allConditionCompleted;
         #endregion
 
     }

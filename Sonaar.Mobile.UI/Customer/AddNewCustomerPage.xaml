@@ -44,7 +44,7 @@
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="LandMark" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>
-                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="LabdMark" Text="{Binding Customer.ContactLandMark}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry Grid.Column="1" FontAttributes="Bold" Placeholder="LandMark" Text="{Binding Customer.ContactLandMark}" BackgroundColor="White" ClearButtonVisibility="WhileEditing"/>
                 </Grid>
                 <Grid ColumnDefinitions="*,2*" ColumnSpacing="10">
                     <Label Grid.Column="0" Text="City" FontAttributes="Bold" FontSize="Title" HorizontalOptions="StartAndExpand"/>

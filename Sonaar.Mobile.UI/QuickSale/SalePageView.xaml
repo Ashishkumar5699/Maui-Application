@@ -9,7 +9,7 @@
              xmlns:expander="clr-namespace:CustomControlFramework.Layout;assembly=CustomControlFramework"
              xmlns:Converter="clr-namespace:CustomControlFramework.Converter;assembly=CustomControlFramework"
              x:Class="Sonaar.Mobile.UI.QuickSale.SalePageView"
-             x:DataType="vm:SalePageViewModel" x:Name="SalePage" 
+             x:DataType="vm:SalePageViewModel" x:Name="_salePage" BindingContext="{x:Reference _salePage}"
              Title="{Binding Title}" ShowActivityIndicator="{Binding IsBusy}"
              ShowProgres="True" >
     <page:ContentPageMobileBase.Resources>
@@ -33,25 +33,28 @@
     </page:ContentPageMobileBase.Resources>
 
     <page:ContentPageMobileBase.ToolbarItems>
-        <ToolbarItem Text="Save" Command="{Binding GenerateBillCommand}" />
+        <ToolbarItem Text="Save" Command="{Binding GenerateBillCommand}" IsEnabled="{Binding AllConditionCompleted}"/>
     </page:ContentPageMobileBase.ToolbarItems>
 
     <page:ContentPageMobileBase.Content>
         <VerticalStackLayout Spacing="10" Margin="10">
 
-            <expander:ConditionalExpander >
+            <expander:ConditionalExpander ConditionValue="True" >
                 <expander:ConditionalExpander.HeaderView>
                     <Grid>
-                        <Grid x:Name="SearchbyPhone" IsVisible="{Binding Condition1,Converter={Converter:NotConverter}}" ColumnDefinitions="auto,*,auto,auto" ColumnSpacing="5" Padding="10">
-                            <Entry Grid.Column="1" Placeholder="Search via phone" MaxLength="10"
-                                    x:Name="phone" Keyboard="Telephone" HorizontalOptions="FillAndExpand"
-                                    Style="{StaticResource FirstNameTextStyle}"/>
-                            <Button Grid.Column="2" Text="Search" Padding="20" 
-                                TextColor="Blue" BackgroundColor="Transparent" 
-                                Command="{Binding BindingContext.LoadCustmorCommand,Source={x:Reference SalePage}}"
-                                CommandParameter="{Binding Path=Text, Source={x:Reference phone}}"
-                                HorizontalOptions="FillAndExpand" />
-                            <Button Grid.Column="23" Text="Create New" Padding="20" TextColor="Blue" BackgroundColor="Transparent" Command="{Binding AddNewContactCommand}"/>
+                        <Grid x:Name="SearchbyPhone" IsVisible="{Binding Condition1,Converter={Converter:NotConverter}}"
+                              ColumnDefinitions="*,auto,auto" ColumnSpacing="5" Padding="10">
+                            <Entry Grid.Column="0" Placeholder="Search via phone" PlaceholderColor="Black"
+                                   x:Name="phone" Keyboard="Telephone" MaxLength="10" HorizontalOptions="FillAndExpand"
+                                   Style="{StaticResource FirstNameTextStyle}"/>
+                            <Button Grid.Column="1" Text="Search"
+                                    TextColor="Blue" BackgroundColor="Transparent"
+                                    Command="{Binding BindingContext.LoadCustmorCommand,Source={x:Reference _salePage}}"
+                                    CommandParameter="{Binding Path=Text, Source={x:Reference phone}}"
+                                    HorizontalOptions="FillAndExpand" />
+                            <Button Grid.Column="2" Text="Create New"
+                                    TextColor="Blue" BackgroundColor="Transparent"
+                                    Command="{Binding AddNewContactCommand}"/>
                         </Grid>
                         <StackLayout IsVisible="{Binding Condition1}">
                             <Grid ColumnDefinitions="*,*,*" HorizontalOptions="FillAndExpand" >
@@ -122,7 +125,7 @@
                 </expander:ConditionalExpander.ContentView>
             </expander:ConditionalExpander>
 
-            <expander:ConditionalExpander >
+            <expander:ConditionalExpander ConditionValue="True">
                 <expander:ConditionalExpander.HeaderView>
                     <Grid ColumnDefinitions="*,*,auto" HorizontalOptions="FillAndExpand">
                         <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
@@ -163,14 +166,14 @@
                                     <SwipeView.RightItems>
                                         <SwipeItems>
                                             <SwipeItem Text="Delete" BackgroundColor="LightPink"
-                                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=RemoveItemSalesCommand}"
+                                                        Command="{Binding RemoveItemSalesCommand}"
                                                         CommandParameter="{Binding .}"/>
                                         </SwipeItems>
                                     </SwipeView.RightItems>
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
                                             <SwipeItem Text="Edit" BackgroundColor="LightGreen"
-                                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SalePageViewModel}}, Path=AddNewItemPopupSalesCommand}"
+                                                        Command="{Binding AddNewItemPopupSalesCommand}"
                                                         CommandParameter="{Binding .}" />
                                         </SwipeItems>
                                     </SwipeView.LeftItems>
@@ -202,14 +205,21 @@
                 </expander:ConditionalExpander.ContentView>
             </expander:ConditionalExpander>
 
-            <expander:ConditionalExpander >
+            <expander:ConditionalExpander ConditionValue="True">
                 <expander:ConditionalExpander.HeaderView>
-                    <HorizontalStackLayout>
-                        <Label Text="Before Tax:"/>
-                        <Label Text="{Binding AmountModel.TotalAfterDiscount}"/>
-                        <Label Text="After Tax"/>
-                        <Label Text="{Binding AmountModel.GrandTotal}"/>
-                    </HorizontalStackLayout>
+                    <Grid ColumnDefinitions="*,*">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="Before Tax:" FontAttributes="Bold"/>
+                            <Label Text="{Binding AmountModel.TotalAfterDiscount}" TextColor="Blue"/>
+                            <Label Text="₹"/>
+                        </HorizontalStackLayout>
+
+                         <HorizontalStackLayout Grid.Column="1" Spacing="10">
+                            <Label Text="After Tax:" FontAttributes="Bold"/>
+                            <Label Text="{Binding AmountModel.GrandTotal}" TextColor="Blue"/>
+                            <Label Text="₹"/>
+                        </HorizontalStackLayout>
+                    </Grid>
                 </expander:ConditionalExpander.HeaderView>
                 <expander:ConditionalExpander.ContentView>
                     <Grid ColumnDefinitions="3*,*,*" RowDefinitions="35,25,25,25,25,25">
@@ -230,18 +240,18 @@
                 </expander:ConditionalExpander.ContentView>
             </expander:ConditionalExpander>
 
-            <expander:ConditionalExpander>
+            <expander:ConditionalExpander ConditionValue="True">
                 <expander:ConditionalExpander.HeaderView>
-                    <Label Text="Custmore Signature"/>
+                    <Label Text="Custmore Signature:" FontAttributes="Bold" />
                 </expander:ConditionalExpander.HeaderView>
                 <expander:ConditionalExpander.ContentView>
                     <entry:SignaturePad/>
                 </expander:ConditionalExpander.ContentView>
             </expander:ConditionalExpander>
 
-            <expander:ConditionalExpander>
+            <expander:ConditionalExpander ConditionValue="True">
                 <expander:ConditionalExpander.HeaderView>
-                    <Label Text="Merchant Signature"/>
+                    <Label Text="Merchant Signature:" FontAttributes="Bold"/>
                 </expander:ConditionalExpander.HeaderView>
                 <expander:ConditionalExpander.ContentView>
                     <entry:SignaturePad/>

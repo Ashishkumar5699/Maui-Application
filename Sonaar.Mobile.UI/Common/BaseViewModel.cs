@@ -3,10 +3,14 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Sonaar.Mobile.UI.Common
 {
-	public abstract partial class BaseViewModel(INavigationService navigationService) : ObservableObject
+	public abstract partial class BaseViewModel : ObservableObject
     {
-        protected readonly INavigationService _navigationService = navigationService;
+        protected readonly INavigationService _navigationService;
 
+        public BaseViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
         public virtual Task InitializeAsync(object obj = null)
         {
             return Task.CompletedTask;
@@ -19,7 +23,7 @@ namespace Sonaar.Mobile.UI.Common
         bool isBusy;
 
         [ObservableProperty]
-        private double progress;
+        double progress;
     }
 }
 
