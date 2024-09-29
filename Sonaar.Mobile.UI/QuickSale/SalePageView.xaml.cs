@@ -6,15 +6,8 @@ public partial class SalePageView : ContentPageMobileBase
 {
 	public SalePageView(SalePageViewModel viewModel)
 	{
-        try
-        {
-		    InitializeComponent();
-		    BindingContext = viewModel;
-        }
-        catch (Exception ex)
-        {
-
-        }
+	    InitializeComponent();
+        BindingContext = viewModel;
     }
 
 

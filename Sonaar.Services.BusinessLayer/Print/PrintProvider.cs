@@ -7,11 +7,16 @@ using Sonaar.Mobile.RestBridge.Urls;
 
 namespace Sonaar.Services.BusinessLayer.Print
 {
-    public class PrintProvider(IRestService restService, IMapper mapper) : BaseBussinessLayer(mapper), IPrintProvider
+    public class PrintProvider : BaseBussinessLayer, IPrintProvider
     {
-        private readonly IRestService _restService = restService;
+        private readonly IRestService _restService;
         private readonly IMapper _mapper;
 
+        public PrintProvider(IRestService restService, IMapper mapper) : base(mapper)
+        {
+            _restService = restService;
+            _mapper = mapper;
+        }
         public async Task<ResponseResult<byte[]>> GenerateQuotation(PrintBillModel printBillModel)
         {
             printBillModel.FirmDetail = new Domain.Models.Company.FirmDetail

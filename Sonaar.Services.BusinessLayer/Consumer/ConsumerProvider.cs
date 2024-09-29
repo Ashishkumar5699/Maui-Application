@@ -8,10 +8,14 @@ using Sonaar.Mobile.RestBridge.Urls;
 
 namespace Sonaar.Services.BusinessLayer.Consumer
 {
-    public class ConsumerProvider(IRestService restService, IMapper mapper) : BaseBussinessLayer(mapper), IConsumerProvider
+    public class ConsumerProvider : BaseBussinessLayer, IConsumerProvider
     {
-        private readonly IRestService _restService = restService;
-        private readonly IMapper _mapper = mapper;
+        private readonly IRestService _restService;
+
+        public ConsumerProvider(IRestService restService, IMapper mapper) : base(mapper)
+        {
+            _restService = restService;
+        }
 
         public async Task<ExecResult> AddCustomer(Customer customer)
         {
@@ -20,7 +24,7 @@ namespace Sonaar.Services.BusinessLayer.Consumer
             try
             {
                 var CustmorDTO = _mapper.Map<ConsumerDTO>(customer);
-                response = await _restService.PostAsync(ApiConstant.Contacts, CustmorDTO, response);
+                response = await _restService.PostAsync(ApiConstant.AddContacts, CustmorDTO, response);
             }
             catch (Exception ex)
             {
@@ -37,7 +41,7 @@ namespace Sonaar.Services.BusinessLayer.Consumer
 
             try
             {
-                var bussinessResponse =  await _restService.GetAsync<ResponseResult<List<ContactDetails>>>(ApiConstant.Contacts, null);
+                var bussinessResponse =  await _restService.GetAsync<ResponseResult<List<ContactDetails>>>(ApiConstant.GetAllContacts, null);
                 response.Data = _mapper.Map<IEnumerable<Customer>>(bussinessResponse.Data);
                 response.Message = bussinessResponse.Message;
             }

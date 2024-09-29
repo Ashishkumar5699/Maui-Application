@@ -24,7 +24,9 @@ namespace Sonaar.Mobile.RestBridge.Urls
 
         #region Customers
 
-        public const string Contacts = base_url + "Contacts/GetAllContacts";
+        public const string GetAllContacts = base_url + "Contacts/GetAllContacts";
+
+        public const string AddContacts = base_url + "Contacts/AddContacts";
 
         #endregion
     }

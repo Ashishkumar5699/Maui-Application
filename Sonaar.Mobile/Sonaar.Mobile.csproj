@@ -47,10 +47,18 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidSigningKeyStore>Sonaar.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias>sonaar</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass>ASdf@1234</AndroidSigningKeyPass>
+		<AndroidSigningStorePass>ASdf@1234</AndroidSigningStorePass>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#FFFFFF" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.65" />
-		<!--<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />-->
+		<!-- <MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#FFFFFF" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.65" /> -->
+		<MauiIcon Include="Resources\AppIcon\newappicon.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" BaseSize="128,128" />
@@ -63,6 +71,7 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -80,6 +89,7 @@
 	  <None Remove="Extensions\" />
 	  <None Remove="Domain\Approvals\" />
 	  <None Remove="Presentation\Viewmodels\HomePage\Customer\" />
+	  <None Remove="Resources\AppIcon\appicon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

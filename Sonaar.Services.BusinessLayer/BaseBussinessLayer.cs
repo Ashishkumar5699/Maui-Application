@@ -3,9 +3,9 @@ using AutoMapper;
 
 namespace Sonaar.Services.BusinessLayer;
 
-public class BaseBussinessLayer
+public abstract class BaseBussinessLayer
 {
-    private readonly IMapper _mapper;
+    protected readonly IMapper _mapper;
 
     public BaseBussinessLayer(IMapper mapper)
     {
