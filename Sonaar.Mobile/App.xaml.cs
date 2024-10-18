@@ -18,7 +18,7 @@ public partial class App : Application
     private void InitApp()
     {
 
-        isUserAuth = true;
+        isUserAuth = false;
 
         if (isUserAuth)
     		MainPage = new AppShell();
