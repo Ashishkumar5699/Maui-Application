@@ -1,68 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:Sonaar.Mobile.Models.Client;assembly=Sonaar.Mobile.Models"
-             xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
-             x:DataType="customer:CustomerListPageViewModel"
-             x:Class="Sonaar.Mobile.UI.Customer.CustomerListPage"
-             x:Name="_customerlistpage"
-             Title="Contact Page">
-    <ContentPage.ToolbarItems>
+<page:ContentPageMobileBase ShowActivityIndicator="{Binding IsBusy}"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:Sonaar.Mobile.Models.Client;assembly=Sonaar.Mobile.Models"
+    xmlns:customer="clr-namespace:Sonaar.Mobile.UI.Customer"
+    xmlns:page="clr-namespace:CustomControlFramework.Page;assembly=CustomControlFramework"
+    x:DataType="customer:CustomerListPageViewModel"
+    x:Class="Sonaar.Mobile.UI.Customer.CustomerListPage"
+    x:Name="_customerlistpage" >
+    <page:ContentPageMobileBase.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddNewContactCommand}"/>
         <!--<ToolbarItem Text="Add" Command="{Binding BindingContext.AddNewContactCommand, Source={x:Reference _customerlistpage}}"/>-->
-        <!-- <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/> -->
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
+    </page:ContentPageMobileBase.ToolbarItems>
+    <page:ContentPageMobileBase.Content>
         <VerticalStackLayout>
-        <SearchBar Placeholder="Search" Text="{Binding SearchText, Mode=TwoWay}"
-                   SearchCommand="{Binding SearchCommand}"
-                   BackgroundColor="{AppThemeBinding Light=White, Dark=Black}" />
-        <CollectionView ItemsSource="{Binding CustomerList}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame x:DataType="model:Customer">
-                        <Grid ColumnDefinitions="100,*,*">
-                            <Frame HeightRequest="75" WidthRequest="75" Grid.Column="0"
-                                   CornerRadius="25" BackgroundColor="LightCoral">
-                                <Label Text="AaaaaaaAaaaaaaAaaaaaaAaaaaaa" TextColor="Black" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                            </Frame>
+            <SearchBar Placeholder="Search" Text="{Binding SearchText, Mode=TwoWay}"
+                       SearchCommand="{Binding SearchCommand}"
+                       BackgroundColor="{AppThemeBinding Light=White, Dark=Black}" />
+            <CollectionView ItemsSource="{Binding CustomerList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame x:DataType="model:Customer" Margin="5">
+                            <Grid ColumnDefinitions="auto,*,*">
+                                <!--<Fr¯ame HeightRequest="75" WidthRequest="75" Grid.Column="0"
+                                       CornerRadius="25" BackgroundColor="LightCoral">
+                                    <Label Text="{Binding ContactFirstName}" TextColor="Black" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                </Frame>-->
 
-                            <VerticalStackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
-                                <HorizontalStackLayout Spacing="10">
-                                <Label Text="Name:" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle" FontAttributes="Bold"/>
-                                <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="{Binding ContactPrifix}"/>
-                                            <Span Text=" "/>
-                                            <Span Text="{Binding ContactFirstName}"/>
-                                            <Span Text=" "/>
-                                            <Span Text="{Binding ContactLastName}"/>
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                                    <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Name:" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle" FontAttributes="Bold"/>
+                                    <Label MaxLines="2" LineBreakMode="WordWrap"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="Subtitle">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding ContactPrifix}"/>
+                                                <Span Text=" "/>
+                                                <Span Text="{Binding ContactFirstName}"/>
+                                                <Span Text=" "/>
+                                                <Span Text="{Binding ContactLastName}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Phone:"
+                                           MaxLines="2" LineBreakMode="WordWrap"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           FontSize="Subtitle" FontAttributes="Bold"/>
+                                    <Label Text="{Binding ContactPhoneNumber}" FontSize="Subtitle" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout Spacing="10">
-                                <Label Text="PhoneNumber" FontSize="Subtitle" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                                <Label Text="{Binding ContactPhoneNumber}" FontSize="Subtitle" HorizontalOptions="Center" VerticalOptions="Center"/>
-                            </HorizontalStackLayout>
-                            </VerticalStackLayout>
+                                </VerticalStackLayout>
 
-                            <VerticalStackLayout Grid.Column="2" VerticalOptions="CenterAndExpand">
-                                <HorizontalStackLayout Spacing="10">
-                                <Label Text="CustmorId" HorizontalOptions="Center" FontSize="Subtitle" VerticalOptions="Center" FontAttributes="Bold"/>
-                                <Label Text="{Binding ContactId}" HorizontalOptions="Center" FontSize="Subtitle" VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Spacing="10">
-                                <Label Text="City" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle" FontAttributes="Bold"/>
-                                <Label Text="{Binding ContactCity}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle"/>
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                        </Grid>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <!--<Button Text="Add" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Command="{Binding AddNewContactCommand}"/>-->
-    </VerticalStackLayout>
-    </ContentPage.Content>
-</ContentPage>
+                                <VerticalStackLayout Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand">
+                                    <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Custmor Id:" FontSize="Subtitle" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           MaxLines="2" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding ContactId}" FontSize="Subtitle"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           MaxLines="2" LineBreakMode="WordWrap"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="10">
+                                    <Label Text="City:" FontSize="Subtitle" FontAttributes="Bold"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           MaxLines="2" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding ContactCity}" FontSize="Subtitle"
+                                           HorizontalOptions="Center" VerticalOptions="Center"
+                                           MaxLines="2" LineBreakMode="WordWrap"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Add" VerticalOptions="End" HorizontalOptions="CenterAndExpand" Command="{Binding AddNewContactCommand}"/>
+        </VerticalStackLayout>
+    </page:ContentPageMobileBase.Content>
+</page:ContentPageMobileBase>
